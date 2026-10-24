@@ -75,15 +75,52 @@
       <div id="accounts"></div>
     </section>
 
+    <section class="panel" aria-labelledby="loadHeading">
+      <h2 id="loadHeading">Buy load for someone</h2>
+      <p class="muted">Buy regular DITO load for your own number or another recipient. Pay through one of DITO's online payment options.</p>
+      <label for="loadRecipient">Recipient mobile number</label>
+      <input id="loadRecipient" type="tel" inputmode="tel" autocomplete="off" placeholder="09XXXXXXXXX">
+      <div><button id="loadOptions" type="button">Check recipient &amp; payment options</button></div>
+      <div id="loadFields" class="hidden">
+        <div class="hist-range">
+          <div class="hist-field">
+            <label for="loadAmount">Load amount (₱)</label>
+            <input id="loadAmount" type="text" inputmode="decimal" list="loadAmounts" placeholder="Enter amount">
+            <datalist id="loadAmounts"></datalist>
+          </div>
+          <div class="hist-field">
+            <label for="loadMethod">Payment method</label>
+            <select id="loadMethod"></select>
+          </div>
+          <button id="loadReview" type="button">Review purchase</button>
+        </div>
+      </div>
+      <div id="loadQuote" class="notice hidden" aria-live="polite">
+        <p id="loadQuoteText"></p>
+        <p>Check the recipient carefully. Creating checkout may create a payment order. Complete payment on the gateway page.</p>
+        <button id="loadConfirm" type="button">Confirm and create payment</button>
+        <button id="loadCancel" class="ghost" type="button">Cancel</button>
+      </div>
+      <p id="loadStatus" role="status" aria-live="polite"></p>
+      <p class="muted">If checkout times out, check the payment below and your payment history before starting another purchase.</p>
+      <div id="loadOrders" aria-live="polite"></div>
+      <p><a href="https://my.dito.ph/pto/BuyLoad" target="_blank" rel="noopener noreferrer">Open DITO's official Buy Load page</a></p>
+    </section>
+
     <section class="panel" aria-labelledby="promoHeading">
       <h2 id="promoHeading">Available promos</h2>
       <div class="hist-range">
         <div class="hist-field">
           <label for="promoCat">Category</label>
-          <select id="promoCat"></select>
+          <select id="promoCat"><option value="">All categories</option></select>
         </div>
-        <button id="promoLoad" type="button">Show promos</button>
+        <div class="hist-field">
+          <label for="promoSearch">Search promos</label>
+          <input id="promoSearch" type="search" placeholder="Name, category, or validity">
+        </div>
+        <button id="promoLoad" type="button">Fetch all promos</button>
       </div>
+      <p class="muted">Fetches every page in each category returned by DITO's web catalog for your account. Other sales channels may have additional offers. DITO lists <a href="https://dito.ph/prepaid" target="_blank" rel="noopener noreferrer">Long Expiry through GCash</a>.</p>
       <p id="promoStatus" role="status" aria-live="polite"></p>
       <div id="promoResult" class="account-grid"></div>
     </section>
@@ -130,6 +167,6 @@
     </div>
   </div>
 
-  <script src="/app.js?v=11" defer></script>
+  <script src="/app.js?v=14" type="module"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@ An installable web dashboard for the confirmed DITO web login flow: mobile valid
 
 ## Current limits
 
+- **Fetch all promos** loads every returned web category and follows pagination, deduplicating offers shared by multiple categories. Filter the fetched results by category or search by name, category, or validity. Any failed category, repeated page, or safety limit is reported as incomplete results. This covers the authenticated web catalog, not every DITO sales channel: DITO's [prepaid FAQ](https://dito.ph/prepaid) lists Long Expiry through GCash, so its absence from the web catalog does not establish account ineligibility.
 - Linked numbers are associated with the primary DITO account, but the authenticated list/switch API has not yet been captured. This project does not guess that route or present independently logged-in numbers as DITO-linked accounts.
 - The DITO web access token lasts about 30 minutes for both OTP and password logins, and there is no refresh exchange: the SPA bundles expose no token-renewal route, the refresh token embedded in the login JWT expires about a minute before the access token, and authenticated responses never rotate the token. So a single token cannot be extended.
 - Persistence is instead achieved through silent re-login. DITO web accepts a captcha-free password login (the graphic code is only required after repeated failures), so with "Stay signed in" enabled the dashboard stores the account password and transparently logs in again with it whenever the 30-minute token expires. Re-auth is attempted at most once per refresh; any failure clears the stored password, shows the expired card, and requires a manual login, so a wrong password cannot loop into a DITO lockout.
@@ -17,16 +18,42 @@ An installable web dashboard for the confirmed DITO web login flow: mobile valid
 - `proxy-server.js` — original localhost Node proxy; its sessions remain process-memory-only.
 - `wrangler.jsonc` — Worker static-assets and KV configuration.
 
-## Existing localhost mode
+## Local and GitHub Codespaces mode
 
-Run these in separate terminals from this directory:
+Install the pinned dependencies once, then start the server from this directory:
 
-```powershell
-node proxy-server.js
-python -m http.server 5173 --bind 127.0.0.1 --directory public
+```sh
+npm install
+npm start
 ```
 
-Open `http://localhost:5173`. In this mode, the frontend automatically uses `http://localhost:5174/api`.
+Open `http://localhost:5174`. The Node server serves both the dashboard and `/api` on the same port.
+
+In GitHub Codespaces, open port **5174** from the **Ports** panel and keep its visibility **Private**. Use that port's forwarded HTTPS URL for the dashboard. The frontend uses `/api` on the same forwarded URL, so no second port is needed. Keep the server task running while using the dashboard; restart it after the Codespace restarts.
+
+The older two-terminal setup (Node on port 5174 plus `python -m http.server 5173 --bind 127.0.0.1 --directory public`) remains supported for localhost use only.
+
+## Buy load for another recipient
+
+In local Node mode, sign in and use **Buy load for someone**:
+
+1. Enter a DITO recipient and check payment options. The recipient does not need to be signed in to this dashboard.
+2. Enter the regular-load amount and choose one of the external online payment methods returned by DITO.
+3. Review the recipient, load amount, quoted total, payment method, and five-minute quote expiry.
+4. Click **Confirm and create payment** once, then **Open payment checkout** to complete the gateway payment. HTTPS redirects, gateway forms, and scan-to-pay QR responses are supported.
+5. Use **Check payment status**. Only a DITO transaction response with status `C` is shown as completed. Creating checkout does not mean the recipient has received load.
+
+This buys new regular load through an external payment gateway. It does not transfer the payer's existing DITO balance or use DITO points. The server verifies the recipient, obtains the authoritative fee quote, validates the amount, and binds the confirmed request to a saved server-side quote. Editing client fields cannot change that quote. Duplicate submissions use the same local session record and are never automatically retried after a network error.
+
+Only payment channel/method pairs selected by DITO's inspected web checkout are offered; app-only/alternate provider methods are excluded. An unresolved payment for the same payer, recipient, and amount blocks another quote or confirmation even when a different method is selected. Checkout diagnostics expose only response types, HTTP status, and selected result codes; payment URLs, references, credentials, and raw messages are excluded. Earlier attempts without diagnostics still require transaction/provider-history checks.
+
+Load orders, payment references, and gateway handoffs remain in process memory. Reloading the browser preserves their visibility while that server runs, but restarting the Node process loses them. Check DITO/payment-provider history before retrying any uncertain payment, especially after a restart. Keep the forwarded port private.
+
+Cloudflare Worker mode explicitly disables this checkout and links to DITO's official Buy Load page. Encrypted KV sessions alone cannot guarantee atomic consumption of a payment quote across Worker instances. A durable coordinator is required before enabling checkout there.
+
+The request flow was matched to DITO's public frontend code and tested with mocked upstream responses; an end-to-end purchase on a real account has not been performed. Unsupported response shapes fail closed. Gateway HTML is served in an opaque sandbox with upstream scripts blocked; a gateway requiring custom scripts may need the official DITO page.
+
+See [Expantor study notes](../expantor/notes/2026-10-24-load-purchase.md) for the route mapping and validation record. Run the focused checks with `node tests/load-purchase.test.mjs` and `node tests/promo-catalog.test.mjs`.
 
 ## Cloudflare local development
 

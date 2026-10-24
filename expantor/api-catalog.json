@@ -1,0 +1,626 @@
+{
+  "title": "Expantor — DITO API study",
+  "version": 1,
+  "reviewedAt": "2026-10-24",
+  "upstreamOrigin": "https://my.dito.ph",
+  "sourceIndex": "sources.md",
+  "evidenceDefinitions": {
+    "implemented": "Constructed by project code; not independently account-verified in this notebook.",
+    "code-observed": "Found in official frontend code; server behavior and session compatibility remain unverified.",
+    "account-verified": "Reserved for a dated sanitized account experiment; not assigned in this initial catalog."
+  },
+  "authentication": "Implemented upstream requests use project-specific signing and Auth-Token headers. Code-observed routes may use a different runtime origin, prefix, or auth context. JSON examples alone are not runnable upstream requests.",
+  "placeholderPolicy": "All {{...}} values are placeholders. Numeric identifiers are strings in illustrative examples; match the verified request type before implementation.",
+  "endpoints": [
+    {
+      "id": "auth.captcha",
+      "group": "authentication",
+      "method": "GET",
+      "path": "/ecare/webs/captcha/{{requestSN}}",
+      "effect": "challenge creation",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Fetch the graphic challenge.",
+      "dashboardRoute": "/api/captcha",
+      "notes": "The dashboard creates its own session-bound requestSN. The upstream response is an image."
+    },
+    {
+      "id": "auth.account-check",
+      "group": "authentication",
+      "method": "POST",
+      "path": "/ecare/webs/user/login/check",
+      "effect": "account validation",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Check the supplied account number.",
+      "requestExample": {
+        "accNbr": "{{mobile}}"
+      },
+      "dashboardRoute": "/api/check"
+    },
+    {
+      "id": "auth.send-otp",
+      "group": "authentication",
+      "method": "POST",
+      "path": "/ecare/webs/message/sms/1/{{mobile}}",
+      "effect": "sends SMS",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Request an SMS OTP.",
+      "dashboardRoute": "/api/send-otp",
+      "notes": "Explicit manual action only. The project applies a 60-second throttle."
+    },
+    {
+      "id": "auth.login",
+      "group": "authentication",
+      "method": "POST",
+      "path": "/ecare/webs/user/login",
+      "effect": "creates authenticated session",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Sign in with an encrypted password or OTP.",
+      "requestExample": {
+        "account": "{{mobile}}",
+        "password": "{{encryptedCredential}}",
+        "channelType": "2",
+        "loginType": "1",
+        "pwdType": "0"
+      },
+      "dashboardRoute": "/api/login",
+      "notes": "Example is password mode. SMS mode uses loginType 0 / pwdType 1. Optional requestSN and captcha must correspond to a live challenge. The wrapper accepts the credential then encrypts it server-side; this upstream example is not the wrapper body."
+    },
+    {
+      "id": "account.subscriber",
+      "group": "account",
+      "method": "GET",
+      "path": "/ecare/webs/subs/qrySubsDetail?prodInstIds={{subsId}}",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Retrieve subscriber details.",
+      "dashboardRoute": "/api/accounts"
+    },
+    {
+      "id": "account.balance",
+      "group": "account",
+      "method": "GET",
+      "path": "/ecare/webs/account/{{acctId}}/balance",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Retrieve load balance and expiration.",
+      "dashboardRoute": "/api/accounts"
+    },
+    {
+      "id": "account.allocations",
+      "group": "account",
+      "method": "POST",
+      "path": "/ecare/webs/balance/balInfo",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Retrieve active resource balances.",
+      "requestExample": {
+        "prodInstId": "{{subsId}}"
+      },
+      "dashboardRoute": "/api/accounts",
+      "notes": "prodInstId is converted to a number by the backend."
+    },
+    {
+      "id": "account.summary",
+      "group": "account",
+      "method": "POST",
+      "path": "/ecare/webs/balance/balInfo/glSumInfo",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Retrieve allocation summary.",
+      "requestExample": {
+        "prodInstId": "{{subsId}}"
+      },
+      "dashboardRoute": "/api/accounts"
+    },
+    {
+      "id": "account.alias-profile",
+      "group": "account",
+      "method": "GET",
+      "path": "/ecare/webs/cust/qryUserInfo/{{userId}}",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P7"
+      ],
+      "summary": "Profile lookup inspected for authoritative alias fields.",
+      "notes": "Used by the browser extension, not the current dashboard catalog. Legal names are not a nickname fallback."
+    },
+    {
+      "id": "history.load",
+      "group": "history",
+      "method": "POST",
+      "path": "/ecare/webs/recharge/qryRechargeHis",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Load/recharge history.",
+      "requestExample": {
+        "accNbr": "{{mobile}}",
+        "beginDate": "{{startDate}} 00:00:00",
+        "endDate": "{{endDate}} 23:59:59",
+        "pageIndex": 1,
+        "pageSize": 20,
+        "rechargeMode": "all"
+      },
+      "dashboardRoute": "/api/history/recharge"
+    },
+    {
+      "id": "history.promos",
+      "group": "history",
+      "method": "POST",
+      "path": "/ecare/webs/subs/packageHisPageList",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Promo purchase history.",
+      "requestExample": {
+        "prodInstId": "{{subsId}}",
+        "startDate": "{{startDate}} 00:00:00",
+        "endDate": "{{endDate}} 23:59:59",
+        "pageIndex": 1,
+        "pageSize": 20
+      },
+      "dashboardRoute": "/api/history/package"
+    },
+    {
+      "id": "account.points",
+      "group": "account",
+      "method": "POST",
+      "path": "/ecare/webs/point/detail",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "summary": "Rewards points summary.",
+      "requestExample": {},
+      "dashboardRoute": "/api/points"
+    },
+    {
+      "id": "catalog.categories",
+      "group": "catalog",
+      "method": "POST",
+      "path": "/ecare/webs/shop/catg/list",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2",
+        "W1",
+        "W2",
+        "W5"
+      ],
+      "summary": "List categories under a supplied parent.",
+      "requestExample": {
+        "parentCatgCode": "ECARE_PROMO_WEB_PREPAID"
+      },
+      "dashboardRoute": "/api/promo/categories",
+      "notes": "The wrapper fixes this parent. Official flows also pass accNbr and use returned recipient categories or recommendation roots. Nested subProdCatgList and isMCCM flags need separate handling."
+    },
+    {
+      "id": "catalog.available",
+      "group": "catalog",
+      "method": "POST",
+      "path": "/ecare/webs/subs/available/promo/list",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2",
+        "W1"
+      ],
+      "summary": "List subscriber-available promos.",
+      "requestExample": {
+        "catgCodes": "{{categoryCode}}",
+        "pageInfo": {
+          "currentPage": 1,
+          "pageSize": 50
+        }
+      },
+      "dashboardRoute": "/api/promo/list",
+      "notes": "Official model consumes data.promoList and data.pageInfo.total/currentPage/pageSize. Dashboard wrapper body uses catgCode and pageIndex instead of these upstream names."
+    },
+    {
+      "id": "catalog.general",
+      "group": "catalog",
+      "method": "POST",
+      "path": "/ecare/webs/offer/promo/list",
+      "effect": "query",
+      "evidence": "code-observed",
+      "sources": [
+        "W1"
+      ],
+      "summary": "General catalog alternative selected when availableOnly is false.",
+      "requestExample": {
+        "catgCodes": "{{categoryCode}}",
+        "pageInfo": {
+          "currentPage": 1,
+          "pageSize": 20
+        }
+      },
+      "notes": "Not integrated. Listed offers must not be treated as eligible or purchasable without recipient validation."
+    },
+    {
+      "id": "catalog.detail",
+      "group": "catalog",
+      "method": "POST",
+      "path": "/ecare/webs/offer/promo/detail",
+      "effect": "query",
+      "evidence": "code-observed",
+      "sources": [
+        "W1"
+      ],
+      "summary": "Retrieve an offer detail.",
+      "knownRequestFields": [
+        "Payload is forwarded by the service; the complete required request schema has not been established."
+      ],
+      "notes": "Not integrated; do not guess an offer ID."
+    },
+    {
+      "id": "catalog.validate-offer",
+      "group": "catalog",
+      "method": "POST",
+      "path": "/ecare/webs/offer/validate",
+      "effect": "validation",
+      "evidence": "code-observed",
+      "sources": [
+        "W1",
+        "W5"
+      ],
+      "summary": "Validate a selected offer before checkout.",
+      "knownRequestFields": [
+        "Complete required request schema not established."
+      ],
+      "notes": "Request effects and eligibility outcomes need an authorized experiment."
+    },
+    {
+      "id": "recipient.validate",
+      "group": "recipient",
+      "method": "POST",
+      "path": "/ecare/webs/order/check-for-guest",
+      "effect": "validation; may issue transaction reference",
+      "evidence": "code-observed",
+      "sources": [
+        "W1",
+        "W3",
+        "W5"
+      ],
+      "summary": "Validate the intended recipient for the promo flow.",
+      "knownRequestFields": [
+        "accNbr",
+        "parentCatgCode",
+        "appVersion",
+        "showBuyPromoCode"
+      ],
+      "notes": "Partial field inventory. Official code accepts result 0 or 2 and consumes returned catgCode/transactionId. Auth-Token and X-CSRF-TOKEN handling is flow-specific; web-session compatibility is unverified."
+    },
+    {
+      "id": "catalog.guest-entry",
+      "group": "catalog",
+      "method": "GET",
+      "path": "/ecare/common/entity/PTO_PROMO_CATG_FOR_GUEST/records",
+      "effect": "query",
+      "evidence": "code-observed",
+      "sources": [
+        "W1",
+        "W6"
+      ],
+      "summary": "Retrieve guest entry cards and their destination URLs.",
+      "notes": "Different base path from /ecare/webs. The guest page uses DESC, IMAGE_URL, BUTTON_NAME, and BUTTON_URL; it is not itself the full offer inventory."
+    },
+    {
+      "id": "marketing.campaigns",
+      "group": "personalized",
+      "method": "POST",
+      "path": "/market/MarketingController/qryCampInfo",
+      "effect": "query",
+      "evidence": "code-observed",
+      "sources": [
+        "W1",
+        "W4"
+      ],
+      "summary": "Query personalized campaign offers.",
+      "requestExample": {
+        "accNbr": "{{mobile}}",
+        "identityId": "{{subsId}}",
+        "identityType": 2,
+        "channelCode": "APP",
+        "adviceCode": "ECARE_APP_PROMO"
+      },
+      "notes": "The service prepends a runtime urlPrefix. Buy Promo uses ECARE_APP_BUY_PROMO as an advice code in another branch. These are observed frontend values, not a proven way to change web-session permissions. No verified dashboard integration."
+    },
+    {
+      "id": "marketing.contact-detail",
+      "group": "personalized",
+      "method": "POST",
+      "path": "/market/MarketingController/qryMarketContactDetail",
+      "effect": "query",
+      "evidence": "code-observed",
+      "sources": [
+        "W1"
+      ],
+      "summary": "Read details for a campaign contact returned by the service.",
+      "requestExample": {
+        "accNbr": "{{mobile}}",
+        "subsId": "{{subsId}}",
+        "channelCode": "APP",
+        "contactId": "{{contactId}}",
+        "treatmentInstCode": "{{treatmentInstCode}}"
+      },
+      "notes": "Runtime urlPrefix and compatible auth context are unverified. Use only identifiers returned by the authorized flow."
+    },
+    {
+      "id": "catalog.buy-again",
+      "group": "catalog",
+      "method": "POST",
+      "path": "/ecare/webs/subs/offer/available-for-buy-again",
+      "effect": "query",
+      "evidence": "code-observed",
+      "sources": [
+        "W1"
+      ],
+      "summary": "List offers available for the buy-again flow.",
+      "requestExample": {}
+    },
+    {
+      "id": "catalog.buy-again-check",
+      "group": "catalog",
+      "method": "POST",
+      "path": "/ecare/webs/subs/offer/buy-again/check",
+      "effect": "validation",
+      "evidence": "code-observed",
+      "sources": [
+        "W1"
+      ],
+      "summary": "Validate a buy-again selection.",
+      "knownRequestFields": [
+        "Complete required request schema not established."
+      ]
+    },
+    {
+      "id": "load.amounts",
+      "group": "load",
+      "method": "POST",
+      "path": "/ecare/webs/recharge/amount-list-for-h5",
+      "effect": "query",
+      "evidence": "code-observed",
+      "sources": [
+        "W1",
+        "W7"
+      ],
+      "summary": "Load denominations for a recipient.",
+      "requestExample": {
+        "accNbr": "{{recipientMobile}}"
+      },
+      "notes": "Official H5 requests carry a channel_code header from runtime configuration."
+    },
+    {
+      "id": "load.h5-fees",
+      "group": "load",
+      "method": "POST",
+      "path": "/ecare/webs/recharge/calc-fee-for-h5",
+      "effect": "quote/fee calculation",
+      "evidence": "code-observed",
+      "sources": [
+        "W1",
+        "W7"
+      ],
+      "summary": "Calculate the load payment amounts.",
+      "knownRequestFields": [
+        "accNbr",
+        "amount",
+        "channelCode"
+      ],
+      "notes": "Partial field inventory. channel_code header is supplied by the official H5 service."
+    },
+    {
+      "id": "load.web-fees",
+      "group": "load",
+      "method": "POST",
+      "path": "/ecare/webs/recharge/calcFee",
+      "effect": "quote/fee calculation",
+      "evidence": "implemented",
+      "sources": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "summary": "Web load fee calculation.",
+      "notes": "Implemented in local Node mode using the official web request flow; real-account acceptance has not been verified. See notes/2026-10-24-load-purchase.md.",
+      "requestExample": {
+        "amount": "{{loadAmount}}",
+        "channelId": 2
+      },
+      "dashboardRoute": "/api/load/quote"
+    },
+    {
+      "id": "load.validate-amount",
+      "group": "load",
+      "method": "POST",
+      "path": "/ecare/webs/recharge/amount/validation",
+      "effect": "validation",
+      "evidence": "implemented",
+      "sources": [
+        "W1",
+        "P8",
+        "P9"
+      ],
+      "summary": "Validate a load amount.",
+      "notes": "Implemented in local Node mode using the official web request flow; real-account acceptance has not been verified. See notes/2026-10-24-load-purchase.md.",
+      "requestExample": {
+        "accNbr": "{{recipientMobile}}",
+        "amount": "{{quotedOriginalAmount}}"
+      },
+      "dashboardRoute": "/api/load/quote"
+    },
+    {
+      "id": "payment.methods",
+      "group": "payment",
+      "method": "POST",
+      "path": "/ecare/webs/payMethod/query",
+      "effect": "payment-method query",
+      "evidence": "implemented",
+      "sources": [
+        "W1",
+        "W7",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "summary": "Retrieve payment options for the selected flow.",
+      "notes": "Implemented in local Node mode using the official web request flow; real-account acceptance has not been verified. See notes/2026-10-24-load-purchase.md.",
+      "requestExample": {
+        "source": 5,
+        "payEvent": "recharge"
+      },
+      "dashboardRoute": "/api/load/options"
+    },
+    {
+      "id": "payment.promo-purchase",
+      "group": "payment",
+      "method": "POST",
+      "path": "/ecare/webs/payment/prePay",
+      "effect": "may create order and spend real load",
+      "evidence": "implemented",
+      "sources": [
+        "P1",
+        "P2",
+        "W1",
+        "W3",
+        "W5"
+      ],
+      "summary": "Purchase a selected promo in the implemented own-account flow.",
+      "requestExample": {
+        "businessType": 2,
+        "appCode": "Web Selfcare",
+        "source": 5,
+        "payChannel": "WSS",
+        "servEventId": 1,
+        "custId": "{{custId}}",
+        "businessData": {
+          "accNbr": "{{mobile}}",
+          "offerId": "{{offerId}}",
+          "billFlag": true
+        }
+      },
+      "dashboardRoute": "/api/promo/buy",
+      "notes": "Documentation only; excluded from the runnable collection. The dashboard fixes the recipient to the selected signed-in account. Official app-style payment branches differ and are not an instruction to modify the channel or recipient blindly."
+    },
+    {
+      "id": "payment.load-submit",
+      "group": "payment",
+      "method": "POST",
+      "path": "/ecare/webs/payMethod/submit",
+      "effect": "may create payment/order",
+      "evidence": "implemented",
+      "sources": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "summary": "Submit payment for a selected load recipient.",
+      "notes": "Implemented in local Node mode using the official web request flow; real-account acceptance has not been verified. See notes/2026-10-24-load-purchase.md.",
+      "requestExample": {
+        "accNbr": "{{recipientMobile}}",
+        "paymentMethodId": "{{returnedMethodId}}",
+        "paymentChannelId": "{{returnedChannelId}}",
+        "charge": "{{quotedOriginalAmount}}",
+        "servEventId": 1,
+        "channelId": 2
+      },
+      "dashboardRoute": "/api/load/submit"
+    },
+    {
+      "id": "load.recipient-exists",
+      "group": "load",
+      "method": "GET",
+      "path": "/ecare/webs/user/{{recipientMobile}}/exist",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "summary": "Verify the selected load recipient.",
+      "dashboardRoute": "/api/load/options"
+    },
+    {
+      "id": "load.denominations",
+      "group": "load",
+      "method": "POST",
+      "path": "/ecare/webs/common/configParam",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "summary": "Web load denominations.",
+      "requestExample": {
+        "configCode": "webs.ecare.recharge.web.amount-list-config"
+      },
+      "dashboardRoute": "/api/load/options"
+    },
+    {
+      "id": "load.transaction-status",
+      "group": "load",
+      "method": "GET",
+      "path": "/ecare/webs/transaction?paymentSn={{paymentReference}}",
+      "effect": "query",
+      "evidence": "implemented",
+      "sources": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "summary": "Check a submitted payment; only status C is marked completed.",
+      "dashboardRoute": "/api/load/status"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 "use strict";
 
-const CACHE = "dito-dashboard-v11";
-const SHELL = ["/", "/app.css", "/app.js?v=11", "/manifest.webmanifest", "/icons/icon.svg"];
+const CACHE = "dito-dashboard-v14";
+const SHELL = ["/", "/app.css", "/app.js?v=14", "/promo-catalog.mjs", "/manifest.webmanifest", "/icons/icon.svg"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)));

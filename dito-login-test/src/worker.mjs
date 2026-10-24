@@ -298,6 +298,13 @@ async function handleApi(request, env) {
   }
   if (!verifySameOrigin(request)) return json(403, { error: "cross-origin request rejected" });
 
+  if (path === "/api/load/capabilities" && request.method === "GET") {
+    return json(200, { supported: false, reason: "Buy Load currently runs in local Node mode. Use DITO's official Buy Load checkout for this deployment." });
+  }
+  if (path.startsWith("/api/load/")) {
+    return json(501, { error: "Load checkout requires the local Node server. Cloudflare KV does not provide the atomic checkout state needed to prevent duplicate submissions." });
+  }
+
   if (path === "/api/captcha" && request.method === "GET") {
     await sessionKey(env);
     const requestSN = crypto.randomUUID();

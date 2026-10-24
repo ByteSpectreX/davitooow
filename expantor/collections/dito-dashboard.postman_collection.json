@@ -1,0 +1,206 @@
+{
+  "info": {
+    "name": "Expantor — DITO dashboard queries",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Query routes implemented by the local DITO dashboard. No OTP, login, purchase, payment submission, or logout requests. Existing sessions can silently reauthenticate when Stay signed in is enabled. A Postman cookie jar does not inherit a browser login. Values are placeholders. Upstream evidence and unresolved schemas are recorded separately in ../api-catalog.json."
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5174",
+      "type": "string"
+    },
+    {
+      "key": "categoryCode",
+      "value": "REPLACE_WITH_RETURNED_CATEGORY_CODE",
+      "type": "string"
+    },
+    {
+      "key": "startDate",
+      "value": "2026-10-01",
+      "type": "string"
+    },
+    {
+      "key": "endDate",
+      "value": "2026-10-24",
+      "type": "string"
+    },
+    {
+      "key": "recipientMobile",
+      "value": "REPLACE_WITH_AUTHORIZED_DITO_NUMBER",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Service",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/health",
+            "description": "Local service availability; no DITO request is made. Upstream catalog IDs: . Requires the dashboard session cookie except for health. See the Expantor README for authentication limits."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Account",
+      "item": [
+        {
+          "name": "Account and active allocations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/accounts",
+            "description": "Combines data for signed-in accounts. May reauthenticate stored sessions. Upstream catalog IDs: account.subscriber, account.balance, account.allocations, account.summary. Requires the dashboard session cookie except for health. See the Expantor README for authentication limits."
+          },
+          "response": []
+        },
+        {
+          "name": "Points",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/points",
+            "description": " Upstream catalog IDs: account.points. Requires the dashboard session cookie except for health. See the Expantor README for authentication limits."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Promos",
+      "item": [
+        {
+          "name": "Promo categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/promo/categories",
+            "description": "Current wrapper fixes the parent to ECARE_PROMO_WEB_PREPAID. Upstream catalog IDs: catalog.categories. Requires the dashboard session cookie except for health. See the Expantor README for authentication limits."
+          },
+          "response": []
+        },
+        {
+          "name": "Promo list — one page",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/promo/list",
+            "description": "Use a category code from Promo categories. This collection request does not fetch all pages automatically. Upstream catalog IDs: catalog.available. Requires the dashboard session cookie except for health. See the Expantor README for authentication limits.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"catgCode\": \"{{categoryCode}}\",\n  \"pageIndex\": 1,\n  \"pageSize\": 50\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "item": [
+        {
+          "name": "Load history",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/history/recharge",
+            "description": " Upstream catalog IDs: history.load. Requires the dashboard session cookie except for health. See the Expantor README for authentication limits.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"startDate\": \"{{startDate}}\",\n  \"endDate\": \"{{endDate}}\",\n  \"pageIndex\": 1,\n  \"pageSize\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Promo history",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/history/package",
+            "description": " Upstream catalog IDs: history.promos. Requires the dashboard session cookie except for health. See the Expantor README for authentication limits.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"startDate\": \"{{startDate}}\",\n  \"endDate\": \"{{endDate}}\",\n  \"pageIndex\": 1,\n  \"pageSize\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Buy Load discovery",
+      "item": [
+        {
+          "name": "Load checkout capabilities",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/load/capabilities",
+            "description": "Reports whether the current deployment supports local load checkout."
+          },
+          "response": []
+        },
+        {
+          "name": "Recipient and online payment options",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/load/options",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"recipient\": \"{{recipientMobile}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": "Requires a local signed-in session. Queries recipient, denominations, and supported online payment options. No payment submission."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

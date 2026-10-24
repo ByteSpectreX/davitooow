@@ -1,5 +1,7 @@
 "use strict";
 
+import { fetchPromoPages, mergeCategoryPromos } from "./promo-catalog.mjs";
+
 const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1"]);
 const API = location.port === "5173" && LOCAL_HOSTS.has(location.hostname)
   ? `http://${location.hostname}:5174/api`
@@ -145,6 +147,7 @@ async function refreshAccounts() {
     const result = await api("/accounts");
     const accounts = result.accounts || [];
     renderAccounts(accounts);
+    if (accounts.some((account) => account.ok)) refreshLoadOrders();
     log(`Loaded ${accounts.length} account(s).`);
     if (accounts.some((account) => account.renewed)) {
       log("Session auto-renewed with the stored password (no OTP needed).");
@@ -258,6 +261,15 @@ $("refresh").addEventListener("click", refreshAccounts);
 $("logout").addEventListener("click", async () => {
   await api("/session", { method: "DELETE" });
   renderAccounts([]);
+  promoCategoriesLoaded = false;
+  currentPromos = [];
+  promoCatalogLoaded = false;
+  promoLoadGeneration++;
+  promoWarnings = [];
+  $("promoResult").innerHTML = "";
+  $("promoStatus").textContent = "";
+  resetLoadPurchase();
+  $("loadOrders").innerHTML = "";
   setStatus("Session cleared.");
 });
 
@@ -282,24 +294,176 @@ $("install").addEventListener("click", async () => {
   $("install").classList.add("hidden");
 });
 
-// ---- Available promos (browse; purchase pending capture) ----
+// ---- Buy load for a recipient ----
+let loadGeneration = 0;
+let currentLoadQuote = null;
+
+function loadStatus(message, error = false) {
+  $("loadStatus").textContent = message;
+  $("loadStatus").className = error ? "error" : "";
+}
+
+function resetLoadQuote() {
+  currentLoadQuote = null;
+  $("loadQuote").classList.add("hidden");
+}
+
+function resetLoadPurchase() {
+  loadGeneration++;
+  resetLoadQuote();
+  $("loadFields").classList.add("hidden");
+  $("loadMethod").innerHTML = "";
+  $("loadAmount").value = "";
+  loadStatus("");
+}
+
+$("loadRecipient").addEventListener("input", resetLoadPurchase);
+$("loadAmount").addEventListener("input", () => { loadGeneration++; resetLoadQuote(); });
+$("loadMethod").addEventListener("change", () => { loadGeneration++; resetLoadQuote(); });
+$("loadCancel").addEventListener("click", resetLoadQuote);
+
+$("loadOptions").addEventListener("click", async () => {
+  const generation = ++loadGeneration;
+  resetLoadQuote();
+  $("loadFields").classList.add("hidden");
+  $("loadOptions").disabled = true;
+  loadStatus("Checking the recipient and available payment options…");
+  try {
+    const result = await api("/load/options", { method: "POST", body: JSON.stringify({ recipient: $("loadRecipient").value }) });
+    if (generation !== loadGeneration) return;
+    $("loadAmounts").innerHTML = result.amounts.map((item) => `<option value="${escapeHtml(item.amount)}"></option>`).join("");
+    $("loadMethod").innerHTML = '<option value="">Select a payment method</option>' + result.methods.map((method) =>
+      `<option value="${escapeHtml(method.key)}">${escapeHtml(method.name)}</option>`).join("");
+    $("loadFields").classList.remove("hidden");
+    loadStatus("Recipient recognized. Enter the load amount and select a payment method.");
+  } catch (error) { if (generation === loadGeneration) loadStatus(error.message, true); }
+  finally { $("loadOptions").disabled = false; }
+});
+
+$("loadReview").addEventListener("click", async () => {
+  const generation = ++loadGeneration;
+  resetLoadQuote();
+  $("loadReview").disabled = true;
+  loadStatus("Checking the final price and recipient eligibility…");
+  try {
+    const result = await api("/load/quote", { method: "POST", body: JSON.stringify({
+      recipient: $("loadRecipient").value, amount: $("loadAmount").value, paymentKey: $("loadMethod").value,
+    }) });
+    if (generation !== loadGeneration) return;
+    currentLoadQuote = result.quote;
+    const q = currentLoadQuote;
+    $("loadQuoteText").textContent = `Recipient: 0${q.recipient}. Load: ₱${q.amount}. Total to pay: ₱${q.total}. Payment method: ${q.paymentMethod}. Quote expires at ${new Date(q.expiresAt).toLocaleTimeString()}.`;
+    $("loadQuote").classList.remove("hidden");
+    loadStatus("Review the details before confirming.");
+  } catch (error) { if (generation === loadGeneration) loadStatus(error.message, true); }
+  finally { $("loadReview").disabled = false; }
+});
+
+$("loadConfirm").addEventListener("click", async () => {
+  const quote = currentLoadQuote;
+  if (!quote) return;
+  resetLoadQuote();
+  $("loadConfirm").disabled = true;
+  loadStatus("Creating one payment order. Please wait…");
+  try {
+    const result = await api("/load/submit", { method: "POST", body: JSON.stringify({ quoteId: quote.id, confirmed: true }) });
+    loadStatus(result.order.status === "pending"
+      ? "Payment is pending. Open checkout below to pay, then check its status."
+      : "Checkout could not be opened. This does not confirm a payment or load credit. Check the existing payment below; do not create another for the same amount.", result.order.status !== "pending");
+  } catch (error) { loadStatus(`${error.message} Do not resubmit; check pending payments below.`, true); }
+  finally { $("loadConfirm").disabled = false; await refreshLoadOrders(); }
+});
+
+async function refreshLoadOrders() {
+  const generation = loadGeneration;
+  try {
+    const result = await api("/load/orders");
+    if (generation !== loadGeneration) return;
+    const labels = { submitting: "Creating payment — do not submit again", pending: "Awaiting payment / gateway confirmation",
+      unknown: "Checkout unavailable — payment and load credit have not been confirmed", completed: "Payment completed", failed: "DITO reports this payment failed" };
+    const issues = {
+      "legacy-unknown": "This earlier attempt has a payment reference, but its checkout response was not recorded. Check its status or DITO/payment-provider history before retrying.",
+      "handoff-unavailable": "DITO returned no supported payment link, form, or QR code. No successful payment has been confirmed.",
+      "upstream-response": "DITO returned an error or unexpected HTTP response while creating checkout. Check the existing payment before retrying.",
+      "network-uncertain": "The checkout request did not finish normally. Its outcome must be checked before retrying.",
+    };
+    $("loadOrders").innerHTML = result.orders.slice().reverse().map((order) => `<article class="account">
+      <h3>₱${escapeHtml(order.amount)} load for 0${escapeHtml(order.recipient)}</h3>
+      <p>Total: ₱${escapeHtml(order.total)} · ${escapeHtml(order.paymentMethod)}</p>
+      <p>${escapeHtml(labels[order.status] || "Unconfirmed payment")}</p>
+      ${order.status === "unknown" && issues[order.checkoutIssue] ? `<p class="muted">${escapeHtml(issues[order.checkoutIssue])}</p>` : ""}
+      ${order.lastCheckedAt ? `<p class="muted">Last checked: ${escapeHtml(new Date(order.lastCheckedAt).toLocaleTimeString())}${order.upstreamState ? ` · DITO status: ${escapeHtml(order.upstreamState)}` : " · DITO did not return a recognized status"}</p>` : ""}
+      ${order.checkoutAvailable && order.status === "pending" ? `<a class="checkout-link" href="${API}/load/checkout/${encodeURIComponent(order.id)}" target="_blank" rel="noopener noreferrer">Open payment checkout</a>` : ""}
+      ${order.hasPaymentReference && order.status !== "completed" && order.status !== "failed" ? `<button class="load-check secondary" type="button" data-quote="${escapeHtml(order.id)}">Check payment status</button>` : ""}
+      ${order.diagnostics ? `<details><summary>Technical details (redacted)</summary><pre>${escapeHtml(JSON.stringify(order.diagnostics, null, 2))}</pre></details>` : ""}
+    </article>`).join("");
+  } catch (error) {
+    if (error.status !== 401 && error.status !== 501) loadStatus("Pending orders could not be loaded. Check payment history before starting another purchase.", true);
+  }
+}
+
+$("loadOrders").addEventListener("click", async (event) => {
+  const button = event.target.closest(".load-check");
+  if (!button) return;
+  button.disabled = true;
+  try {
+    const result = await api("/load/status", { method: "POST", body: JSON.stringify({ quoteId: button.dataset.quote }) });
+    await refreshLoadOrders();
+    const status = result.order.status;
+    loadStatus(status === "completed" ? "DITO confirmed this payment completed."
+      : status === "failed" ? "DITO reports this payment failed. Check your payment-provider history before starting another."
+      : "Status checked. DITO has not confirmed completion. Keep using the existing payment entry; do not create a duplicate.", status === "unknown");
+  } catch (error) { loadStatus(error.message, true); }
+  finally { button.disabled = false; }
+});
+
+async function loadCapabilities() {
+  try {
+    const result = await api("/load/capabilities");
+    if (!result.supported) {
+      $("loadOptions").disabled = true;
+      $("loadRecipient").disabled = true;
+      loadStatus(result.reason, true);
+    }
+  } catch { loadStatus("Buy Load is unavailable. Use the official DITO page linked below.", true); $("loadOptions").disabled = true; }
+}
+
+// ---- Available promos ----
 let promoCategoriesLoaded = false;
+let promoCategories = [];
+let promoCategoriesRequest = null;
 
 async function loadPromoCategories() {
-  try {
+  if (promoCategoriesRequest) return promoCategoriesRequest;
+  promoCategoriesRequest = (async () => {
     const result = await api("/promo/categories");
-    const cats = result.body?.prodCatgList || [];
-    // Send the category `code`; show the friendly `name`.
-    $("promoCat").innerHTML = cats.map((c) => `<option value="${escapeHtml(c.code)}">${escapeHtml(c.name || c.code)}</option>`).join("");
-    promoCategoriesLoaded = cats.length > 0;
+    const cats = result.body?.prodCatgList;
+    if (!Array.isArray(cats) || cats.some((c) => typeof c.code !== "string" || !c.code)) {
+      throw new Error("DITO did not return a valid category list.");
+    }
+    promoCategories = [...new Map(cats.map((c) => [c.code, c])).values()];
+    const selected = $("promoCat").value;
+    $("promoCat").innerHTML = '<option value="">All categories</option>' + promoCategories.map((c) => `<option value="${escapeHtml(c.code)}">${escapeHtml(c.name || c.code)}</option>`).join("");
+    if (promoCategories.some((c) => c.code === selected)) $("promoCat").value = selected;
+    promoCategoriesLoaded = true;
+    return promoCategories;
+  })();
+  try {
+    return await promoCategoriesRequest;
   } catch (error) {
     promoCategoriesLoaded = false;
+    $("promoStatus").textContent = `Could not load promo categories: ${error.message}`;
+    $("promoStatus").className = "error";
+    return null;
+  } finally {
+    promoCategoriesRequest = null;
   }
 }
 
 function renderPromoCards(promos) {
-  if (!promos.length) return `<p class="muted">No promos in this category.</p>`;
-  return promos.map((p, index) => {
+  if (!promos.length) return `<p class="muted">No matching promos returned.</p>`;
+  return promos.map((p) => {
+    const index = currentPromos.indexOf(p);
     const discounted = p.displayListPrice && p.displaySalesPrice && p.displayListPrice !== p.displaySalesPrice;
     const validity = p.validityPeriod ? `${escapeHtml(String(p.validityPeriod))} ${escapeHtml(p.validityPeriodUnit || "days")}` : "";
     return `
@@ -308,6 +472,7 @@ function renderPromoCards(promos) {
         <div class="balance">${escapeHtml(p.displaySalesPrice || p.salesPrice || "")}</div>
         ${discounted ? `<p class="muted"><s>${escapeHtml(p.displayListPrice)}</s>${p.discountRate ? " · " + escapeHtml(String(p.discountRate)) + "% off" : ""}</p>` : ""}
         ${validity ? `<p class="muted">Valid for ${validity}</p>` : ""}
+        <p class="muted">${escapeHtml(p.catalogCategories.map((c) => c.name || c.code).join(" · "))}</p>
         ${p.brief ? `<p>${escapeHtml(p.brief)}</p>` : ""}
         <button class="promo-buy" type="button" data-index="${index}">Buy with load</button>
       </article>`;
@@ -315,6 +480,28 @@ function renderPromoCards(promos) {
 }
 
 let currentPromos = [];
+let promoCatalogLoaded = false;
+let promoWarnings = [];
+let promoLoadGeneration = 0;
+
+function filterPromos() {
+  if (!promoCatalogLoaded) return;
+  const category = $("promoCat").value;
+  const query = $("promoSearch").value.trim().toLowerCase();
+  const visible = currentPromos.filter((p) => {
+    const inCategory = !category || p.catalogCategories.some((c) => c.code === category);
+    const text = [p.offerName, p.brief, p.validityPeriod, p.validityPeriodUnit,
+      ...p.catalogCategories.map((c) => c.name || c.code)].join(" ").toLowerCase();
+    return inCategory && (!query || text.includes(query));
+  });
+  $("promoResult").innerHTML = renderPromoCards(visible);
+  const summary = `Showing ${visible.length} of ${currentPromos.length} unique promos from ${promoCategories.length} web categories.`;
+  $("promoStatus").textContent = summary + (promoWarnings.length ? ` Results incomplete: ${promoWarnings.join("; ")}` : "");
+  $("promoStatus").className = promoWarnings.length ? "error" : "";
+}
+
+$("promoCat").addEventListener("change", filterPromos);
+$("promoSearch").addEventListener("input", filterPromos);
 
 // In-app purchase confirmation modal. Returns a Promise<boolean>. Requires an
 // explicit "Confirm purchase" click; Cancel, backdrop click, or Escape all abort.
@@ -345,28 +532,51 @@ function confirmPurchase(promo) {
 }
 
 async function loadPromos() {
-  const catgCode = $("promoCat").value;
-  if (!catgCode) { $("promoStatus").textContent = "No category selected."; return; }
+  const generation = ++promoLoadGeneration;
   $("promoLoad").disabled = true;
+  $("promoCat").disabled = true;
   $("promoStatus").textContent = "Loading promos…";
   $("promoStatus").className = "";
+  currentPromos = [];
+  promoCatalogLoaded = false;
+  promoWarnings = [];
+  $("promoResult").innerHTML = "";
   try {
-    const result = await api("/promo/list", { method: "POST", body: JSON.stringify({ catgCode, pageIndex: 1, pageSize: 50 }) });
-    currentPromos = result.body?.data?.promoList || [];
-    $("promoResult").innerHTML = renderPromoCards(currentPromos);
-    $("promoStatus").textContent = "";
+    const categories = await loadPromoCategories();
+    if (generation !== promoLoadGeneration) return;
+    if (!categories) return;
+    if (!categories.length) throw new Error("DITO returned no web promo categories for this account.");
+    const catalog = new Map();
+    for (const [index, category] of categories.entries()) {
+      const result = await fetchPromoPages(
+        (pageIndex) => {
+          if (generation !== promoLoadGeneration) throw new Error("Promo fetch cancelled.");
+          return api("/promo/list", { method: "POST", body: JSON.stringify({ catgCode: category.code, pageIndex, pageSize: 50 }) });
+        },
+        (page) => {
+          if (generation === promoLoadGeneration) {
+            $("promoStatus").textContent = `Loading ${category.name || category.code} (${index + 1}/${categories.length}), page ${page}…`;
+          }
+        }
+      );
+      if (generation !== promoLoadGeneration) return;
+      mergeCategoryPromos(catalog, result.promos, category);
+      if (!result.complete) promoWarnings.push(`${category.name || category.code}: ${result.warning}`);
+    }
+    currentPromos = [...catalog.values()];
+    promoCatalogLoaded = true;
+    filterPromos();
   } catch (error) {
     $("promoStatus").textContent = error.message;
     $("promoStatus").className = "error";
     $("promoResult").innerHTML = "";
   } finally {
     $("promoLoad").disabled = false;
+    $("promoCat").disabled = false;
   }
 }
 
-$("promoLoad").addEventListener("click", () => {
-  if (!promoCategoriesLoaded) { loadPromoCategories().then(loadPromos); } else { loadPromos(); }
-});
+$("promoLoad").addEventListener("click", loadPromos);
 
 $("promoResult").addEventListener("click", async (event) => {
   const button = event.target.closest(".promo-buy");
@@ -519,4 +729,5 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch((error) => log(`PWA setup failed: ${error.message}`)));
 }
 
+loadCapabilities();
 refreshAccounts();

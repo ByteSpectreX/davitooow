@@ -1,5 +1,8 @@
 const http = require("http");
 const crypto = require("crypto");
+const { readFile } = require("node:fs/promises");
+const path = require("node:path");
+const loadService = import("./src/load-purchase.mjs?revision=20261024-checkout2");
 
 const PORT = Number(process.env.PORT || 5174);
 const PWA_ORIGIN = "http://localhost:5173";
@@ -7,9 +10,39 @@ const DITO_BASE = "https://my.dito.ph/ecare/webs";
 const AES_KEY = Buffer.from("4EGJ6D9CFFA2GG9A", "utf8");
 const AES_IV = Buffer.from("0102030405060708", "utf8");
 const SIGN_SALT = "32BytesString";
+const PUBLIC_FILES = new Map([
+  ["/", ["index.html", "text/html; charset=utf-8"]],
+  ["/index.html", ["index.html", "text/html; charset=utf-8"]],
+  ["/app.js", ["app.js", "text/javascript; charset=utf-8"]],
+  ["/promo-catalog.mjs", ["promo-catalog.mjs", "text/javascript; charset=utf-8"]],
+  ["/app.css", ["app.css", "text/css; charset=utf-8"]],
+  ["/sw.js", ["sw.js", "text/javascript; charset=utf-8"]],
+  ["/manifest.webmanifest", ["manifest.webmanifest", "application/manifest+json"]],
+  ["/icons/icon.svg", ["icons/icon.svg", "image/svg+xml"]],
+]);
+
+async function servePublicFile(req, res) {
+  if (req.method !== "GET" && req.method !== "HEAD") return false;
+  const pathname = new URL(req.url, "http://localhost").pathname;
+  const asset = PUBLIC_FILES.get(pathname);
+  if (!asset) return false;
+  const [filename, contentType] = asset;
+  const body = await readFile(path.join(__dirname, "public", filename));
+  res.writeHead(200, {
+    "Content-Type": contentType,
+    "Content-Length": body.length,
+    "Cache-Control": "no-cache",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "no-referrer",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
+    "Content-Security-Policy": "default-src 'self'; connect-src 'self' http://localhost:5174 http://127.0.0.1:5174; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'",
+  });
+  res.end(req.method === "HEAD" ? undefined : body);
+  return true;
+}
 
 // Local proof-of-concept only: sessions disappear when this process stops.
-const sessions = new Map();
+let sessions = new Map();
 const otpRequestTimes = new Map();
 
 function aesEncryptBase64(plaintext) {
@@ -60,7 +93,7 @@ async function callDito(pathAfterWebs, method, bodyObj, authToken = "") {
     timestamp,
     signcode: computeSigncode(pathAfterWebs, method, bodyObj, authToken, timestamp),
   };
-  const options = { method, headers };
+  const options = { method, headers, signal: AbortSignal.timeout(20_000) };
   if (method !== "GET" && bodyObj !== undefined) {
     options.body = JSON.stringify(bodyObj);
   }
@@ -296,6 +329,78 @@ function clampPage(value, fallback, max) {
   return Number.isInteger(n) && n >= 1 && n <= max ? n : fallback;
 }
 
+async function handleLoadApi(req, res) {
+  const service = await loadService;
+  const url = new URL(req.url, "http://localhost");
+  if (url.pathname === "/api/load/capabilities" && req.method === "GET") {
+    return sendJson(res, 200, { supported: true });
+  }
+  const origin = req.headers.origin;
+  const requestHosts = [req.headers.host, req.headers["x-forwarded-host"]].filter(Boolean);
+  const sameOrigin = origin && requestHosts.some((host) => origin === `https://${host}` || origin === `http://${host}`);
+  const legacyOrigin = origin === PWA_ORIGIN || origin === "http://127.0.0.1:5173";
+  if ((origin && !sameOrigin && !legacyOrigin) || req.headers["sec-fetch-site"] === "cross-site") {
+    return sendJson(res, 403, { error: "cross-origin load request rejected" });
+  }
+  const current = getSession(req);
+  if (!current) return sendJson(res, 401, { error: "Sign in before buying load." });
+  try {
+    if (url.pathname === "/api/load/orders" && req.method === "GET") {
+      return sendJson(res, 200, { orders: Object.values(current.session.loadQuotes || {})
+        .filter((quote) => quote.status !== "ready").map(service.publicQuote) });
+    }
+    if (url.pathname.startsWith("/api/load/checkout/") && req.method === "GET") {
+      const quote = service.findLoadQuote(current.session, url.pathname.slice("/api/load/checkout/".length));
+      if (!quote.gateway || quote.status !== "pending") return sendJson(res, 409, { error: "No pending checkout is available." });
+      const headers = { "Cache-Control": "no-store", "Referrer-Policy": "no-referrer", "X-Content-Type-Options": "nosniff" };
+      if (quote.gateway.type === "url") {
+        res.writeHead(303, { ...headers, Location: quote.gateway.value });
+        return res.end();
+      }
+      const nonce = crypto.randomBytes(24).toString("base64");
+      let html;
+      if (quote.gateway.type === "qr") {
+        const QRCode = require("qrcode");
+        const svg = await QRCode.toString(quote.gateway.value, { type: "svg", errorCorrectionLevel: "M" });
+        html = `<!doctype html><meta charset="utf-8"><title>DITO load payment</title><h1>Scan to pay</h1><p>Scan this code using the selected payment app. Check payment status in your dashboard after paying.</p><div style="max-width:360px">${svg}</div>`;
+      } else html = service.paymentFormPage(quote.gateway.value, nonce);
+      res.writeHead(200, { ...headers, "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": `sandbox allow-forms allow-scripts; default-src 'none'; script-src 'nonce-${nonce}'; style-src 'unsafe-inline'; form-action https:; base-uri 'none'; frame-ancestors 'none'` });
+      return res.end(html);
+    }
+    if (req.method !== "POST" || !["/api/load/options", "/api/load/quote", "/api/load/submit", "/api/load/status"].includes(url.pathname)) {
+      return sendJson(res, 404, { error: "not found" });
+    }
+    if (!req.headers["content-type"]?.toLowerCase().startsWith("application/json")) {
+      return sendJson(res, 415, { error: "Send a JSON request." });
+    }
+    const input = await readBody(req);
+    if (url.pathname === "/api/load/submit" || url.pathname === "/api/load/status") {
+      const quote = service.findLoadQuote(current.session, input.quoteId);
+      if (url.pathname === "/api/load/submit" && quote.status !== "ready") {
+        if (input.confirmed !== true) return sendJson(res, 400, { error: "Purchase confirmation required." });
+        return sendJson(res, 200, { order: service.publicQuote(quote) });
+      }
+      const account = await withFreshToken(current, quote.accountMobile);
+      if (!account) return sendJson(res, 401, { error: "Session expired. Sign in again; do not repeat the payment." });
+      const call = (path, method, body) => callDito(path, method, body, account.token);
+      const order = url.pathname === "/api/load/submit"
+        ? await service.submitLoadQuote(call, quote, input.confirmed, Date.now(), current.session)
+        : await service.checkLoadPayment(call, quote);
+      return sendJson(res, 200, { order });
+    }
+    const account = await withFreshToken(current);
+    if (!account) return sendJson(res, 401, { error: "Session expired; sign in again." });
+    const call = (path, method, body) => callDito(path, method, body, account.token);
+    if (url.pathname === "/api/load/options") return sendJson(res, 200, await service.loadOptions(call, input));
+    return sendJson(res, 200, { quote: await service.createLoadQuote(call, current.session, account.mobile, input) });
+  } catch (error) {
+    return sendJson(res, error instanceof service.LoadError ? error.status : 502, {
+      error: error instanceof service.LoadError ? error.message : "The load request could not be completed. Check pending payments before trying again.",
+    });
+  }
+}
+
 const server = http.createServer(async (req, res) => {
   if (req.method === "OPTIONS") {
     res.writeHead(204, corsHeaders(req.headers.origin));
@@ -303,6 +408,10 @@ const server = http.createServer(async (req, res) => {
   }
 
   try {
+    if (await servePublicFile(req, res)) return;
+
+    if (req.url.startsWith("/api/load/")) return await handleLoadApi(req, res);
+
     if (req.url === "/api/health" && req.method === "GET") {
       return sendJson(res, 200, { ok: true });
     }
@@ -616,6 +725,19 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, "127.0.0.1", () => {
-  console.log(`DITO local proxy listening on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  server.listen(PORT, "127.0.0.1", () => {
+    console.log(`DITO dashboard and API listening on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = {
+  server,
+  get sessions() { return sessions; },
+  // Process-local lifecycle hook: a replacement handler can retain the same
+  // session Map during an update, including pending payment references.
+  adoptSessionStore(store) {
+    if (!(store instanceof Map)) throw new TypeError("Session store must be a Map");
+    sessions = store;
+  },
+};

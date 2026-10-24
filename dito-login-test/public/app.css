@@ -65,7 +65,8 @@ button:disabled { opacity: .55; cursor: wait; }
 .hist-row strong { font-size: 1.02rem; }
 .hist-pager { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
 .hist-pager button { margin: 0; }
-#promoCat { width: auto; min-width: 200px; padding: 11px 12px; border: 1px solid #aeb0b5; border-radius: 9px; background: #fff; }
+#promoCat, #loadMethod { width: auto; max-width: 100%; min-width: 200px; padding: 11px 12px; border: 1px solid #aeb0b5; border-radius: 9px; background: #fff; }
+.checkout-link { display: inline-block; margin: 10px 12px 0 0; font-weight: 700; }
 .promo-card .balance { font-size: 1.4rem; margin: 4px 0; }
 .promo-card .promo-buy { margin-top: 10px; }
 .modal { position: fixed; inset: 0; background: rgb(0 0 0 / 45%); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 100; }
