@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_main_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TabHost android:id="@android:id/tabhost" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:orientation="vertical" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+                <FrameLayout android:id="@android:id/tabcontent" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@android:id/tabs" android:layout_alignParentTop="true" />
+                <TabWidget android:id="@android:id/tabs" android:background="@drawable/bg_main_tab" android:layout_width="match_parent" android:layout_height="54.0dp" android:layout_marginBottom="4.0dp" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </TabHost>
+        <RelativeLayout android:id="@id/ll_new_login" android:tag="binding_1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@id/ic_new_login" layout="@layout/view_guide_page3" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

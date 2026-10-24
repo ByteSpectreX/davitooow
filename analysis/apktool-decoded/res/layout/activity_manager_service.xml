@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_manager_service_0" android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+        <View android:background="@color/white" android:layout_width="match_parent" android:layout_height="30.0dp" />
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/relativeLayout" android:layout_width="match_parent" android:layout_height="44.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:textSize="14.0sp" android:textColor="@color/color_0038A8" android:id="@id/iv_back" android:paddingLeft="6.0dp" android:paddingRight="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:text="@string/btn_cancel" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/color_2c2c2c" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manage My Focus" android:layout_weight="1.0" android:layout_centerInParent="true" android:layout_centerVertical="true" android:fontFamily="@font/exo2_bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <Button android:enabled="true" android:gravity="center" android:id="@id/tv_right" android:layout_width="62.0dp" android:layout_height="30.0dp" android:layout_marginRight="10.0dp" android:text="@string/text_done" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/common_button" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/text_12sp" android:textColor="@color/color_929292" android:gravity="center" android:background="@color/white" android:padding="@dimen/margin_16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/menu_manager_tip" android:fontFamily="@font/montserrat_medium" />
+    <View android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="1.0dp" />
+    <com.mydito.ui.home.widgets.DragGridView android:id="@id/ngv_focus" android:background="@drawable/bg_white_bottom_16dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:numColumns="4" />
+    <View android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="20.0dp" />
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <com.mydito.widgets.NoScrollGridView android:id="@id/ngv_unchoose" android:background="@drawable/bg_white_16dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:numColumns="4" />
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

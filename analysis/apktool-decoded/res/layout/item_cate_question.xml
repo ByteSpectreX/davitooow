@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_cate_question_0" android:layout_width="match_parent" android:layout_height="52.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_title" android:paddingLeft="8.0dp" android:paddingTop="10.0dp" android:paddingRight="5.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0sp" android:textColor="#606060" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="三级菜单标题" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+        <ImageView android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_next" />
+    </LinearLayout>
+    <View android:id="@id/view_divider" android:background="#e8e8e8" android:paddingLeft="5.0dp" android:paddingRight="5.0dp" android:layout_width="match_parent" android:layout_height="1.0px" />
+</LinearLayout>

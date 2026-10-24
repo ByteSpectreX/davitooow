@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/banner_image" android:layout_width="match_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerHorizontal="true" />
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/banner_image" layout="@layout/view_pb_dito_count_down" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dp" android:text="Plan Consumable" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="------" android:fontFamily="@font/exo2_bold" />
+    </LinearLayout>
+</LinearLayout>

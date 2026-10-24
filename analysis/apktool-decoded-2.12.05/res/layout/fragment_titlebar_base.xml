@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.iwhalecloud.basemodule.widgets.titlebar.TitleBar android:id="@id/titleBar" android:layout_width="match_parent" android:layout_height="wrap_content" app:titleBar_left_button_image="@mipmap/icon_nav_back_black" app:titleBar_view="@layout/base_moudle_white_top_bar"
+      xmlns:app="http://schemas.android.com/apk/res-auto" />
+</RelativeLayout>

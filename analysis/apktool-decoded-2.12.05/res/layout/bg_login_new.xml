@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/bg_login_new_0" android:background="@drawable/bg_login_3" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="bottom" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_login_bottom_new" android:scaleType="fitXY" />
+        <ImageView android:layout_gravity="end|bottom" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40.0dp" android:src="@drawable/ic_login_logo_new" android:scaleType="fitXY" android:layout_marginEnd="54.0dp" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_release_note_0" android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/bar" layout="@layout/include_radius_title_bar" />
+    <View android:layout_width="match_parent" android:layout_height="15.0dp" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_top_16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center_horizontal" android:id="@id/tv_version_name" android:padding="@dimen/margin_16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_medium" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/margin_16dp" android:layout_marginRight="@dimen/margin_16dp" android:fontFamily="@font/montserrat_regular" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+[
+  {
+    "value": "0",
+    "key": "TSBS"
+  },
+  {
+    "key": "h5_remote_debug_host",
+    "value": "ws://mpaasproxy.digitalstrato.com:8083/host/"
+  },
+  {
+    "key": "h5_eventThroughWorker",
+    "value": "{\"back\":[\"2018110260384047\",\"1000000000000004\",\"2018110260384046\", \"77700189\", \"77700199\",\"2018112662329617\",\"77700149\",\"2017020805564803\",\"77700162\"],\"titleClick\":[\"1000000000000004\"],\"tabClick\":[\"2018110260384046\", \"77700189\"]}"
+  },
+  {
+    "key": "mp_ta_showOptionMenu",
+    "value": "YES"
+  },
+  {
+    "key": "mp_ta_showShareMenuItem",
+    "value": "YES"
+  },
+  {
+    "value": "NO",
+    "key": "mp_ta_use_orginal_mini_nagivationbar"
+  },
+
+  {
+    "value": "NO",
+    "key": "h5_shouldverifyapp"
+  },
+  {
+    "value":"{\"h5_enableExternalWebView\":\"YES\",\"h5_externalWebViewSdkVersion\":{\"min\":11,\"max\":31}}",
+    "key":"h5_webViewConfig"
+  }
+]

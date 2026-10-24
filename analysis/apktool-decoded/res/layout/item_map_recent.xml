@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_14sp" android:textColor="@color/color_0038A8" android:layout_gravity="center" android:id="@id/tv_recent_text" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Makati" android:layout_weight="1.0" android:fontFamily="@font/montserrat_semibold" android:layout_marginStart="@dimen/margin_16dp" />
+        <ImageView android:layout_gravity="center" android:layout_width="8.0dp" android:layout_height="44.0dp" android:src="@drawable/ic_right_arrow_list" android:layout_marginEnd="@dimen/margin_16dp" />
+    </LinearLayout>
+    <View android:id="@id/v_divider" android:background="#e5e5e5" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginBottom="@dimen/margin_16dp" android:layout_marginStart="@dimen/margin_16dp" android:layout_marginEnd="@dimen/margin_16dp" />
+</LinearLayout>

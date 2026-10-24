@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_map_favorite_0" android:background="#f2f2f2" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/bar" layout="@layout/include_radius_title_bar" />
+    <LinearLayout android:background="@drawable/shape_white_top_18dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16.0dp">
+        <TextView android:textColor="@color/color_3e3e3e" android:gravity="center" android:id="@id/tv_no_results" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_16dp" android:layout_marginTop="64.0dp" android:layout_marginRight="@dimen/margin_16dp" android:text="It seems there are no nearby stores in your area. Please try again." android:drawableTop="@drawable/img_no_data_found" android:fontFamily="@font/montserrat_medium" />
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/srf" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_favorite_list" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootLayout" android:tag="layout/fragment_cms_pager_0" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivBg" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:adjustViewBounds="true" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/smart_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/relCmsToolBar">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <RelativeLayout android:id="@id/relCmsToolBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/iv_back_white" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/rel_title_bar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="44.0dp" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/iv_back" android:paddingBottom="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_nav_back_black" android:adjustViewBounds="true" android:layout_centerVertical="true" android:layout_marginStart="10.0dp" />
+        <TextView android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/iv_back_white" android:paddingBottom="5.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="47.0dp" android:layout_marginBottom="12.0dp" android:src="@mipmap/ic_back_left_white" android:adjustViewBounds="true" android:layout_alignParentTop="true" android:layout_marginStart="26.0dp" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/iv_menu" android:layout_width="46.0dp" android:layout_height="wrap_content" android:src="@mipmap/ic_share_system" android:adjustViewBounds="true" />
+    <TextView android:textSize="10.0sp" android:textColor="#ff3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="@string/share_title_more" android:alpha="1.0" android:fontFamily="@font/montserrat_medium" android:textFontWeight="500" />
+</LinearLayout>

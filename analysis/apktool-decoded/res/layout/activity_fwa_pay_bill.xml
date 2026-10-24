@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_fwa_pay_bill_0" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/bar" layout="@layout/include_radius_red_blue_title_bar" />
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toTopOf="@id/ll_bottom_btn" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/bar" app:layout_constraintVertical_bias="0.0" app:layout_constraintVertical_weight="1.0">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/llOutstandingBalance" android:background="@color/white" android:paddingTop="16.0dp" android:paddingBottom="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16.0dp" android:paddingEnd="16.0dp" app:layout_constraintTop_toTopOf="parent">
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tvOutstandingBalance" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:id="@id/tvOutstandingBalancePrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-----" android:fontFamily="@font/exo2_bold" android:layout_marginStart="2.0dp" />
+                <View android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                <TextView android:textSize="14.0sp" android:textColor="#ff0038a8" android:gravity="end" android:id="@id/tv_view_summary" android:tag="binding_2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_semi_bold" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llInputView" android:background="@color/white" android:paddingTop="16.0dp" android:paddingBottom="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/llOutstandingBalance">
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="48.0dp" android:layout_marginTop="7.0dp" android:layout_marginRight="48.0dp">
+                    <EditText android:textSize="24.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:id="@id/etInputPrice" android:background="@null" android:longClickable="false" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="" android:maxLength="12" android:layout_weight="1.0" android:inputType="numberDecimal" android:textCursorDrawable="@drawable/input_textcursor_color" android:fontFamily="@font/exo2_bold" />
+                    <ImageView android:id="@id/ivDetail" android:background="@drawable/ic_close_red_delete_thin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View android:background="#d1d1d1" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginLeft="48.0dp" android:layout_marginRight="48.0dp" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_card" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="24.0dp" android:layout_marginRight="16.0dp" android:layout_marginHorizontal="16.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/llInputView">
+                <ImageView android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_card_debit" android:layout_marginEnd="16.0dp" />
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center_vertical" android:id="@id/tv_debit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_credit_card" android:fontFamily="@font/exo2_medium" android:layout_marginEnd="8.0dp" />
+                                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_master_card" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_card_debit_credit" />
+                            </LinearLayout>
+                            <TextView android:textSize="8.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_card_only" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="*Card issued in the Philippines only" android:fontFamily="@font/exo2_medium" />
+                            <TextView android:textSize="10.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_accept" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:fontFamily="@font/exo2_medium" />
+                        </LinearLayout>
+                        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_card_check" android:layout_width="16.0dp" android:layout_height="16.0dp" android:src="@drawable/ic_check_box_oval_unselect" android:adjustViewBounds="true" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/ll_auto" android:background="@color/white" android:padding="12.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginEnd="32.0dp">
+                        <ImageView android:layout_gravity="top" android:id="@id/iv_credit" android:layout_width="20.0dp" android:layout_height="20.0dp" android:src="@drawable/ic_checkbox_rectangle_unselect" android:layout_marginEnd="8.0dp" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:id="@id/view_debit" android:background="#eaeaea" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="12.0dp" android:layout_marginStart="56.0dp" android:layout_marginEnd="16.0dp" app:layout_constraintTop_toBottomOf="@id/ll_card" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recy_payment" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/view_debit" />
+            <LinearLayout android:orientation="vertical" android:id="@id/cl_pay_rewards" android:paddingBottom="20.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:layout_marginBottom="24.0dp" android:layout_marginStart="@dimen/margin_16dp" android:layout_marginEnd="@dimen/margin_16dp" app:layout_constraintTop_toBottomOf="@id/recy_payment">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/iv_pay_rewards" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_point_pay" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dp">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_pay_rewards" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DITO POINTS" android:fontFamily="@font/exo2_bold" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tvPoints" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:fontFamily="@font/exo2_medium_italic" />
+                        <LinearLayout android:orientation="horizontal" android:id="@id/ll_point_not" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp">
+                            <TextView android:textSize="10.0sp" android:textColor="@color/color_ce1126" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+                            <TextView android:textSize="10.0sp" android:textColor="@color/color_0038A7" android:id="@id/tv_how_earn" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" android:layout_marginStart="4.0dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="8.0sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/tv_rewards_new_mark" android:background="@drawable/bg_shape_ce1126_4dp" android:padding="3.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NEW" android:includeFontPadding="false" android:fontFamily="@font/exo2_bold" android:layout_marginEnd="8.0dp" app:layout_constraintBottom_toBottomOf="@id/iv_pay_rewards_check" app:layout_constraintRight_toLeftOf="@id/iv_pay_rewards_check" app:layout_constraintTop_toTopOf="@id/iv_pay_rewards_check" />
+                        <ImageView android:id="@id/iv_pay_rewards_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_check_box_oval_unselect" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="@id/tv_pay_rewards" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:id="@id/view_point" android:background="#eaeaea" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="12.0dp" android:layout_marginStart="40.0dp" app:layout_constraintTop_toBottomOf="@id/ll_card" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_bottom_btn" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent">
+        <View android:background="#eaeaea" android:layout_width="match_parent" android:layout_height="1.0dp" app:layout_constraintTop_toBottomOf="@id/ll_card" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tip_debit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="16.0dp" android:layout_marginRight="16.0dp" android:fontFamily="@font/exo2_medium" android:layout_marginHorizontal="16.0dp" />
+        <Button android:id="@id/btn_proceed" android:tag="binding_8" android:layout_width="match_parent" android:layout_height="46.0dp" android:layout_margin="16.0dp" style="@style/common_button_radius_common" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

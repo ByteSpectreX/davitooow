@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/fragment_ott_list_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_data" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_grid_list" android:background="@drawable/bg_line_c7c7c7_100" android:layout_width="114.0dp" android:layout_height="23.0dp" android:layout_alignParentEnd="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_grid" android:layout_width="60.0dp" android:layout_height="23.0dp">
+            <ImageView android:id="@id/iv_grid" android:layout_width="10.0dp" android:layout_height="10.0dp" android:adjustViewBounds="true" android:layout_marginEnd="4.0dp" />
+            <TextView android:textSize="12.0sp" android:id="@id/tv_grid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="grid" android:fontFamily="@font/exo2_semi_bold" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_list" android:layout_width="60.0dp" android:layout_height="23.0dp" android:layout_marginStart="-6.0dp">
+            <ImageView android:id="@id/iv_list" android:layout_width="10.0dp" android:layout_height="10.0dp" android:adjustViewBounds="true" android:layout_marginEnd="4.0dp" />
+            <TextView android:textSize="12.0sp" android:id="@id/tv_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="list" android:fontFamily="@font/exo2_semi_bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

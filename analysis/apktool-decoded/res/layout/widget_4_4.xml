@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="315.0dp" android:layout_height="315.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/login_in" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/icon_widget_4_4" android:contentDescription="@null" />
+    <RelativeLayout android:orientation="vertical" android:id="@id/root_detail" android:background="@drawable/bg_white_20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_top" android:paddingLeft="20.0dp" android:paddingTop="9.0dp" android:paddingRight="20.0dp" android:paddingBottom="9.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="20.0dp" android:paddingVertical="9.0dp">
+            <ImageView android:id="@id/top_logo" android:layout_width="62.0dp" android:layout_height="18.0dp" android:src="@drawable/icon_dito" android:contentDescription="@null" />
+            <FrameLayout android:id="@id/user_name_root" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10.0dp">
+                <ImageView android:layout_gravity="end" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_marginStart="10.0dp" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_user" android:background="@color/color_ce1126" android:padding="9.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/ll_top">
+            <ImageView android:id="@id/top_paid_flag_logo" android:layout_width="wrap_content" android:layout_height="23.0dp" android:contentDescription="@null" />
+            <ImageView android:id="@id/mobile_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_marginStart="@dimen/dp_4" />
+            <ImageView android:background="@color/white" android:layout_width="1.0dp" android:layout_height="match_parent" android:layout_marginLeft="6.0dp" android:layout_marginRight="6.0dp" android:contentDescription="@null" android:layout_marginHorizontal="6.0dp" />
+            <ImageView android:id="@id/mobile_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+        </LinearLayout>
+        <TextView android:id="@id/top_line" android:background="@color/color_EAEAEA" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_below="@id/ll_user" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_account" android:paddingTop="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_below="@id/top_line">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_balance" android:background="@drawable/bg_gray_4dp" android:paddingTop="12.0dp" android:paddingBottom="12.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_4" android:layout_marginRight="@dimen/dp_4" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/dp_4" android:paddingVertical="12.0dp">
+                <ImageView android:id="@id/text_your_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                <ImageView android:id="@id/balance_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                <ImageView android:id="@id/valid_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_reward" android:background="@drawable/bg_gray_4dp" android:paddingTop="12.0dp" android:paddingBottom="12.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" android:layout_marginEnd="@dimen/dp_4" android:paddingVertical="12.0dp">
+                <ImageView android:layout_width="36.0dp" android:layout_height="32.0dp" android:src="@drawable/icon_widget_logo_point" android:contentDescription="@null" />
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/point_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_marginStart="4.0dp" />
+                    <ImageView android:id="@id/text_point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_marginStart="4.0dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_usage" android:padding="@dimen/dp_4" android:layout_width="match_parent" android:layout_height="match_parent" android:baselineAligned="false" android:layout_above="@id/ll_bottom" android:layout_below="@id/ll_account">
+            <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                <ProgressBar android:id="@id/progress_bar_call" android:background="@drawable/bg_widget_progress_red" android:layout_width="match_parent" android:layout_height="match_parent" android:max="100" android:progress="0" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/widget_progress_red" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ImageView android:id="@id/call_data" android:paddingTop="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                    <ImageView android:id="@id/total_call_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                    <ImageView android:id="@id/text_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:contentDescription="@null" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                <ProgressBar android:id="@id/progress_bar_data" android:background="@drawable/bg_widget_progress_blue" android:layout_width="match_parent" android:layout_height="match_parent" android:max="100" android:progress="0" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/widget_progress_blue" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ImageView android:id="@id/data" android:paddingTop="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                    <ImageView android:id="@id/total_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                    <ImageView android:id="@id/text_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:contentDescription="@null" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                <ProgressBar android:id="@id/progress_bar_sms" android:background="@drawable/bg_widget_progress_yellow" android:layout_width="match_parent" android:layout_height="match_parent" android:max="100" android:progress="0" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/widget_progress_yellow" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ImageView android:id="@id/sms_data" android:paddingTop="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                    <ImageView android:id="@id/total_sms_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                    <ImageView android:id="@id/text_sms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:contentDescription="@null" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_bottom" android:background="@drawable/bg_red_bottom_20dp" android:paddingTop="9.0dp" android:paddingBottom="9.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:paddingVertical="9.0dp" />
+    </RelativeLayout>
+</LinearLayout>

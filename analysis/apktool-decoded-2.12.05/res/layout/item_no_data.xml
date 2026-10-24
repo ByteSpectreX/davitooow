@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_no_results" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dp" android:text="Sorry, no results found." android:drawableTop="@drawable/img_no_data_found" android:fontFamily="@font/montserrat_medium" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/chat_bottom_icon_0" android:layout_width="match_parent" android:layout_height="49.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/voice" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:src="@drawable/chat_voice_n" android:scaleType="centerInside" android:layout_weight="1.0" android:alpha="0.4" />
+    <ImageView android:id="@id/photos" android:layout_width="60.0dp" android:layout_height="match_parent" android:src="@drawable/chat_pic_n" android:scaleType="centerInside" android:alpha="0.4" />
+    <ImageView android:id="@id/camera" android:layout_width="60.0dp" android:layout_height="match_parent" android:src="@drawable/chat_camera_n" android:scaleType="centerInside" android:alpha="0.4" />
+    <ImageView android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:src="@drawable/chat_file_n" android:scaleType="centerInside" android:layout_weight="1.0" android:alpha="0.4" />
+    <ImageView android:id="@id/common_word" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:src="@drawable/chat_hi_n" android:scaleType="centerInside" android:layout_weight="1.0" android:alpha="0.4" />
+    <ImageView android:id="@id/face" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:src="@drawable/chat_face_n" android:scaleType="centerInside" android:layout_weight="1.0" android:alpha="0.4" />
+    <ImageView android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:src="@drawable/chat_add_n" android:scaleType="centerInside" android:layout_weight="1.0" android:alpha="0.4" />
+</LinearLayout>

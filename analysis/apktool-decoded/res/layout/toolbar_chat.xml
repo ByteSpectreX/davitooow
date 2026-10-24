@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/toolbar_chat_0" android:background="@drawable/bg_common" android:layout_width="match_parent" android:layout_height="48.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="left|center" android:id="@id/menu_left" android:paddingLeft="15.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="Back" android:drawableLeft="@drawable/icon_back" android:drawablePadding="7.0dp" />
+    <TextView android:textSize="16.0dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/target_user" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="客服" android:layout_weight="1.0" />
+    <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <ImageView android:paddingLeft="7.0dp" android:paddingRight="7.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/chat_id" android:scaleType="centerInside" />
+        <ImageView android:paddingLeft="7.0dp" android:paddingRight="10.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/chat_personal" android:scaleType="centerInside" />
+    </LinearLayout>
+</FrameLayout>

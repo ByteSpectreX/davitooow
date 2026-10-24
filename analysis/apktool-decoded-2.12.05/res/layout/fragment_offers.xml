@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_offers_data" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="290.0dp" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_price" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:paddingStart="@dimen/margin_16dp" android:paddingEnd="@dimen/margin_16dp">
+            <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_type_name1" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="22 Diamonds" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:gravity="end" android:id="@id/tv_value_name1" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="₱17.60" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dp" android:paddingStart="@dimen/margin_16dp" android:paddingEnd="@dimen/margin_16dp">
+            <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_type_name2" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="22 Diamonds" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:gravity="end" android:id="@id/tv_value_name2" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="₱17.60" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+        </LinearLayout>
+        <View android:background="#e5e5e5" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="8.0dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:paddingStart="@dimen/margin_16dp" android:paddingEnd="@dimen/margin_16dp">
+            <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_type_name3" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="22 Diamonds" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="16.0sp" android:textColor="#ffce1126" android:gravity="end" android:id="@id/tv_value_name3" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="₱17.60" android:layout_weight="1.0" android:fontFamily="@font/montserrat_bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:paddingStart="@dimen/margin_16dp" android:paddingEnd="@dimen/margin_16dp">
+        <TextView android:textSize="12.0sp" android:textColor="#ffce1126" android:id="@id/tv_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_note" android:fontFamily="@font/montserrat_bold" android:layout_alignParentStart="true" />
+        <TextView android:textSize="12.0sp" android:textColor="#3e3e3e" android:id="@id/tv_note_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/amount_will_be_deducted_to_current_load_balance" android:layout_alignBaseline="@id/tv_note" android:fontFamily="@font/montserrat_bold" android:layout_marginStart="5.0dp" android:layout_toEndOf="@id/tv_note" />
+    </RelativeLayout>
+    <Button android:enabled="false" android:id="@id/btn_proceed" android:layout_width="match_parent" android:layout_height="46.0dp" android:layout_marginTop="24.0dp" android:layout_marginBottom="16.0dp" android:text="@string/btn_proceed" android:layout_marginStart="16.0dp" android:layout_marginEnd="16.0dp" style="@style/common_button" />
+</LinearLayout>

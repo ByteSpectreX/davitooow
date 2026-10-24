@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/ll_root_layout" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:layout_alignTop="@id/ll_main_layout" android:layout_alignBottom="@id/ll_main_layout" android:layout_alignStart="@id/ll_main_layout" android:layout_alignEnd="@id/ll_main_layout" />
+    <RelativeLayout android:id="@id/ll_main_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/rv_image" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <RelativeLayout android:id="@id/rl_media" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                <com.iwhalecloud.basemodule.widgets.CropImageView android:id="@id/iv_content" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+                <VideoView android:layout_gravity="center_horizontal" android:id="@id/video" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="1.0dp" />
+            </RelativeLayout>
+            <TextView android:textSize="24.0sp" android:textColor="#3d3d3d" android:id="@id/main_title" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginRight="24.0dp" android:layout_marginHorizontal="24.0dp" />
+            <TextView android:scrollbarSize="4.0dp" android:scrollbarThumbVertical="@drawable/bg_pop_thumb_bar" android:scrollbarStyle="insideInset" android:textSize="16.0sp" android:textColor="#3d3d3d" android:id="@id/subs_title" android:visibility="gone" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginRight="24.0dp" android:isScrollContainer="true" android:fadeScrollbars="false" android:overScrollMode="always" android:layout_marginHorizontal="24.0dp" android:lineHeight="22.0dp" />
+        </RelativeLayout>
+        <TextView android:layout_gravity="end|top" android:id="@id/tv_timer" android:paddingTop="3.0dp" android:paddingBottom="3.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:paddingStart="8.0dp" android:paddingEnd="8.0dp" android:layout_marginEnd="16.0dp" android:layout_alignParentEnd="true" />
+        <ImageView android:id="@id/iv_close" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_16dp" android:contentDescription="@null" android:layout_marginEnd="@dimen/margin_16dp" android:layout_alignParentEnd="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/rl_btn" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginRight="24.0dp" android:layout_marginBottom="24.0dp" android:layout_below="@id/rv_image" android:layout_marginHorizontal="24.0dp">
+            <TextView android:gravity="center" android:id="@id/secondary_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:gravity="center" android:id="@id/primary_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

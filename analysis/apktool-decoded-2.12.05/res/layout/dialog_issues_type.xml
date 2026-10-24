@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_white_top_18dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/color_0038A8" android:id="@id/tv_cancel" android:padding="@dimen/margin_16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" android:fontFamily="@font/montserrat_medium" />
+        <TextView android:textColor="@color/color_2c2c2c" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tips_issues_service_type" android:layout_centerInParent="true" android:fontFamily="@font/montserrat_bold" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recy_issues" android:paddingLeft="@dimen/margin_16dp" android:paddingRight="@dimen/margin_16dp" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    <RelativeLayout android:id="@id/rl_select" android:paddingLeft="@dimen/margin_16dp" android:paddingTop="10.0dp" android:paddingRight="@dimen/margin_16dp" android:paddingBottom="@dimen/margin_16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent">
+        <Button android:id="@id/btn_select" android:layout_width="match_parent" android:layout_height="46.0dp" android:text="Select" style="@style/common_button" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_white_10dp" android:paddingLeft="24.0dp" android:paddingTop="32.0dp" android:paddingRight="24.0dp" android:paddingBottom="32.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_marginStart="24.0dp" android:layout_marginEnd="24.0dp" android:paddingHorizontal="24.0dp">
+        <TextView android:textSize="24.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_dialog_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp" android:text="@string/text_confirmation" android:fontFamily="@font/exo2_bold" />
+        <TextView android:textSize="14.0sp" android:textColor="#3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_load" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp" android:fontFamily="@font/exo2_medium" />
+        <Button android:enabled="true" android:textSize="@dimen/sp_14" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_right" android:background="@drawable/bg_button_4dp_selector" android:layout_width="match_parent" android:layout_height="40.0dp" android:text="@string/text_ok_borrow_now_" android:textAllCaps="false" android:fontFamily="@font/exo2_semi_bold" />
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_0038A8" android:gravity="center" android:id="@id/btn_left" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="@string/btn_cancel" android:textAllCaps="false" android:fontFamily="@font/exo2_semi_bold" />
+    </LinearLayout>
+</RelativeLayout>

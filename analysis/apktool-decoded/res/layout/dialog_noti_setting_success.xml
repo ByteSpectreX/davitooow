@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shape_dialog_white_corner" android:paddingLeft="@dimen/margin_16dp" android:paddingTop="24.0dp" android:paddingRight="@dimen/margin_16dp" android:paddingBottom="24.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_16dp" android:layout_marginRight="@dimen/margin_16dp">
+        <TextView android:textSize="22.0sp" android:textColor="@color/color_ce1126" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Congratulations!" android:fontFamily="@font/exo_bold" />
+        <TextView android:textSize="16.0sp" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/tv_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_16dp" android:fontFamily="@font/montserrat_medium" />
+    </LinearLayout>
+</RelativeLayout>

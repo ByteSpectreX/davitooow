@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_dialog_longclick" android:layout_width="wrap_content" android:layout_height="35.0dp">
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/copy" android:paddingLeft="11.0dp" android:paddingRight="11.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/copy" />
+        <View android:background="#575757" android:layout_width="1.0px" android:layout_height="match_parent" />
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/add_hi" android:paddingLeft="11.0dp" android:paddingRight="11.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/add_hi" />
+    </LinearLayout>
+    <com.ztesoft.ucc.widget.shape.TrigonView android:layout_width="20.0dp" android:layout_height="17.0dp" android:layout_marginLeft="35.0dp" />
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/view_guide_page3_0" android:background="@drawable/bg_guide_6" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shape_white_20dp_bottom" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="match_parent" android:layout_height="168.5dp" android:layout_marginTop="80.0dp" android:src="@drawable/bg_guide_5_center" android:scaleType="fitXY" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="24.0sp" android:textColor="#3e3e3e" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="255.0dp" android:text="@string/text_everything_easier" android:fontFamily="@font/exo2_bold" android:layout_marginStart="5.0dp" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:src="@drawable/ic_logo_1" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp">
+                    <TextView android:textSize="14.0sp" android:textColor="#3e3e3e" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:text="@string/tips_manage_your_account_whenever" android:fontFamily="@font/exo2_semi_bold" android:layout_marginHorizontal="16.0dp" />
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="120.0" />
+                <Button android:enabled="true" android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_into" android:background="@drawable/bg_button_radius_4" android:layout_width="match_parent" android:layout_height="47.0dp" android:layout_marginLeft="32.0dp" android:layout_marginRight="32.0dp" android:text="@string/sign_in_with_dito_number" android:textAllCaps="false" android:fontFamily="@font/exo2_semi_bold" android:stateListAnimator="@null" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dp" android:layout_marginTop="32.0dp" android:layout_marginRight="32.0dp" android:layout_marginBottom="32.0dp" android:layout_marginHorizontal="32.0dp" android:layout_marginVertical="32.0dp" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/swipe_explore" android:layout_width="match_parent" android:layout_height="150.0dp">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_explore" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_swipe" android:layout_width="32.0dp" android:layout_height="32.0dp" android:layout_marginTop="22.0dp" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Swipe up to" android:fontFamily="@font/exo2_400" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EXPLORE DITO" android:fontFamily="@font/exo2_bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

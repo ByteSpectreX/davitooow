@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingRight="@dimen/margin_16dp" android:paddingBottom="@dimen/margin_16dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox android:id="@id/cb_valid" android:background="@drawable/checkbox_selector" android:layout_width="20.0dp" android:layout_height="20.0dp" android:layout_marginTop="4.0dp" android:button="@null" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_valid_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:maxWidth="230.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/cb_valid" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_valid_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="166.0dp" android:text="3 months of DITO 10" android:fontFamily="@font/montserrat_bold" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_value" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/iv_dot" android:visibility="visible" android:layout_width="5.0dp" android:layout_height="5.0dp" android:src="@drawable/dot_red" />
+            <TextView android:textSize="@dimen/text_12sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_bounds_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dp" android:fontFamily="@font/montserrat_bold" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/text_12sp" android:textColor="#888" android:id="@id/tv_discount_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_bold" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_tip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="200.0dp" android:src="@drawable/ic_load_success_rewards_tips" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

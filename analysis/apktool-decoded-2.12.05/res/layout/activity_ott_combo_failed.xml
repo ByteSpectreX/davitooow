@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_ott_combo_failed_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_ott_combo_failed_bg" android:scaleType="fitXY" android:adjustViewBounds="true" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:src="@drawable/ic_ott_combo_failed_circle" />
+            <TextView android:textSize="24.0sp" android:textColor="@color/white" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:fontFamily="@font/exo2_bold" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_horizontal" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="31.0dp" android:layout_marginTop="8.0dp" android:layout_marginRight="31.0dp" android:fontFamily="@font/exo2_medium" android:layout_marginHorizontal="31.0dp" />
+        </LinearLayout>
+    </FrameLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="31.0dp" android:layout_marginTop="24.0dp" android:layout_marginRight="31.0dp" android:fontFamily="@font/exo2_medium" android:layout_marginHorizontal="31.0dp" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp">
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/tv_chat" android:layout_width="73.0dp" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:text="Chat\nWith Us" android:drawableTop="@drawable/ic_ott_combo_failed_chat" android:drawablePadding="8.0dp" android:fontFamily="@font/exo2_semi_bold" />
+        <View android:layout_width="32.0dp" android:layout_height="1.0dp" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/tv_tt" android:layout_width="73.0dp" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:text="File a\nHelp Ticket" android:drawableTop="@drawable/ic_ott_failed_tt" android:drawablePadding="8.0dp" android:fontFamily="@font/exo2_semi_bold" />
+    </LinearLayout>
+    <View android:layout_width="wrap_content" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:id="@id/v_bottom_back" android:background="@color/white" android:layout_width="match_parent" android:layout_height="72.0dp">
+        <View android:background="@color/color_EAEAEA" android:layout_width="match_parent" android:layout_height="1.0dp" />
+        <Button android:enabled="true" android:textColor="@color/white" android:id="@id/btn_back_home" android:tag="binding_4" android:background="@drawable/bg_button_4dp_selector" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_marginLeft="@dimen/margin_16dp" android:layout_marginTop="12.0dp" android:layout_marginRight="@dimen/margin_16dp" android:layout_marginBottom="12.0dp" android:textAllCaps="false" android:fontFamily="@font/exo2_semi_bold" android:stateListAnimator="@null" android:layout_marginVertical="12.0dp" app:layout_constraintBottom_toBottomOf="@id/v_bottom_back" app:layout_constraintTop_toTopOf="@id/v_bottom_back" />
+    </LinearLayout>
+</LinearLayout>

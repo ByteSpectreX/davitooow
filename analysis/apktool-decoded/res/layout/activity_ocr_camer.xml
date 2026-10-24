@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_ocr_camer_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.otaliastudios.cameraview.CameraView android:id="@id/camera_view" android:layout_width="match_parent" android:layout_height="match_parent" app:cameraAudio="off" app:cameraEngine="camera2" app:cameraExperimental="true" app:cameraGestureLongTap="autoFocus" app:cameraGestureTap="autoFocus" app:cameraMode="picture" app:cameraPictureFormat="jpeg" app:cameraPreview="glSurface" app:cameraRequestPermissions="true" app:cameraUseDeviceOrientation="true" />
+    <include android:id="@id/bar" layout="@layout/include_radius_red_blue_title_bar" />
+    <ImageView android:id="@id/iv_scan_frame" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="110.0dp" android:src="@mipmap/bg_id_card_frame" android:adjustViewBounds="true" android:layout_marginStart="28.0dp" android:layout_marginEnd="28.0dp" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_bottom" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="16.0sp" android:textColor="#ff3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_camera_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:alpha="1.0" android:fontFamily="@font/exo2_semi_bold" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_sub_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:fontFamily="@font/exo_medium" android:layout_marginStart="16.0dp" android:layout_marginEnd="16.0dp" />
+        <ImageView android:layout_gravity="center" android:id="@id/btn_scan_id" android:layout_width="91.0dp" android:layout_height="wrap_content" android:layout_marginTop="37.0dp" android:layout_marginBottom="30.0dp" android:src="@drawable/ic_ocr_capture" android:adjustViewBounds="true" />
+    </LinearLayout>
+</RelativeLayout>

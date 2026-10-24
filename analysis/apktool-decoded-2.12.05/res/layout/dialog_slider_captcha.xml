@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_white_8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="47.0dp" android:layout_marginRight="47.0dp" android:layout_centerInParent="true" android:layout_marginHorizontal="47.0dp">
+        <View android:id="@id/top_view" android:background="@drawable/ic_003cb8_corner_8_8_0_0" android:layout_width="match_parent" android:layout_height="7.0dp" />
+        <TextView android:textSize="12.0sp" android:textColor="#000000" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_slider_captcha_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginTop="13.0dp" android:layout_marginRight="24.0dp" android:text="Slide to complete the puzzle" android:fontFamily="@font/exo2_400" android:layout_marginHorizontal="24.0dp" />
+        <FrameLayout android:id="@id/fl_puzzle_area" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginTop="13.0dp" android:layout_marginRight="24.0dp" android:layout_marginHorizontal="24.0dp">
+            <View android:layout_width="match_parent" android:layout_height="1.0dp" />
+            <ImageView android:id="@id/iv_captcha_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:contentDescription="@null" />
+            <ImageView android:layout_gravity="bottom" android:id="@id/iv_captcha_puzzle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:contentDescription="@null" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_retry" android:paddingLeft="24.0dp" android:paddingRight="24.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="28.0dp" android:fontFamily="@font/exo2_bold" android:paddingHorizontal="24.0dp" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/fl_slider_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginTop="7.0dp" android:layout_marginRight="24.0dp" android:layout_marginBottom="7.0dp" android:layout_marginHorizontal="24.0dp" android:layout_marginVertical="7.0dp">
+            <View android:layout_gravity="center_vertical" android:id="@id/view_slider_track" android:background="@drawable/bg_e0e7ec_corner_10" android:layout_width="match_parent" android:layout_height="15.0dp" />
+            <ImageView android:id="@id/iv_slider_thumb" android:background="@drawable/bg_003cb8_corner_20" android:paddingLeft="24.0dp" android:paddingTop="12.5dp" android:paddingRight="24.0dp" android:paddingBottom="12.5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_captcha_arrow_slide" android:adjustViewBounds="true" android:contentDescription="@null" android:paddingHorizontal="24.0dp" android:paddingVertical="12.5dp" />
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginRight="24.0dp" android:layout_marginHorizontal="24.0dp">
+            <ImageView android:id="@id/iv_slider_close" android:paddingTop="9.0dp" android:paddingBottom="9.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_captcha_close" android:adjustViewBounds="true" android:paddingVertical="9.0dp" />
+            <ImageView android:id="@id/iv_slider_refresh" android:paddingTop="9.0dp" android:paddingBottom="9.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_captcha_refresh" android:adjustViewBounds="true" android:layout_marginStart="11.0dp" android:paddingVertical="9.0dp" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/fl_slide_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dp">
+            <TextView android:textSize="12.0sp" android:textColor="#666666" android:id="@id/tv_slider_status" android:background="@drawable/bg_c7c7c7_0_0_8_8" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Verifying" android:fontFamily="@font/exo2_400" android:paddingStart="26.0dp" android:paddingVertical="10.0dp" />
+            <View android:background="@drawable/bg_shadow_captcha" android:layout_width="match_parent" android:layout_height="8.0dp" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

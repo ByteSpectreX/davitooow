@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="236.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@color/transparent" android:layout_width="10.0dp" android:layout_height="match_parent" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_faq" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+        <TextView android:textSize="16.0sp" android:textColor="#606060" android:id="@id/tv_category_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="14.0dp" android:fontFamily="@font/montserrat_semibold" />
+        <com.google.android.material.tabs.TabLayout android:id="@id/slidingTab" android:layout_width="match_parent" android:layout_height="36.0dp" app:tabBackground="@null" app:tabIndicator="@null" app:tabMaxWidth="0.0dp" app:tabMinWidth="0.0dp" app:tabPaddingEnd="0.0dp" app:tabPaddingStart="0.0dp" app:tabRippleColor="@null" />
+        <View android:background="#ffe8e8e8" android:layout_width="match_parent" android:layout_height="0.5dp" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </LinearLayout>
+    <View android:background="@color/transparent" android:layout_width="10.0dp" android:layout_height="match_parent" />
+</LinearLayout>

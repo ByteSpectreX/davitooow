@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_icon" android:layout_width="match_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="10.0sp" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/tv_new" android:background="@drawable/bg_pb_ott_game_gradient" android:paddingTop="2.0dp" android:paddingBottom="2.0dp" android:layout_width="49.0dp" android:layout_height="wrap_content" android:layout_alignStart="@id/iv_icon" android:textFontWeight="500" />
+</RelativeLayout>

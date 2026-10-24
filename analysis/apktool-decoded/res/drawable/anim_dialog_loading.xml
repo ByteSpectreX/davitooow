@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="40" android:drawable="@drawable/ic_loading_1" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_2" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_3" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_4" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_5" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_6" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_7" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_8" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_9" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_10" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_11" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_12" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_13" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_14" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_15" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_16" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_17" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_18" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_19" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_20" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_21" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_22" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_23" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_24" />
+    <item android:duration="40" android:drawable="@drawable/ic_loading_25" />
+</animation-list>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_top_10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dp">
+            <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_dialog_title" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Confirmation" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" android:layout_marginStart="16.0dp" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_cancel_big" android:layout_marginEnd="16.0dp" />
+        </LinearLayout>
+        <View android:background="#eaeaea" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="16.0dp" />
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16.0dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_split_loan_info" android:layout_width="210.0dp" android:layout_height="wrap_content" android:fontFamily="@font/exo2_400" />
+                <com.iwhalecloud.basemodule.widgets.RefreshWebView android:id="@id/wv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16.0dp" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dp" android:paddingRight="16.0dp" android:paddingBottom="32.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dp">
+                    <CheckBox android:textSize="14.0sp" android:gravity="top" android:layout_gravity="start" android:id="@id/cb_privacy" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp" android:checked="false" android:button="@drawable/selector_check_green" android:fontFamily="@font/exo2_medium" android:paddingStart="8.0dp" />
+                    <TextView android:textSize="14.0sp" android:textColor="#3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_tips" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dp" android:layout_marginRight="32.0dp" android:layout_marginBottom="19.5dp" android:fontFamily="@font/exo2_medium" android:layout_marginHorizontal="32.0dp" />
+                    <Button android:enabled="false" android:textSize="@dimen/sp_14" android:textColor="#c7c7c7" android:gravity="center" android:id="@id/btn_right" android:background="@drawable/bg_button_4dp_selector" android:layout_width="match_parent" android:layout_height="40.0dp" android:text="@string/text_ok_borrow_now_" android:textAllCaps="false" android:fontFamily="@font/exo2_semi_bold" />
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_0038A8" android:gravity="center" android:id="@id/btn_left" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="@string/btn_cancel" android:textAllCaps="false" android:fontFamily="@font/exo2_semi_bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</RelativeLayout>

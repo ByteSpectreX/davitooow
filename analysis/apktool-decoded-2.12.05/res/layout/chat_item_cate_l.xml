@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/chat_item_cate_l_0" android:background="@color/bg_main" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tl="http://schemas.android.com/apk/res-auto">
+    <ImageView android:paddingLeft="12.0dp" android:paddingRight="12.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dp" android:layout_marginBottom="15.0dp" android:src="@drawable/img_home_banner" android:adjustViewBounds="true" />
+    <com.ucc.chat.widget.IWViewPager android:id="@id/viewPager" android:background="@color/transparent" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="253.0dp" android:layout_marginLeft="10.0dp" android:layout_marginTop="10.0dp" android:layout_marginRight="10.0dp" android:layout_marginBottom="10.0dp" />
+</LinearLayout>

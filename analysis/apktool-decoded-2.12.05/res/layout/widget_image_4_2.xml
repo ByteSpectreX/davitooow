@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="315.0dp" android:layout_height="142.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/login_in" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/icon_widget_4_2" android:contentDescription="@null" />
+    <RelativeLayout android:orientation="vertical" android:id="@id/root_detail" android:background="@drawable/bg_white_20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_top" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/top_logo" android:layout_width="34.0dp" android:layout_height="10.0dp" android:layout_marginLeft="12.0dp" android:layout_marginTop="8.0dp" android:layout_marginRight="12.0dp" android:layout_marginBottom="8.0dp" android:src="@drawable/icon_dito" android:contentDescription="@null" android:layout_marginHorizontal="12.0dp" android:layout_marginVertical="8.0dp" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/bg_red_right_top_20dp" android:padding="4.0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:id="@id/top_paid_flag_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                <ImageView android:id="@id/mobile_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_marginStart="2.0dp" />
+                <ImageView android:background="@color/white" android:layout_width="1.0dp" android:layout_height="match_parent" android:layout_marginLeft="6.0dp" android:layout_marginRight="6.0dp" android:contentDescription="@null" android:layout_marginHorizontal="6.0dp" />
+                <ImageView android:id="@id/mobile_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@id/line_top" android:background="@color/color_EAEAEA" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_below="@id/ll_top" />
+        <RelativeLayout android:orientation="horizontal" android:padding="@dimen/dp_4" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/ll_bottom" android:layout_below="@id/line_top">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_balance" android:background="@drawable/bg_gray_4dp" android:padding="@dimen/dp_4" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/center" android:layout_toStartOf="@id/center">
+                <ImageView android:id="@id/text_your_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                <ImageView android:id="@id/balance_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                <ImageView android:id="@id/valid_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+            </LinearLayout>
+            <TextView android:id="@id/center" android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_marginLeft="2.0dp" android:layout_marginRight="2.0dp" android:layout_centerInParent="true" android:layout_marginHorizontal="2.0dp" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_usage" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/center" android:layout_toStartOf="@id/center">
+                <ProgressBar android:id="@id/progress_bar_data" android:background="@drawable/bg_widget_progress_blue" android:layout_width="24.0dp" android:layout_height="24.0dp" android:max="100" android:progress="0" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/widget_progress_blue" />
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10.0dp">
+                    <ImageView android:id="@id/data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                    <ImageView android:id="@id/total_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                    <ImageView android:id="@id/text_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:id="@id/image" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/icon_widget_image_4_2" android:contentDescription="@null" android:layout_toEndOf="@id/center" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_bottom" android:background="@drawable/bg_red_bottom_20dp" android:paddingTop="4.5dp" android:paddingBottom="4.5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:paddingVertical="4.5dp" />
+    </RelativeLayout>
+</LinearLayout>

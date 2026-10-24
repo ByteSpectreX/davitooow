@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_touch_in_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/background_login" />
+    <RelativeLayout android:id="@id/ll_touch_in" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@id/iv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_top_margin" android:src="@drawable/ic_login_return" android:layout_marginStart="@dimen/back_left_margin" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_login_fingerprint" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/primary_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="45.099976dp" android:text="@string/touch_in" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textColor="@color/primary_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="69.0dp" android:text="@string/login_with_sms_code" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/root" android:tag="layout/activity_sim_scan_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <cn.bingoogolapple.qrcode.zxing.ZXingView android:id="@id/zxingview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true" app:qrcv_barcodeRectHeight="98.0dp" app:qrcv_borderColor="@color/color_0038A8" app:qrcv_borderSize="4.0dp" app:qrcv_cornerSize="0.0dp" app:qrcv_isBarcode="true" app:qrcv_isShowDefaultScanLineDrawable="false" app:qrcv_rectWidth="311.0dp" app:qrcv_scanLineSize="0.0dp" app:qrcv_topOffset="265.0dp" />
+    <View android:background="#99000000" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toTopOf="@id/v_rect" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/v_rect" android:background="@drawable/bg_sim_scan_rect" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="240.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <View android:background="#99000000" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/v_rect" />
+    <include android:id="@id/bar" layout="@layout/include_radius_red_blue_title_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

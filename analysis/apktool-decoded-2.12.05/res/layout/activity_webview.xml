@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_webview_0" android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/viewStatusBar" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="30.0dp" />
+    <include android:id="@id/bar" layout="@layout/include_radius_title_bar" />
+    <View android:id="@id/v_under_bar" android:layout_width="match_parent" android:layout_height="@dimen/margin_16dp" />
+    <View android:id="@id/viewRound" android:background="@drawable/bg_white_top_16dp" android:layout_width="match_parent" android:layout_height="16.0dp" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/srl" android:layout_width="match_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0" app:srlEnableLoadMore="false" app:srlEnableRefresh="false">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.iwhalecloud.basemodule.widgets.RefreshWebView android:id="@id/wv" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <TextView android:textColor="@color/color_3e3e3e" android:gravity="center" android:id="@id/tv_no_results" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25dp" android:layout_marginTop="50.0dp" android:layout_marginRight="@dimen/margin_25dp" android:text="There seems to be a problem with partner site. Please try again later." android:drawableTop="@drawable/img_no_data_found" android:drawablePadding="@dimen/margin_25dp" android:layout_centerHorizontal="true" android:fontFamily="@font/montserrat_medium" />
+            <FrameLayout android:id="@id/flVideoContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

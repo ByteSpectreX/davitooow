@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_promo_webview_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/srl" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0" app:srlEnableLoadMore="false" app:srlEnableRefresh="false">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.iwhalecloud.basemodule.widgets.RefreshWebView android:id="@id/wv_promo" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <TextView android:textColor="@color/color_3e3e3e" android:gravity="center" android:id="@id/tv_no_results" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25dp" android:layout_marginTop="50.0dp" android:layout_marginRight="@dimen/margin_25dp" android:text="There seems to be a problem with partner site. Please try again later." android:drawableTop="@drawable/img_no_data_found" android:drawablePadding="@dimen/margin_25dp" android:layout_centerHorizontal="true" android:fontFamily="@font/montserrat_medium" />
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

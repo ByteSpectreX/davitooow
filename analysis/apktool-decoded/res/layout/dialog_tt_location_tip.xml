@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_10dp" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:fontFamily="@font/exo2_bold" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_2f3043" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_tips" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="24.0dp" android:fontFamily="@font/exo2_medium" />
+        <View android:id="@id/line" android:background="#e8e8e8" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_below="@id/tv_tips" />
+        <Button android:enabled="true" android:textSize="16.0sp" android:gravity="center" android:id="@id/btn_right" android:background="@drawable/bg_ce1126_corner_4" android:paddingTop="14.0dp" android:paddingBottom="14.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="13.0dp" android:text="Yes" android:fontFamily="@font/exo2_semi_bold" style="@style/common_button" />
+        <TextView android:textColor="@color/color_0038A8" android:gravity="center" android:id="@id/btn_left" android:background="@null" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dp" android:text="@string/btn_cancel" android:textAllCaps="false" android:fontFamily="@font/exo2_semi_bold" />
+    </LinearLayout>
+</RelativeLayout>

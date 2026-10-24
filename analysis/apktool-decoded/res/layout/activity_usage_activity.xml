@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_usage_activity_0" android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/bar" layout="@layout/include_blue_title_bar" />
+    <FrameLayout android:id="@id/fl_content" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    <RelativeLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="328.0dp">
+        <LinearLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.mydito.widgets.ResizeImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:src="@drawable/ic_usage_bg" android:scaleType="fitXY" app:photoRate="1" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:id="@id/ll_dashboard" android:visibility="gone" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <androidx.viewpager.widget.ViewPager android:layout_gravity="center" android:id="@id/vpBalance" android:clipChildren="false" android:layout_width="235.0dp" android:layout_height="235.0dp" android:layout_marginTop="20.0dp" android:layout_marginBottom="20.0dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_data" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" android:layout_weight="1.0">
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_16dp" android:padding="15.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_2c2c2c" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="My Promo" android:fontFamily="@font/montserrat_bold" android:lineHeight="36.0dp" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_data" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_no_result" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+        <TextView android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_no_results" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sorry, no results found." android:drawableTop="@drawable/img_no_data_found" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:fontFamily="@font/montserrat_medium" />
+    </RelativeLayout>
+    <LinearLayout android:background="@color/white" android:padding="15.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:enabled="true" android:gravity="center" android:id="@id/tv_purchase" android:padding="14.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:layout_marginRight="15.0dp" android:text="Purchase more Promo" style="@style/common_button" />
+    </LinearLayout>
+</LinearLayout>

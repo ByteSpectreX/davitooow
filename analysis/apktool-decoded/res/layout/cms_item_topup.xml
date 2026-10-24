@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootLayout" android:tag="layout/cms_item_topup_0" android:background="@drawable/bg_item_top_up_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12.0dp" android:layout_marginEnd="12.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tv_title" android:background="@drawable/bliack_bottom_radius_square" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:paddingStart="15.0dp" android:paddingEnd="15.0dp" />
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:layout_marginBottom="10.0dp" android:layout_below="@id/tv_title" android:layout_marginStart="6.0dp" android:layout_marginEnd="6.0dp">
+            <EditText android:textSize="14.0sp" android:id="@id/et_input" android:background="@drawable/bg_edit_top_up" android:layout_width="match_parent" android:layout_height="40.0dp" android:maxLines="1" android:layout_centerVertical="true" android:inputType="phone" android:paddingStart="10.0dp" android:paddingEnd="5.0dp" android:layout_marginStart="8.0dp" android:layout_marginEnd="8.0dp" android:layout_toStartOf="@id/btn_pay" android:layout_alignParentStart="true" />
+            <Button android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/btn_pay" android:background="@drawable/btn_pay_bg" android:layout_width="87.0dp" android:layout_height="40.0dp" android:layout_centerVertical="true" android:textAllCaps="false" android:paddingStart="8.0dp" android:paddingEnd="8.0dp" android:layout_marginEnd="5.0dp" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

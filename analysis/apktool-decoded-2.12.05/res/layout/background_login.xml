@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/login_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="121.379974dp" android:layout_height="119.82999dp" android:layout_marginTop="164.0dp" android:src="@drawable/ic_login_bubble_red" android:scaleType="fitXY" android:layout_alignParentEnd="true" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="518.0dp" android:src="@drawable/ic_login_bubble_yellow" />
+</RelativeLayout>

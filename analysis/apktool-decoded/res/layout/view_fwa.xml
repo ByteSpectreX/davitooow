@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shape_dialog_white_corner" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="24.0sp" android:textColor="@color/color_ce1126" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hello, DITO Tester!" android:fontFamily="@font/exo2_bold" />
+    <com.mydito.widgets.ResizeImageView android:id="@id/iv_ad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_16dp" android:src="@drawable/icon_fwa" app:photoRate="0.96" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:id="@id/tv_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_16dp" android:layout_marginTop="18.0dp" android:layout_marginRight="@dimen/margin_16dp" android:lineSpacingExtra="4.0dp" android:fontFamily="@font/montserrat_medium" />
+</LinearLayout>

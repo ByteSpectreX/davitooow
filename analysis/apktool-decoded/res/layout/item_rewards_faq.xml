@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/shape_white_10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_marginStart="@dimen/margin_16dp" android:layout_marginEnd="@dimen/margin_16dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_14sp" android:textColor="@color/color_2f3043" android:id="@id/tv_rewards_faq_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:layout_marginBottom="20.0dp" android:maxWidth="290.0dp" android:fontFamily="@font/montserrat_semibold" android:layout_marginStart="@dimen/dp_15" />
+    <View android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+    <ImageView android:layout_gravity="center" android:layout_width="@dimen/margin_16dp" android:layout_height="@dimen/margin_16dp" android:src="@drawable/ic_arrow_right_3" android:layout_marginEnd="11.0dp" />
+</LinearLayout>

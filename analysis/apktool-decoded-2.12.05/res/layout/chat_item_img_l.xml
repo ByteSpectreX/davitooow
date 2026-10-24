@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/chat_item_img_l_0" android:paddingLeft="13.0dp" android:paddingRight="43.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="13.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_head" android:layout_width="wrap_content" android:layout_height="40.0dp" android:src="@drawable/ic_faq_service" android:adjustViewBounds="true" />
+    <ImageView android:gravity="center_vertical" android:id="@id/content" android:paddingLeft="19.0dp" android:paddingTop="4.0dp" android:paddingRight="9.0dp" android:paddingBottom="4.0dp" android:layout_width="150.0dp" android:layout_height="wrap_content" android:layout_marginLeft="6.0dp" android:src="@drawable/photo_error" android:adjustViewBounds="true" />
+</LinearLayout>

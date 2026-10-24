@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_ott_detail_0" android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_no_results" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sorry, no results found." android:drawableTop="@drawable/img_no_data_found" android:layout_centerInParent="true" android:fontFamily="@font/montserrat_medium" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:orientation="vertical" android:id="@id/smart_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="-13.0dp" android:fillViewport="true" android:layout_above="@id/ll_bottom" android:layout_below="@id/top">
+        <androidx.core.widget.NestedScrollView android:id="@id/nestScrollView" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.youth.banner.Banner android:id="@id/banner" android:layout_width="match_parent" android:layout_height="300.0dp" />
+                </RelativeLayout>
+                <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:textColorLink="@color/blue" android:id="@id/tv_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:fontFamily="@font/montserrat_medium" android:layout_marginStart="16.0dp" android:layout_marginEnd="16.0dp" />
+                <com.google.android.material.tabs.TabLayout android:layout_gravity="center_horizontal" android:id="@id/tabLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_16dp" android:layout_marginRight="@dimen/margin_16dp" app:tabBackground="@null" app:tabGravity="fill" app:tabIndicator="@null" app:tabMaxWidth="0.0dp" app:tabMinWidth="0.0dp" app:tabMode="fixed" app:tabPaddingEnd="4.0dp" app:tabPaddingStart="4.0dp" app:tabRippleColor="@null" />
+                <com.iwhalecloud.basemodule.widgets.AutoHeightViewPager android:id="@id/viewpager" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <LinearLayout android:id="@id/top" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:id="@id/bar" layout="@layout/include_blue_bottom_round_bar" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_price_detail" android:background="@drawable/bg_white_top_10dp" android:paddingTop="8.0dp" android:paddingBottom="14.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:paddingStart="@dimen/margin_16dp" android:paddingEnd="@dimen/margin_16dp">
+                <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_type_name1" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:gravity="end" android:id="@id/tv_value_name1" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/ll_type_12VAT" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:paddingStart="@dimen/margin_16dp" android:paddingEnd="@dimen/margin_16dp">
+                <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_type_name2" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="12% VAT" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:gravity="end" android:id="@id/tv_value_name2" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+            </LinearLayout>
+            <View android:id="@id/v_bottom_line" android:background="@drawable/bg_payment_bottom_line" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginLeft="16.0dp" android:layout_marginTop="12.0dp" android:layout_marginRight="@dimen/margin_16dp" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="5.0dp">
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_offer_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp">
+                <TextView android:textSize="10.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_amount_to_pay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amount to Pay" android:textAllCaps="true" android:fontFamily="@font/exo2_bold" app:layout_constraintBottom_toTopOf="@id/tv_pay_price" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:textSize="24.0sp" android:textColor="@color/color_ce1126" android:gravity="center" android:id="@id/tv_pay_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="₱0.00" android:fontFamily="@font/exo2_extra_bold" app:layout_constraintBottom_toTopOf="@id/tv_point_text" app:layout_constraintLeft_toLeftOf="@id/tv_amount_to_pay" app:layout_constraintTop_toBottomOf="@id/tv_amount_to_pay" app:layout_goneMarginBottom="12.0dp" />
+            </LinearLayout>
+            <View android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+            <Button android:enabled="false" android:textColor="@color/white" android:id="@id/btn_proceed" android:background="@drawable/bg_button_4dp_selector" android:layout_width="118.0dp" android:layout_height="46.0dp" android:layout_marginTop="18.0dp" android:layout_marginRight="@dimen/margin_16dp" android:layout_marginBottom="18.0dp" android:text="@string/text_proceed" android:textAllCaps="false" android:fontFamily="@font/exo2_semi_bold" android:stateListAnimator="@null" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

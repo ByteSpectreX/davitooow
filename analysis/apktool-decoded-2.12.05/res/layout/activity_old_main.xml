@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer" android:tag="layout/activity_old_main_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.iwhalecloud.basemodule.widgets.IWViewPager android:id="@id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/tabLayout" />
+        <com.google.android.material.tabs.TabLayout android:id="@id/tabLayout" android:background="@drawable/bg_main_tab" android:layout_width="match_parent" android:layout_height="67.0dp" android:layout_alignParentBottom="true" app:tabBackground="@null" app:tabIndicatorColor="@color/transparent" app:tabMode="fixed" app:tabPaddingBottom="-1.0dp" app:tabPaddingEnd="-1.0dp" app:tabPaddingStart="-1.0dp" app:tabPaddingTop="-1.0dp" app:tabRippleColor="@null" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="left" android:orientation="vertical" android:id="@id/ll_drawer" android:background="#ffffff" android:clickable="true" android:layout_width="280.0dp" android:layout_height="match_parent" android:minWidth="280.0dp">
+        <RelativeLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/rl_top" android:background="@drawable/bg_sidebar_header" android:layout_width="match_parent" android:layout_height="140.0dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="33.0dp" android:layout_alignParentBottom="true">
+                <ImageView android:id="@id/iv_user_icon" android:layout_width="42.0dp" android:layout_height="42.0dp" android:layout_marginLeft="31.0dp" android:src="@drawable/ic_sidebar_head" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_user_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dp" android:layout_centerVertical="true" android:fontFamily="@font/montserrat_bold" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_sign_in" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dp" android:text="@string/sign_in" android:fontFamily="@font/montserrat_bold" />
+                <ImageView android:id="@id/iv_arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dp" android:src="@drawable/ic_arrow_bottom" />
+            </LinearLayout>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_left_menu" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/btn_logout" android:layout_below="@id/rl_top" />
+        <Button android:textSize="14.0sp" android:textColor="@color/color_ce1126" android:id="@id/btn_logout" android:background="@drawable/bg_button_logout" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_marginLeft="24.0dp" android:layout_marginRight="24.0dp" android:layout_marginBottom="58.0dp" android:text="@string/btn_log_out" android:layout_alignParentBottom="true" android:textAllCaps="false" android:fontFamily="@font/montserrat_semibold" />
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

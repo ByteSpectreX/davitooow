@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/popupwindow_range_select_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_bottom_10dp" android:layout_width="150.0dp" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="#ff3e3e3e" android:gravity="center_vertical" android:id="@id/tv3Months" android:layout_width="match_parent" android:layout_height="40.0dp" android:text="@string/text_lowercase_three_month" android:fontFamily="@font/exo2_semi_bold" android:paddingStart="10.0dp" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff3e3e3e" android:gravity="center_vertical" android:id="@id/tv6Months" android:layout_width="match_parent" android:layout_height="40.0dp" android:text="@string/text_lowercase_six_month" android:fontFamily="@font/exo2_semi_bold" android:paddingStart="10.0dp" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff3e3e3e" android:gravity="center_vertical" android:id="@id/tvCustomDate" android:layout_width="match_parent" android:layout_height="40.0dp" android:text="@string/custom_date" android:fontFamily="@font/exo2_semi_bold" android:paddingStart="10.0dp" />
+    </LinearLayout>
+</FrameLayout>

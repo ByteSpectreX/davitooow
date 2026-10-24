@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_actionbar" android:background="@color/bg_main" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@drawable/bg_nav" android:layout_width="match_parent" android:layout_height="52.0dp">
+            <ImageView android:id="@id/imgbtn_nav_back" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="28.0dp" android:layout_marginLeft="15.0dp" android:src="@drawable/ic_nav_arrow" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_nav_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/imgbtn_nav_back" android:layout_centerVertical="true" android:layout_toEndOf="@id/imgbtn_nav_back">
+                <TextView android:textSize="16.0sp" android:textColor="@color/color_normal_text" android:ellipsize="end" android:id="@id/tv_nav_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
+                <TextView android:textSize="10.0sp" android:textColor="@color/color_normal_text" android:id="@id/tv_nav_sub_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.bm.library.PhotoView android:id="@id/photoView" android:background="@color/bg_main" android:layout_width="match_parent" android:layout_height="match_parent" android:adjustViewBounds="true" />
+</LinearLayout>

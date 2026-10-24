@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rel_top" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_ad_image_top" android:layout_width="match_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_alignParentTop="true" />
+        <TextView android:textSize="14.0sp" android:textColor="#000000" android:ellipsize="end" android:id="@id/tv_desc_top" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:maxLines="3" android:layout_below="@id/iv_ad_image_top" android:lineSpacingMultiplier="1.0" android:breakStrategy="simple" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rel_start" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_ad_image_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+        <TextView android:textSize="14.0sp" android:textColor="#000000" android:ellipsize="end" android:id="@id/tv_desc_start" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="5" android:layout_centerVertical="true" android:lineSpacingMultiplier="1.0" android:layout_marginStart="12.0dp" android:layout_toEndOf="@id/iv_ad_image_start" android:breakStrategy="simple" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rel_end" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_ad_image_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        <TextView android:textSize="14.0sp" android:textColor="#000000" android:ellipsize="end" android:id="@id/tv_desc_end" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="5" android:layout_centerVertical="true" android:lineSpacingMultiplier="1.0" android:layout_marginEnd="12.0dp" android:layout_toStartOf="@id/iv_ad_image_end" android:breakStrategy="simple" />
+    </RelativeLayout>
+</LinearLayout>

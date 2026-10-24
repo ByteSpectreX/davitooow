@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_left_voip_0" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="13.0dp" android:paddingStart="13.0dp" android:paddingEnd="0.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/iv_head" android:layout_width="48.0dp" android:layout_height="48.0dp" android:src="@drawable/ic_faq_service" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_chat_text_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="244.0dp">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/content" android:paddingLeft="12.0dp" android:paddingTop="13.0dp" android:paddingRight="12.0dp" android:paddingBottom="13.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="244.0dp" android:text="" android:textIsSelectable="true" android:fontFamily="@font/montserrat_medium" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/item_text_l_menu_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_marginRight="12.0dp" android:divider="@drawable/divider_8px_f2f2f2" android:showDividers="middle" android:layout_marginStart="48.0dp">
+        <TextView android:textSize="12.0sp" android:textColor="#0038a8" android:ellipsize="end" android:id="@id/tv_no" android:background="@drawable/bg_operation_view" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="244.0dp" android:singleLine="true" android:paddingStart="15.0dp" android:paddingEnd="15.0dp" />
+        <TextView android:textSize="12.0sp" android:textColor="#0038a8" android:ellipsize="end" android:id="@id/tv_yes" android:background="@drawable/bg_operation_view" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:maxWidth="244.0dp" android:singleLine="true" android:paddingStart="15.0dp" android:paddingEnd="15.0dp" />
+    </LinearLayout>
+</LinearLayout>

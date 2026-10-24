@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_dialog_white_corner" android:paddingLeft="16.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_centerInParent="true">
+        <TextView android:textSize="16.0sp" android:textColor="#2c2c2c" android:gravity="center" android:id="@id/tv_tips" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:text="Oops！" android:fontFamily="@font/montserrat_bold" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff2f3043" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_login_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:text="@string/text_need_login_tips" android:fontFamily="@font/montserrat_medium" />
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="31.0dp">
+            <Button android:textColor="#ffffff" android:id="@id/btn_right" android:background="@drawable/bg_button_rectangle_color_ce1126" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sign In" android:textAllCaps="false" android:fontFamily="@font/montserrat_bold" />
+            <Button android:textColor="#0038a8" android:id="@id/btn_left" android:background="@null" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_marginBottom="8.0dp" android:text="Not Now" android:textAllCaps="false" android:fontFamily="@font/exo_bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

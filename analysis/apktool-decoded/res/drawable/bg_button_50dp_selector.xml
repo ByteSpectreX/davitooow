@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/shape_eaeaea_50dp" />
+    <item android:state_enabled="true" android:drawable="@drawable/bg_ce1126_corner_50" />
+</selector>

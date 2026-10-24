@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:tag="layout/activity_load_assist_0" android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tl="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/bar" layout="@layout/include_blue_title_bar" />
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/bar">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dp">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_10dp" android:paddingLeft="16.0dp" android:paddingTop="18.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="19.0dp" android:paddingHorizontal="16.0dp">
+                <TextView android:textSize="16.0sp" android:textColor="#3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="9.399994dp" android:text="@string/text_dito_mobile_number" android:fontFamily="@font/exo2_medium" />
+                <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_f7f7_ea_border_10dp" android:paddingTop="12.0dp" android:paddingBottom="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.599976dp" android:paddingStart="16.0dp" android:paddingVertical="12.0dp">
+                    <TextView android:textSize="16.0sp" android:textColor="#2f3043" android:id="@id/tv_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="16.0sp" android:textColor="#979797" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_my_number_up" android:fontFamily="@font/exo2_medium" android:layout_marginStart="5.0dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:textColor="#3e3e3e" android:layout_gravity="center_horizontal" android:id="@id/tv_news" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="19.0dp" android:text="@string/tip_load_assist_good_news" android:fontFamily="@font/exo2_extra_bold" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

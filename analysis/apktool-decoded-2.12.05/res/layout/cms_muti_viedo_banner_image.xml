@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="160.0dp" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/banner_image" android:layout_width="160.0dp" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+    <ImageView android:id="@id/iv_play" android:layout_width="24.0dp" android:layout_height="wrap_content" android:src="@drawable/jz_play_normal" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="end|top" android:id="@id/tv_learn_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_alignParentTop="true" android:lineSpacingExtra="-2.7999878sp" android:alpha="1.0" android:fontFamily="@font/exo2_semi_bold" android:layout_marginEnd="10.0dp" android:layout_alignParentEnd="true" android:letterSpacing="-0.01" android:textFontWeight="400" />
+</RelativeLayout>

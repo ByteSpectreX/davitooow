@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/dialog_status_notice_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_dialog_white_corner" android:paddingLeft="16.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="336.0dp" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_centerInParent="true">
+        <TextView android:textSize="22.0sp" android:textColor="@color/color_ce1126" android:gravity="center" android:id="@id/tv_notice_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dp" android:text="System Maintenance Notice" android:fontFamily="@font/exo_bold" android:lineHeight="24.0dp" />
+        <TextView android:textSize="16.0sp" android:textColor="#2f3043" android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/tv_content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="9.0dp" android:layout_marginBottom="9.0dp" android:text="We will be having a system maintenance between xxxx on xxxx. Please try again later." android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" android:lineHeight="24.0dp" />
+        <Button android:enabled="true" android:gravity="center" android:id="@id/btn_ok" android:paddingTop="14.0dp" android:paddingBottom="14.0dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_marginBottom="22.0dp" android:text="OK" android:lineHeight="34.0dp" style="@style/common_button" />
+    </LinearLayout>
+</RelativeLayout>

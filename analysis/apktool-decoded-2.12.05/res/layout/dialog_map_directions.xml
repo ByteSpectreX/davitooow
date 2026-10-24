@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_dialog_white_corner" android:paddingLeft="16.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="263.0dp" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_centerInParent="true">
+        <TextView android:textColor="@color/color_2f3043" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" android:text="Get directions and navigate to our store using the app of your choice. Tap one to continue." android:fontFamily="@font/montserrat_medium" android:lineHeight="24.0dp" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recy_directions" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button android:enabled="true" android:gravity="center" android:id="@id/tv_cancel" android:paddingTop="14.0dp" android:paddingBottom="14.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_marginBottom="22.0dp" android:text="Cancel" android:lineHeight="34.0dp" style="@style/common_button" />
+    </LinearLayout>
+</RelativeLayout>

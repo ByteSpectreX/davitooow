@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_recipient_details_0" android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/ll_top" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <include android:id="@id/bar" layout="@layout/include_blue_bottom_round_bar" />
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" android:layout_above="@id/rel_bottom" android:layout_below="@id/ll_top">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_item_list" android:background="@drawable/bg_white_10dp" android:paddingBottom="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16.0dp" android:paddingEnd="16.0dp" android:layout_marginStart="@dimen/margin_16dp" android:layout_marginEnd="@dimen/margin_16dp" />
+    </ScrollView>
+    <RelativeLayout android:id="@id/rel_bottom" android:background="@color/white" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:elevation="5.0dp">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_offer_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:layout_marginBottom="2.0dp">
+            <TextView android:textSize="10.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_amount_to_pay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amount to Pay" android:textAllCaps="true" android:fontFamily="@font/exo2_bold" app:layout_constraintBottom_toTopOf="@id/tv_pay_price" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="24.0sp" android:textColor="@color/color_ce1126" android:gravity="center" android:id="@id/tv_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="₱0.00" android:fontFamily="@font/exo2_extra_bold" app:layout_constraintBottom_toTopOf="@id/tv_point_text" app:layout_constraintLeft_toLeftOf="@id/tv_amount_to_pay" app:layout_constraintTop_toBottomOf="@id/tv_amount_to_pay" app:layout_goneMarginBottom="12.0dp" />
+        </LinearLayout>
+        <Button android:enabled="false" android:textColor="@color/white" android:id="@id/btn_subscribe" android:background="@drawable/bg_button_4dp_selector" android:layout_width="118.0dp" android:layout_height="46.0dp" android:text="@string/text_proceed" android:layout_centerVertical="true" android:textAllCaps="false" android:fontFamily="@font/exo2_semi_bold" android:layout_alignParentEnd="true" android:stateListAnimator="@null" />
+    </RelativeLayout>
+</RelativeLayout>

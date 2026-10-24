@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_bonus_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bonus Load" android:fontFamily="@font/exo2_medium" />
+        <TextView android:textSize="8.0sp" android:textColor="@color/color_16aa18" android:layout_gravity="center" android:id="@id/tv_discount_label" android:background="@drawable/bg_16aa18_2_border" android:paddingLeft="4.0dp" android:paddingTop="2.0dp" android:paddingRight="4.0dp" android:paddingBottom="2.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_semi_bold" android:layout_marginStart="4.0dp" android:paddingHorizontal="4.0dp" android:paddingVertical="2.0dp" />
+        <ImageView android:layout_gravity="center" android:id="@id/iv_check" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_green_check" android:layout_marginStart="4.0dp" />
+        <View android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tv_bonus_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="333" android:fontFamily="@font/exo2_medium" />
+    </LinearLayout>
+    <TextView android:textSize="11.0sp" android:textColor="@color/color_0038A7" android:id="@id/tv_view_tc" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View T&amp;C" android:fontFamily="@font/montserrat_medium" />
+</LinearLayout>

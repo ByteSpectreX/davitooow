@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/common_fontsize" android:textColor="@color/color_606060" android:ellipsize="end" android:id="@id/tv_faq_title" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="17.0dp" android:layout_marginTop="16.0dp" android:layout_marginBottom="18.0dp" android:singleLine="true" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+        <ImageView android:layout_gravity="center" android:layout_width="24.0dp" android:layout_height="24.0dp" android:layout_marginLeft="13.0dp" android:src="@drawable/ic_qustion_item_arrow" />
+    </LinearLayout>
+    <View android:background="#b3c7c7c7" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="17.0dp" android:layout_marginRight="15.0dp" />
+</LinearLayout>

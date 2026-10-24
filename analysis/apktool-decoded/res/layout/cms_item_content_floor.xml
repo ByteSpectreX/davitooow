@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12.0dp" android:layout_marginEnd="5.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.iwhalecloud.configpager.ui.widgets.PbTitleView android:id="@id/view_pb_title" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <com.youth.banner.Banner android:id="@id/lay6_rv" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="7.0dp" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_wow_deals_0" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/bar" layout="@layout/include_radius_red_blue_title_bar" />
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_banner" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.youth.banner.Banner android:id="@id/banner" android:layout_width="match_parent" android:layout_height="match_parent" app:banner_infinite_loop="false" />
+            </LinearLayout>
+            <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="28.0dp" android:text="PROMO MECHANICS" android:fontFamily="@font/exo2_bold" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tvDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="12.0dp" android:layout_marginRight="16.0dp" android:fontFamily="@font/exo2_medium" android:layout_marginHorizontal="16.0dp" />
+            <com.mydito.ui.pb.widget.RewardsOffersView android:id="@id/viewRewardsOffers" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

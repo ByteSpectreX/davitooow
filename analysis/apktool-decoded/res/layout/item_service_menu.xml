@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="60.0dp" android:layout_height="wrap_content">
+        <TextView android:textSize="7.0sp" android:textColor="@color/white" android:id="@id/tv_new_flag" android:background="@drawable/bg_shape_ce1126_2dp" android:paddingLeft="2.0dp" android:paddingRight="2.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-5.0dp" android:layout_marginTop="5.0dp" android:text="New" android:layout_alignParentRight="true" android:fontFamily="@font/montserrat_medium" />
+        <ImageView android:id="@id/iv_menu" android:layout_width="match_parent" android:layout_height="64.0dp" android:src="@drawable/ic_home_buy_promo" android:adjustViewBounds="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView android:textSize="12.0sp" android:textColor="@color/login_text_black" android:gravity="center|top" android:layout_gravity="center_horizontal" android:id="@id/tv_faq_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dp" android:text="Buy Promo" android:lines="2" android:fontFamily="@font/montserrat_medium" />
+</LinearLayout>

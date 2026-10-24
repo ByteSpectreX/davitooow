@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/root" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_key_member_sim" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="@dimen/text_14sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:fontFamily="@font/exo2_semi_bold" android:layout_marginStart="40.0dp" app:layout_constraintBottom_toTopOf="@id/tv_profile" app:layout_constraintStart_toEndOf="@id/iv_sim" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="10.0sp" android:textColor="@color/color_c7c7c7" android:id="@id/tv_profile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:layout_marginBottom="8.0dp" android:fontFamily="@font/exo_medium" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="@id/tv_number" app:layout_constraintTop_toBottomOf="@id/tv_number" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/activity_new_chat_0" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_actionbar" android:background="#f2f2f2" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@drawable/bg_nav" android:layout_width="match_parent" android:layout_height="52.0dp">
+            <ImageView android:id="@id/imgbtn_nav_back" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="28.0dp" android:layout_marginLeft="15.0dp" android:src="@drawable/ic_nav_arrow" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/color_normal_text" android:gravity="center" android:id="@id/tv_nav_mid_title" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/online_customer_service" android:maxLines="1" android:layout_centerInParent="true" android:fontFamily="@font/exo2_bold" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff0038a8" android:gravity="center" android:id="@id/tv_history" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="16.0dp" android:text="@string/chat_history" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:fontFamily="@font/montserrat_medium" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_smart_layout" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_above="@id/ll_quickly_question" android:layout_below="@id/rl_actionbar">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/content_recycler_view" android:background="@color/bg_main" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_quickly_question" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@id/ll_bottom">
+        <View android:background="#c7c7c7" android:layout_width="match_parent" android:layout_height="1.0px" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recy_quickly_question" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <View android:background="#f2f2f2" android:layout_width="match_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_bottom" android:background="@color/white" android:layout_width="match_parent" android:layout_height="68.0dp" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center" android:id="@id/photos" android:layout_width="32.0dp" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:src="@drawable/add_photo" android:scaleType="centerInside" android:adjustViewBounds="true" />
+        <EditText android:textSize="14.0sp" android:textColor="@color/bg_25" android:textColorHint="#c7c7c7" android:gravity="center_vertical" android:id="@id/content_input" android:background="@drawable/bg_chat_input" android:paddingLeft="15.0dp" android:paddingRight="8.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_marginLeft="9.0dp" android:layout_marginTop="15.0dp" android:layout_marginBottom="15.0dp" android:hint="@string/type_something" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+        <ImageView android:id="@id/camera" android:visibility="gone" android:layout_width="60.0dp" android:layout_height="match_parent" android:src="@drawable/chat_camera_n" android:scaleType="centerInside" android:alpha="0.4" />
+        <ImageView android:layout_gravity="center" android:id="@id/face" android:visibility="gone" android:layout_width="60.0dp" android:layout_height="wrap_content" android:src="@drawable/chat_face_n" android:scaleType="centerInside" />
+        <ImageView android:layout_gravity="center" android:id="@id/send" android:layout_width="32.0dp" android:layout_height="wrap_content" android:layout_marginLeft="11.0dp" android:layout_marginRight="16.0dp" android:src="@drawable/icon_msg_send" android:scaleType="centerInside" android:adjustViewBounds="true" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/function_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <GridView android:id="@id/face_layout" android:padding="8.0dp" android:visibility="gone" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="155.0dp" android:horizontalSpacing="0.0dp" android:verticalSpacing="0.0dp" android:columnWidth="40.0dp" android:numColumns="auto_fit" />
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/voice_layout" android:background="#fff" android:paddingTop="15.0dp" android:paddingBottom="20.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hold_to_talk" />
+            <com.sufeng.videochat.AudioRecorderButton android:id="@id/talk" android:background="@drawable/hold_to_talk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/words_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="155.0dp">
+            <ListView android:id="@id/words_list" android:background="@color/white" android:layout_width="match_parent" android:layout_height="0.0dp" android:divider="@color/bg_main" android:dividerHeight="1.0px" android:layout_weight="1.0" />
+            <com.google.android.material.tabs.TabLayout android:id="@id/tab_layout" android:layout_width="wrap_content" android:layout_height="40.0dp" app:tabBackground="@drawable/bg_tab" app:tabIndicatorColor="@null" app:tabSelectedTextColor="@color/white" app:tabTextAppearance="@style/TabAllowLowerCase" app:tabTextColor="@color/txt_4c" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

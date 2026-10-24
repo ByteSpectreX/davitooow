@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/my_root" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.mydito.ui.pb.widget.QuickAccessAccountView android:id="@id/qaAccount" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <com.iwhalecloud.configpager.ui.widgets.VajraDistrictView android:id="@id/vajra_district" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llQuickAccessProd" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.tabs.TabLayout android:id="@id/tabLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="45.0dp" app:tabBackground="@color/transparent" app:tabGravity="center" app:tabIndicatorColor="@color/transparent" app:tabIndicatorHeight="0.0dp" app:tabMode="fixed" app:tabRippleColor="@color/transparent" app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.mydito.ui.pb.widget.QuickAccessProdView android:id="@id/rvSheet1" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <com.mydito.ui.pb.widget.QuickAccessProdAppletView android:id="@id/rvSheet2" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

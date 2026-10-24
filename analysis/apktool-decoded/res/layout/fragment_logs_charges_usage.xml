@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_logs_charges_usage_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="95.0dp" android:layout_height="70.0dp" android:src="@drawable/ic_right_bottom_icon" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" />
+    <ImageView android:background="@drawable/ic_left_top_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.core.widget.NestedScrollView android:id="@id/nsv_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:layout_width="375.0dp" android:layout_height="439.0dp" android:layout_marginTop="-133.0dp" android:src="@drawable/bg_logs_round" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/color_2f3043" android:id="@id/tv_title_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="Current Load Balance " android:layout_centerHorizontal="true" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="31.0sp" android:textColor="@color/color_2c2c2c" android:id="@id/tv_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₱ 0.00" android:layout_below="@id/tv_title_balance" android:layout_centerInParent="true" android:fontFamily="@font/montserrat_bold" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/color_2c2c2c" android:gravity="center" android:id="@id/tv_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginRight="24.0dp" android:text="Load Balance can be used to pay for data, call and text charges when your DITO Promo has already been consumed." android:layout_below="@id/tv_balance" android:layout_centerHorizontal="true" android:fontFamily="@font/montserrat_medium" />
+            <include android:id="@id/ll_call" layout="@layout/include_item_available_calls" />
+            <include android:id="@id/ll_data" layout="@layout/include_item_available_data" />
+            <include android:id="@id/ll_text" layout="@layout/include_item_available_text" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

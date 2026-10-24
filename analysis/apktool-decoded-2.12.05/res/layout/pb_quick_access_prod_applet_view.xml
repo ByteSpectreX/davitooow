@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/pb_quick_access_prod_applet_view_0" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-16.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/rvMenuSecond" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <me.relex.circleindicator.CircleIndicator android:layout_gravity="center" android:id="@id/indicatorSecond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:layout_below="@id/rv_home_menu" android:layout_centerHorizontal="true" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/color_1D343E" android:ellipsize="end" android:id="@id/tvName" android:paddingTop="@dimen/margin_16dp" android:paddingBottom="@dimen/margin_16dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_10" android:lines="1" android:fontFamily="@font/montserrat_medium" app:layout_constraintHorizontal_weight="1.0" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/ivCheck" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/ivCheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_payment_unselected" app:layout_constraintBottom_toBottomOf="@id/tvName" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="@id/tvName" />
+    <View android:id="@id/viewLine" android:background="#e5e5e5" android:layout_width="match_parent" android:layout_height="1.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/tvName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

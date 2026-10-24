@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" android:paddingStart="16.0dp" android:paddingEnd="16.0dp">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_start" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="5.0dp" android:layout_toStartOf="@id/ll_end" android:layout_alignParentStart="true">
+            <TextView android:textSize="14.0sp" android:textColor="#2f3043" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#3e3e3e" android:id="@id/tv_serial" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#3e3e3e" android:id="@id/tv_pin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#3e3e3e" android:id="@id/tv_voucher" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#606060" android:id="@id/tv_transaction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#929292" android:id="@id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:fontFamily="@font/montserrat_medium" />
+        </LinearLayout>
+        <LinearLayout android:gravity="end" android:orientation="vertical" android:id="@id/ll_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+            <TextView android:textSize="14.0sp" android:textColor="#606060" android:id="@id/tv_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#08aa18" android:id="@id/tv_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:fontFamily="@font/montserrat_medium" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/line" android:background="#f0f0f0" android:layout_width="match_parent" android:layout_height="1.0dp" />
+</LinearLayout>

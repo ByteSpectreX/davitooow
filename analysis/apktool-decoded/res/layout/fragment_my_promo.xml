@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_my_promo_0" android:background="#f2f2f2" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="10.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_top_tip" android:background="#fddbdf" android:paddingLeft="22.0dp" android:paddingTop="35.0dp" android:paddingRight="18.0dp" android:paddingBottom="17.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Your Auto Pay subscription has been cancelled. Please remove your card details here." android:drawableLeft="@drawable/ic_auto_warning" android:drawablePadding="4.0dp" android:fontFamily="@font/montserrat_regular" app:layout_constrainedHeight="false" app:layout_constraintTop_toTopOf="parent" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/srl_promo" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="18.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_weight="1.0" app:layout_constraintTop_toBottomOf="@id/tv_top_tip">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_promo" android:paddingTop="@dimen/margin_16dp" android:focusable="true" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

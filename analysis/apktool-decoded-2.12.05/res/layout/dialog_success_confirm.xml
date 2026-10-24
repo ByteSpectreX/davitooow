@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/shape_dialog_white_corner" android:paddingLeft="16.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_centerInParent="true">
+        <TextView android:textSize="16.0sp" android:textColor="#2f3043" android:gravity="center" android:id="@id/tv_tips" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" android:layout_marginBottom="16.0dp" android:text="@string/tips_thanks_ques" android:fontFamily="@font/montserrat_medium" android:lineHeight="24.0dp" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_note" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_tips" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ce1126" android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Note" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" android:fontFamily="@font/montserrat_medium" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dp" android:text="This booster pack is not shareable and does not rollover." android:fontFamily="@font/montserrat_medium" />
+        </LinearLayout>
+        <View android:id="@id/line" android:background="#e8e8e8" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="@dimen/margin_16dp" android:layout_below="@id/ll_note" />
+        <Button android:enabled="true" android:gravity="center" android:id="@id/btn_right" android:paddingTop="14.0dp" android:paddingBottom="14.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_marginBottom="32.0dp" android:text="@string/dito_btn_close" android:layout_below="@id/line" android:lineHeight="34.0dp" style="@style/common_button" />
+    </RelativeLayout>
+</RelativeLayout>

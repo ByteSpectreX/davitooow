@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="brvah_load_complete">Click to load more</string>
+    <string name="brvah_load_end">No more data</string>
+    <string name="brvah_load_failed">load more failed</string>
+    <string name="brvah_loading">Loading...</string>
+    <string name="pickerview_cancel">Cancel</string>
+    <string name="pickerview_day" />
+    <string name="pickerview_hours" />
+    <string name="pickerview_minutes" />
+    <string name="pickerview_month" />
+    <string name="pickerview_seconds" />
+    <string name="pickerview_submit">Confirm</string>
+    <string name="pickerview_year" />
+    <string name="service_access_to_directory_permissions">Access to directory permissions</string>
+    <string name="service_cancel">Update Later</string>
+    <string name="service_close">Close</string>
+    <string name="service_find_a_new_version">Update Available</string>
+    <string name="service_please_enter_sms_code">Please enter your sms code</string>
+    <string name="service_please_enter_your_password">Please enter your password</string>
+    <string name="service_update">Update Now</string>
+    <string name="service_your_software_is_up_to_date">Your software is up to date</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_promo_offers_0" android:background="#f2f2f2" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:id="@id/nsv_promo" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="18.0dp" app:layout_constraintBottom_toTopOf="@id/relativeLayout" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@id/banner_promo" android:layout_width="match_parent" android:layout_height="120.0dp" android:layout_marginLeft="@dimen/margin_16dp" android:layout_marginTop="@dimen/margin_16dp" android:layout_marginRight="@dimen/margin_16dp" android:scaleType="fitXY" android:adjustViewBounds="true" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recy_welcome_offer" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="8.0dp" android:layout_marginBottom="14.0dp" android:layout_weight="1.0" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout android:id="@id/relativeLayout" android:background="@color/white" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/nsv_promo">
+        <TextView android:textSize="24.0sp" android:textColor="@color/color_ce1126" android:id="@id/tv_total_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₱ 0.00" android:layout_centerVertical="true" android:fontFamily="@font/montserrat_semibold" />
+        <Button android:id="@id/btn_buy" android:layout_width="136.0dp" android:layout_height="46.0dp" android:text="@string/text_buy_promo" android:layout_alignParentRight="true" style="@style/common_button" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

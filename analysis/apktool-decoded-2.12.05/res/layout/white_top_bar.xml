@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_top_root" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_top_bar" android:layout_width="match_parent" android:layout_height="52.0dp" android:layout_marginTop="24.0dp">
+        <ImageView android:id="@id/iv_back" android:background="@drawable/ic_arrow_black" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <com.iwhalecloud.basemodule.widgets.MarqueeTextView android:textSize="18.0sp" android:textColor="@color/color_2c2c2c" android:ellipsize="marquee" android:gravity="center" android:id="@id/tv_title" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="35.0dp" android:layout_marginRight="35.0dp" android:singleLine="true" android:layout_centerInParent="true" android:marqueeRepeatLimit="marquee_forever" android:fontFamily="@font/exo2_bold" />
+        <TextView android:textSize="16.0sp" android:id="@id/tv_nav_right" android:background="@color/transparent" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:fontFamily="@font/montserrat_medium" />
+        <ImageView android:textSize="16.0sp" android:id="@id/iv_nav_right" android:background="@color/transparent" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

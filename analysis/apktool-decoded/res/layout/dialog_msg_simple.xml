@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_10dp" android:paddingLeft="24.0dp" android:paddingRight="24.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginRight="24.0dp" android:layout_centerInParent="true" android:layout_marginHorizontal="24.0dp" android:paddingHorizontal="24.0dp">
+        <TextView android:textSize="20.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" android:fontFamily="@font/exo2_bold" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_2f3043" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_tips" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:fontFamily="@font/exo2_medium" />
+        <Button android:enabled="true" android:gravity="center" android:id="@id/btn_right" android:background="@drawable/bg_ce1126_corner_4" android:paddingTop="12.0dp" android:paddingBottom="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="32.0dp" android:fontFamily="@font/exo2_semi_bold" style="@style/common_button" />
+    </LinearLayout>
+</RelativeLayout>

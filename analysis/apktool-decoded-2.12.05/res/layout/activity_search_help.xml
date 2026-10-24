@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_search_help_0" android:background="@color/color_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/ll_top" android:background="@drawable/bg_white_bottom_16dp" android:paddingTop="44.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_back" android:background="@drawable/ic_arrow_black" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_search" android:background="@drawable/bg_search_input" android:padding="1.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="15.0dp" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center" android:layout_width="18.0dp" android:layout_height="18.0dp" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp" android:src="@drawable/ic_home_search" android:layout_marginStart="15.0dp" />
+            <EditText android:textSize="16.0sp" android:textColor="#3a2e2e" android:id="@id/et_qus" android:background="@null" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:hint="Search keywords" android:singleLine="true" android:layout_weight="1.0" android:fontFamily="@font/montserrat_medium" />
+            <LinearLayout android:id="@id/ll_clear" android:padding="5.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_contact_delete" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textColor="#3a2e2e" android:id="@id/tv_search" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dp" android:layout_marginRight="15.0dp" android:text="Search" android:fontFamily="@font/montserrat_medium" />
+    </LinearLayout>
+    <View android:background="#f0f0f0" android:layout_width="match_parent" android:layout_height="15.0dp" />
+    <FrameLayout android:background="@drawable/bg_white_top_16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_top_questions" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_margin" android:layout_marginRight="10.0dp" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/no_data_ll" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.mydito.widgets.ResizeImageView android:layout_width="130.0dp" android:layout_height="100.0dp" android:layout_marginTop="130.0dp" android:src="@drawable/img_nodata" app:photoRate="0.84" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/color_CCCCCC" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="No Data" android:fontFamily="@font/montserrat_regular" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

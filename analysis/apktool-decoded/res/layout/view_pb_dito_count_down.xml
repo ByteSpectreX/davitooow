@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_count_down" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="10.0sp" android:textColor="#ff3e3e3e" android:layout_gravity="center" android:id="@id/tv_count_time_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="This deal will end in:" android:fontFamily="@font/exo2_bold" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="4.0dp">
+        <RelativeLayout android:background="@drawable/bg_ce1126_corner_4" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="4.0dp" android:layout_marginEnd="4.0dp">
+            <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:id="@id/tv_days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:layout_marginBottom="4.0dp" android:includeFontPadding="false" android:fontFamily="@font/montserrat_bold" android:layout_marginStart="5.0dp" />
+            <TextView android:textSize="7.0sp" android:textColor="#ffffffff" android:id="@id/tv_suffix_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_day_s" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:fontFamily="@font/exo2_medium" android:layout_marginEnd="4.0dp" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@drawable/bg_ce1126_corner_4" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="4.0dp" android:layout_marginEnd="4.0dp">
+            <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:id="@id/tv_hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:layout_marginBottom="4.0dp" android:includeFontPadding="false" android:fontFamily="@font/montserrat_bold" android:layout_marginStart="5.0dp" />
+            <TextView android:textSize="7.0sp" android:textColor="#ffffffff" android:id="@id/tv_suffix_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_hour_s" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:fontFamily="@font/exo2_medium" android:layout_marginEnd="4.0dp" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@drawable/bg_ce1126_corner_4" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="4.0dp">
+            <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:id="@id/tv_minutes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:layout_marginBottom="4.0dp" android:includeFontPadding="false" android:fontFamily="@font/montserrat_bold" android:layout_marginStart="5.0dp" />
+            <TextView android:textSize="7.0sp" android:textColor="#ffffffff" android:id="@id/tv_suffix_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_minute_s" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:fontFamily="@font/exo2_medium" android:layout_marginEnd="4.0dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

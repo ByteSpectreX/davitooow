@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_fwa_my_plan_details_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0.0dp" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:background="#f4f4f4" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@id/ivTopbg" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:minHeight="40.0dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_10dp" android:paddingLeft="16.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="-32.0dp" android:layout_marginRight="16.0dp" android:layout_marginBottom="@dimen/margin_16dp" android:elevation="6.0dp">
+                <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_top_account_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_16dp" android:fontFamily="@font/exo2_bold" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Account Number" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvAccountNumber" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="------" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DITO Number" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvDitoNumber" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="------" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_handSet" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Handset" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvHandSet" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="------" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_IMEI" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IMEI" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvIMEI" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="------" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Credit Limit" android:layout_weight="1.0" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvCreditLimit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="------" android:drawableRight="@drawable/ic_tip" android:drawablePadding="9.0dp" android:fontFamily="@font/exo2_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cut Off Date" android:layout_weight="1.0" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvCutOffDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="------" android:drawableRight="@drawable/ic_tip" android:drawablePadding="9.0dp" android:fontFamily="@font/exo2_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contract Expiry" android:layout_weight="1.0" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvContractExpiry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="------" android:drawableRight="@drawable/ic_tip" android:drawablePadding="9.0dp" android:fontFamily="@font/exo2_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Number" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvContactNumber" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="------" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/color_0038A8" android:gravity="end" android:id="@id/tvContactNumberChange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:text="Change" android:fontFamily="@font/exo2_semi_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Address" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvEmailAddress" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="------" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/color_0038A8" android:gravity="end" android:id="@id/tvEmailAddressChange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:text="Change" android:fontFamily="@font/exo2_semi_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:layout_marginBottom="23.0dp">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Billing Address" android:fontFamily="@font/exo2_medium" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvBillingAddress" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="------" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_auto_debit" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="22.0dp">
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_debit_date" android:layout_width="144.0dp" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:fontFamily="@font/exo2_medium" />
+                    </LinearLayout>
+                    <TextView android:textSize="14.0sp" android:textColor="@color/color_0038A8" android:gravity="end" android:id="@id/tvDebitChange" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_semi_bold" android:layout_marginStart="10.0dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_fmc_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <View android:background="@color/color_EAEAEA" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_fmc_image" android:background="@drawable/bg_white_10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="@dimen/margin_16dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_members" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <View android:background="@color/color_EAEAEA" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                    <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_members_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_16dp" android:fontFamily="@font/exo2_bold" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_members" android:background="@drawable/bg_white_10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="@dimen/margin_16dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_image" android:background="@drawable/bg_white_10dp" android:padding="15.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_marginBottom="@dimen/margin_16dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:id="@id/ll_bottom" android:background="#f4f4f4" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:enabled="true" android:textSize="@dimen/text_14sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_purchase" android:background="@drawable/bg_button_red_4" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_marginLeft="32.0dp" android:layout_marginTop="20.0dp" android:layout_marginRight="32.0dp" android:layout_marginBottom="20.0dp" android:text="Add Boosters" android:fontFamily="@font/exo2_semi_bold" />
+    </LinearLayout>
+</LinearLayout>

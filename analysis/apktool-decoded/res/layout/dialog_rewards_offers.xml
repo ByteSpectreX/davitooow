@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:text="WEDNESDAY WOW DEALS!" android:fontFamily="@font/exo2_extra_bold" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/white" android:id="@id/tvRedemptionNum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="4.0dp" android:text="x redemption left" android:fontFamily="@font/exo2_bold" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp">
+            <com.youth.banner.Banner android:id="@id/banner" android:layout_width="match_parent" android:layout_height="match_parent" app:banner_infinite_loop="false" />
+        </LinearLayout>
+        <include android:id="@id/viewCountDown" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_below="@id/banner_image" layout="@layout/view_pb_dito_count_down" />
+        <Button android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_confirm" android:background="@drawable/bg_ce1126_corner_4" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_marginLeft="16.0dp" android:layout_marginTop="38.0dp" android:layout_marginRight="16.0dp" android:text="Check more offers" android:textAllCaps="false" android:fontFamily="@font/exo2_bold" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/iv_img" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffffff" android:gravity="center" android:id="@id/btn_cancel" android:background="@drawable/bg_border_white" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_marginLeft="16.0dp" android:layout_marginTop="10.0dp" android:layout_marginRight="16.0dp" android:text="@string/dito_btn_close" android:fontFamily="@font/exo2_bold" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/btn_confirm" />
+    </LinearLayout>
+</RelativeLayout>

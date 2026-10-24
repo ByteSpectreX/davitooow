@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_dialog_white_corner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_16dp" android:layout_marginRight="@dimen/margin_16dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.mydito.widgets.WrapContentHeightViewPager android:id="@id/vp_fwa" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+            <LinearLayout android:layout_gravity="center|bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_indicator" android:paddingTop="32.0dp" android:paddingBottom="32.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/iv_indicator1_nor" android:background="@drawable/dot_grey" android:visibility="gone" android:layout_width="8.0dp" android:layout_height="8.0dp" />
+                    <ImageView android:id="@id/iv_indicator1_sel" android:background="@drawable/bg_red_5dp" android:layout_width="24.0dp" android:layout_height="8.0dp" />
+                    <ImageView android:id="@id/iv_indicator2_nor" android:background="@drawable/dot_grey" android:layout_width="8.0dp" android:layout_height="8.0dp" android:layout_marginLeft="10.0dp" />
+                    <ImageView android:id="@id/iv_indicator2_sel" android:background="@drawable/bg_red_5dp" android:visibility="gone" android:layout_width="24.0dp" android:layout_height="8.0dp" android:layout_marginLeft="10.0dp" />
+                    <ImageView android:id="@id/iv_indicator3_nor" android:background="@drawable/dot_grey" android:layout_width="8.0dp" android:layout_height="8.0dp" android:layout_marginLeft="10.0dp" />
+                    <ImageView android:id="@id/iv_indicator3_sel" android:background="@drawable/bg_red_5dp" android:visibility="gone" android:layout_width="24.0dp" android:layout_height="8.0dp" android:layout_marginLeft="10.0dp" />
+                </LinearLayout>
+                <Button android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_close" android:background="@drawable/bg_submit_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="46.0dp" android:layout_marginLeft="16.0dp" android:layout_marginRight="16.0dp" android:layout_marginBottom="16.0dp" android:text="@string/dito_btn_close" android:textAllCaps="false" android:fontFamily="@font/montserrat_semibold" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

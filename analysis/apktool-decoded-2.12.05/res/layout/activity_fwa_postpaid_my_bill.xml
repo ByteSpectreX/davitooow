@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_fwa_postpaid_my_bill_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/bar" layout="@layout/include_radius_red_blue_title_bar" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_top_info" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/bar">
+        <TextView android:textSize="@dimen/text_14sp" android:textColor="@color/color_2c2c2c" android:id="@id/tv_amount_to_pay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" android:fontFamily="@font/exo2_bold" />
+        <TextView android:textSize="32.0sp" android:textColor="@color/color_ce1126" android:id="@id/tv_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="-----" android:fontFamily="@font/exo2_extra_bold" />
+        <LinearLayout android:id="@id/ll_pay_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp">
+            <TextView android:textSize="12.0sp" android:textColor="@color/color_2c2c2c" android:id="@id/tv_date_tip_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Please pay on or before" android:fontFamily="@font/exo2_semi_bold" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/color_2c2c2c" android:id="@id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="-- -- --" android:fontFamily="@font/exo2_bold" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="@color/color_ce1126" android:id="@id/tv_pay_immediately" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="Pay immediately" android:drawableLeft="@drawable/icon_red_mark" android:drawablePadding="5.0dp" android:fontFamily="@font/exo2_semi_bold" />
+        <LinearLayout android:id="@id/ll_credit_limit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dp">
+            <TextView android:textSize="10.0sp" android:textColor="@color/color_2c2c2c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Available Credit Limit: " android:fontFamily="@font/exo2_semi_bold" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/color_2c2c2c" android:id="@id/tv_limit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-- -- --" android:fontFamily="@font/exo2_bold" />
+            <ImageView android:id="@id/iv_limit_tip" android:layout_width="12.0dp" android:layout_height="12.0dp" android:layout_marginLeft="5.0dp" android:src="@drawable/ic_cms_dashboard_info" />
+        </LinearLayout>
+        <TextView android:enabled="true" android:textSize="@dimen/text_14sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_purchase" android:background="@drawable/bg_button_red_4" android:layout_width="200.0dp" android:layout_height="40.0dp" android:layout_marginTop="11.0dp" android:text="Pay now" android:fontFamily="@font/exo2_semi_bold" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffeaeaea" android:id="@id/tvPdf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" android:layout_marginBottom="13.0dp" android:text="View Bill" android:drawableLeft="@drawable/ic_gray_file_pdf" android:drawablePadding="10.0dp" android:fontFamily="@font/exo2_semi_bold" />
+        <com.google.android.material.tabs.TabLayout android:id="@id/tabLayout" android:background="@drawable/bg_0038a8_top_10dp" android:layout_width="match_parent" android:layout_height="44.0dp" app:tabBackground="@color/transparent" app:tabIndicatorHeight="0.0dp" app:tabMode="scrollable" app:tabRippleColor="@color/transparent" />
+        <androidx.viewpager2.widget.ViewPager2 android:id="@id/viewPager" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

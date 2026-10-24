@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/banner_root" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.iwhalecloud.configpager.ui.widgets.PbTitleView android:id="@id/view_pb_title" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/rl_banner" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.youth.banner.Banner android:id="@id/banner" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <me.relex.circleindicator.CircleIndicator android:layout_gravity="center" android:id="@id/indicator_bottom" android:paddingBottom="16.0dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        <me.relex.circleindicator.CircleIndicator android:layout_gravity="center" android:id="@id/indicator_end" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:paddingEnd="16.0dp" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

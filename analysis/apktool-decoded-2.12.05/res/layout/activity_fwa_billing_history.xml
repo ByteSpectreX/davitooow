@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_fwa_billing_history_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/bar" layout="@layout/include_radius_red_blue_title_bar" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvList" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="16.0dp" />
+</LinearLayout>

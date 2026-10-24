@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/chat_item_text_r_0" android:paddingLeft="43.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="13.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="end|center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/content" android:background="@drawable/bg_chat_text_right" android:paddingLeft="13.0dp" android:paddingTop="10.0dp" android:paddingRight="18.0dp" android:paddingBottom="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="244.0dp" android:minHeight="40.0dp" android:selectAllOnFocus="true" android:textIsSelectable="true" android:fontFamily="@font/montserrat_medium" />
+            <ImageView android:id="@id/operation_image" android:visibility="gone" android:layout_width="30.0dp" android:layout_height="30.0dp" android:contentDescription="@null" />
+        </LinearLayout>
+        <TextView android:textSize="10.0sp" android:textColor="#3e3e3e" android:id="@id/seen" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="Seen" />
+    </LinearLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="48.0dp" android:layout_marginLeft="8.0dp" android:src="@drawable/ic_online_guest" android:adjustViewBounds="true" />
+</LinearLayout>

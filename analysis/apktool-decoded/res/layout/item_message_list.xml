@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout android:id="@id/swipeRefreshLayout" android:layout_width="match_parent" android:layout_height="87.0dp" app:dragEdge="right" app:mode="same_level"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/delete_layout" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_make_as_read" android:background="@color/color_c7c7c7" android:visibility="gone" android:layout_width="122.0dp" android:layout_height="match_parent" android:text="Mark as Read" />
+            <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_delete" android:layout_width="74.0dp" android:layout_height="match_parent" android:text="Delete" />
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/fl_info" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@id/iv_is_read" android:visibility="invisible" android:layout_width="8.0dp" android:layout_height="8.0dp" android:layout_marginLeft="12.0dp" android:src="@drawable/dot_red" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:ellipsize="end" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dp" android:layout_marginTop="8.0dp" android:layout_marginRight="4.0dp" android:text="Promo" android:singleLine="true" android:fontFamily="@font/montserrat_bold" app:layout_constrainedWidth="true" app:layout_constraintBottom_toTopOf="@id/tv_content" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintLeft_toRightOf="@id/iv_is_read" app:layout_constraintRight_toLeftOf="@id/tv_date" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/color_929292" android:id="@id/tv_date" android:paddingRight="24.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="09:00PM" android:layout_alignParentRight="true" android:fontFamily="@font/montserrat_regular" app:layout_constraintBottom_toBottomOf="@id/tv_title" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="@id/tv_title" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:textColorLink="@color/color_0038A8" android:ellipsize="end" android:id="@id/tv_content" android:paddingRight="24.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="You have shared ₱50 worth of load to 0991 123 4567, your new data load balance is now ₱50" android:maxLines="2" android:fontFamily="@font/montserrat_medium" android:lineHeight="22.0dp" app:layout_constraintLeft_toLeftOf="@id/tv_title" app:layout_constraintRight_toRightOf="@id/tv_date" app:layout_constraintTop_toBottomOf="@id/tv_title" />
+            <View app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" style="@style/login_et_divider" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

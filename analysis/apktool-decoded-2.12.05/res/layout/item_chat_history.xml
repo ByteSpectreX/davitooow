@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_head" android:layout_width="32.0dp" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="16.0dp" android:src="@drawable/ic_online_guest" android:adjustViewBounds="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:layout_marginRight="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp">
+                <TextView android:textSize="12.0sp" android:textColor="#ff929292" android:id="@id/tv_user" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Me" android:layout_alignParentLeft="true" android:fontFamily="@font/montserrat_medium" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff929292" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10/4/2020 6:38:PM" android:layout_alignParentRight="true" android:fontFamily="@font/montserrat_medium" />
+            </RelativeLayout>
+            <TextView android:textSize="14.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_chat_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:fontFamily="@font/montserrat_medium" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#f0f0f0" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="22.0dp" android:layout_alignParentBottom="true" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dp">
+        <TextView android:textSize="16.0sp" android:textColor="#ff3e3e3e" android:id="@id/tv_input_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+        <ImageView android:id="@id/iv_question" android:visibility="gone" android:layout_width="16.0dp" android:layout_height="16.0dp" android:src="@drawable/icon_question" android:layout_marginStart="13.0dp" />
+    </LinearLayout>
+    <EditText android:enabled="true" android:textSize="16.0sp" android:textColor="#3e3e3e" android:gravity="center_vertical" android:id="@id/et_edit" android:background="@drawable/bg_input_unselected" android:layout_width="match_parent" android:layout_height="46.0dp" android:maxLines="1" android:singleLine="true" android:fontFamily="@font/exo2_medium" android:paddingStart="16.0dp" android:paddingEnd="16.0dp" />
+    <TextView android:textSize="12.0sp" android:textColor="#ffce1126" android:id="@id/tv_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="Please enter a valid email address format (name@email.com)" android:fontFamily="@font/montserrat_medium" android:layout_marginStart="8.0dp" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_auto_debit_0" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/bar" layout="@layout/include_radius_red_blue_title_bar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_not_debit" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0.0dp" android:fillViewport="true" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_ads" android:layout_width="match_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:autoLink="all" android:layout_gravity="center" android:id="@id/tv_faq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="24.0dp" android:layout_marginRight="16.0dp" android:fontFamily="@font/exo2_semi_bold" android:layout_marginHorizontal="16.0dp" />
+            <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="24.0dp" android:layout_marginRight="16.0dp" android:layout_marginHorizontal="16.0dp">
+                <ImageView android:layout_gravity="top" android:id="@id/iv_term" android:layout_width="20.0dp" android:layout_height="20.0dp" android:src="@drawable/ic_checkbox_rectangle_unselect" android:layout_marginEnd="8.0dp" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_term" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+            </LinearLayout>
+            <Button android:id="@id/btn_enroll" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="46.0dp" android:layout_marginLeft="16.0dp" android:layout_marginTop="24.0dp" android:layout_marginRight="16.0dp" android:layout_marginBottom="16.0dp" android:layout_marginHorizontal="16.0dp" style="@style/common_button_radius_common" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_has_debit" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="24.0dp" android:paddingRight="24.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="24.0dp">
+                    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:src="@drawable/ic_auto_debit_his" android:adjustViewBounds="true" />
+                    <TextView android:textSize="20.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:fontFamily="@font/exo2_bold" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_marginBottom="24.0dp" android:fontFamily="@font/exo2_medium" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_not_his" android:background="@drawable/bg_shape_ffffff_4" android:paddingLeft="16.0dp" android:paddingTop="40.0dp" android:paddingRight="16.0dp" android:paddingBottom="40.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="24.0dp" android:layout_marginRight="16.0dp" android:layout_marginBottom="24.0dp" android:layout_marginHorizontal="16.0dp" android:layout_marginVertical="24.0dp" android:paddingHorizontal="16.0dp" android:paddingVertical="40.0dp">
+                    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:src="@drawable/ic_auto_debit_no_his" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center_horizontal" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:fontFamily="@font/exo2_bold" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:layout_gravity="center_horizontal" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_his" android:paddingLeft="16.0dp" android:paddingTop="16.0dp" android:paddingRight="16.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dp">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/color_3e3e3e" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:fontFamily="@font/exo2_bold" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_his" android:background="@drawable/bg_shape_ffffff_4" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <View android:background="#eaeaea" android:layout_width="match_parent" android:layout_height="1.0dp" />
+            <TextView android:textSize="14.0sp" android:textColor="#ce1126" android:layout_gravity="center_horizontal" android:id="@id/tv_unlink" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="24.0dp" android:layout_marginRight="16.0dp" android:layout_marginBottom="24.0dp" android:fontFamily="@font/exo2_semi_bold" android:layout_marginHorizontal="16.0dp" android:layout_marginVertical="24.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

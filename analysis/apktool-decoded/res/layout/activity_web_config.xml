@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_web_config_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <EditText android:id="@id/et_address" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="80.0dp" android:hint="输入个地址" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <Button android:id="@id/btn_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Go" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/et_address" />
+</androidx.constraintlayout.widget.ConstraintLayout>

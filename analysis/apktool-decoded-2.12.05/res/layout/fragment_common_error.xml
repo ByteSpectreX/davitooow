@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:layout_width="88.0dp" android:layout_height="wrap_content" android:layout_marginTop="64.0dp" android:src="@mipmap/icon_error" android:adjustViewBounds="true" />
+    <TextView android:textSize="16.0sp" android:textColor="#d9000000" android:layout_gravity="center" android:id="@id/tv_error_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:text="@string/operation_failure" />
+    <TextView android:textSize="16.0sp" android:textColor="#d9000000" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_error_desp" android:layout_width="279.0dp" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+    <Button android:textSize="18.0sp" android:textColor="#d9000000" android:id="@id/btn_try_again" android:background="@drawable/bg_btn_selector" android:layout_width="match_parent" android:layout_height="48.0dp" android:layout_marginTop="48.0dp" android:text="@string/try_again" android:textAllCaps="false" android:layout_marginStart="48.0dp" android:layout_marginEnd="48.0dp" android:stateListAnimator="@null" />
+</LinearLayout>

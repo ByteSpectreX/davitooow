@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_view_place_holder" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:id="@id/iv_welcome" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:adjustViewBounds="true" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_skip" android:background="@drawable/bg_skip_8" android:paddingTop="3.0dp" android:paddingBottom="3.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" android:paddingStart="12.0dp" android:paddingEnd="12.0dp" android:layout_marginEnd="24.0dp" android:layout_alignParentEnd="true">
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/tv_skip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Skip" />
+        <View android:layout_gravity="center" android:background="#ffffffff" android:layout_width="1.0dp" android:layout_height="15.0dp" android:layout_marginStart="5.0dp" android:layout_marginEnd="5.0dp" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/tv_count_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    </LinearLayout>
+</RelativeLayout>

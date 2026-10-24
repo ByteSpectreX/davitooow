@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" style="@style/proceed_box_LinearLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tv_proceed_content" style="@style/proceed_textView_style" />
+    <ImageView android:layout_gravity="center" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_arrow_right_red" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/margin_16dp" android:layout_alignParentEnd="true" />
+</RelativeLayout>

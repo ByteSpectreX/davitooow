@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="#f4f4f4" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="11.0dp" android:paddingEnd="11.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:id="@id/my_root" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.iwhalecloud.configpager.ui.widgets.VajraDistrictView android:id="@id/vajra_district" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

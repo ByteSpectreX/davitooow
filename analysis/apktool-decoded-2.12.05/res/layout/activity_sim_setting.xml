@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/activity_sim_setting_0" android:background="#f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/bar" layout="@layout/include_radius_red_blue_title_bar" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:layout_marginStart="16.0dp" android:layout_marginEnd="16.0dp">
+        <TextView android:textSize="18.0sp" android:textColor="#ff3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dp" android:text="NETWORK" android:fontFamily="@font/exo2_bold" android:layout_marginStart="16.0dp" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="VoWiFi" android:fontFamily="@font/exo2_medium" android:layout_marginStart="16.0dp" />
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:layout_marginBottom="18.0dp">
+            <TextView android:textSize="10.0sp" android:textColor="#3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VoWiFi Call is an innovation that lets you make calls from indoor areas where cellular signal may not always be strong." android:fontFamily="@font/exo2_medium" android:layout_marginStart="16.0dp" android:layout_marginEnd="40.0dp" android:layout_toStartOf="@id/tv_enable" />
+            <TextView android:textSize="14.0sp" android:textColor="#08aa18" android:id="@id/tv_enable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dp" android:text="Enabled" android:layout_alignParentTop="true" android:fontFamily="@font/exo2_semi_bold" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

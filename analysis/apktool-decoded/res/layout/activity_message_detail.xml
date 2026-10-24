@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_message_detail_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_top_bar" android:background="@drawable/bg_white_bottom_16dp" android:layout_width="match_parent" android:layout_height="74.0dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="44.0dp" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/iv_back" android:background="@drawable/ic_arrow_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/login_text_black" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:fontFamily="@font/montserrat_medium" />
+            <ImageView android:id="@id/iv_nav_right" android:background="@color/transparent" android:layout_width="19.129974dp" android:layout_height="19.929993dp" android:layout_marginRight="15.0dp" android:src="@drawable/ic_delete_all" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16.0dp" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_top_16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="16.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_detail_title" android:background="@color/white" android:paddingLeft="@dimen/margin_16dp" android:paddingTop="4.0dp" android:paddingRight="@dimen/margin_16dp" android:paddingBottom="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:fontFamily="@font/montserrat_bold" />
+            <RelativeLayout android:background="@color/white" android:paddingLeft="@dimen/margin_16dp" android:paddingRight="@dimen/margin_16dp" android:paddingBottom="@dimen/margin_16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <WebView android:textSize="14.0sp" android:textColor="#2f3043" android:id="@id/webView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:fontFamily="@font/montserrat_medium" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

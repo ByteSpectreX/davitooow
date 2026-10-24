@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rl_root" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:background="@drawable/bg_white_top_16dp" android:paddingBottom="@dimen/margin_16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="16.0sp" android:textColor="@color/color_2c2c2c" android:gravity="center" android:id="@id/tvTips" android:padding="15.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Number list" android:fontFamily="@font/montserrat_bold" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:layout_marginRight="15.0dp" />
+    </LinearLayout>
+</RelativeLayout>

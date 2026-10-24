@@ -1,0 +1,12 @@
+{
+  "prefix": "86",
+  "commonPath": "/common/common_activity",
+  "successPath": "/common/common_success",
+  "errorPath": "/common/common_error",
+  "isNeedLogin": false,
+  "appScheme": "clp://",
+  "webViewPageUrl": "/projectuniversal/web",
+  "pageNotFound": "/common/not_found",
+  "appOtherLanguage": "en",
+  "appOtherCountry": ""
+}

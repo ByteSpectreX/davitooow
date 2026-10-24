@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/root" android:background="@drawable/bg_2a3752_4" android:layout_width="match_parent" android:layout_height="30.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:textSize="12.0sp" android:textColor="@color/white" android:textColorHint="#54ffffff" android:id="@id/et_edit" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="26.0dp" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" android:inputType="textNoSuggestions" android:fontFamily="@font/exo2_400" android:layout_marginHorizontal="10.0dp" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:textColorHint="#54ffffff" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_text" android:visibility="gone" android:layout_width="match_parent" android:layout_height="26.0dp" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" android:maxLines="1" android:fontFamily="@font/exo2_400" android:layout_marginHorizontal="10.0dp" />
+    </FrameLayout>
+</LinearLayout>

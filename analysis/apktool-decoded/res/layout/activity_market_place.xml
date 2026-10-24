@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_market_place_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_menu_content" android:background="@color/color_000_60" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="45.0dp">
+        <ImageView android:id="@id/iv_menu_close" android:background="@drawable/bg_circle" android:padding="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home_market_place_close" android:layout_marginEnd="21.0dp" app:layout_constraintBottom_toTopOf="@id/rl_bottom_bg" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/rl_bottom_bg" />
+        <RelativeLayout android:id="@id/rl_bottom_bg" android:background="@drawable/bg_market_place" android:paddingBottom="30.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_child_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="49.0dp" android:layout_centerHorizontal="true" android:layout_marginStart="26.0dp" android:layout_marginEnd="25.0dp" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView android:background="@drawable/bg_home_tab_top" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/cl_menu_content" />
+    <ImageView android:id="@id/iv_bot_icon" android:layout_width="wrap_content" android:layout_height="39.5dp" android:layout_marginBottom="9.0dp" android:layout_marginEnd="0.5dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

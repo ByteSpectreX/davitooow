@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:tag="layout/fragment_fwa_bill_summary_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="#f4f4f4" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tvCurrentBillTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dp" android:text="Current Bill Charges" android:drawableRight="@drawable/ic_tip" android:drawablePadding="5.0dp" android:fontFamily="@font/exo2_bold" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llNoData" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:background="@drawable/ic_no_data_bill_charges" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dp" />
+            <TextView android:id="@id/tvNoBillDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/next_bill_is_on_or_before_1_s" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_10dp" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dp">
+            <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly Bill Charges" android:fontFamily="@font/exo2_bold" />
+            <LinearLayout android:orientation="vertical" android:id="@id/llBarChat" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.mikephil.charting.charts.BarChart android:id="@id/barChart" android:layout_width="match_parent" android:layout_height="183.0dp" android:layout_above="@id/seekBar1" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rvTitleList" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="39.0dp" android:layout_marginTop="-10.0dp" />
+            </LinearLayout>
+            <ImageView android:id="@id/ivNoData" android:background="@drawable/ic_null_data_chart" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="17.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

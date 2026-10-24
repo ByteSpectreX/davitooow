@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_market_confirm_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:id="@id/tvBack" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" android:drawablePadding="12.0dp" android:drawableStart="@drawable/ic_left_back" android:fontFamily="@font/exo2_semi_bold" android:layout_marginStart="16.0dp" />
+    <View android:background="#eaeaea" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="15.0dp" />
+    <View android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="213.5" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_alert_deep_blue" android:adjustViewBounds="true" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/color_3e3e3e" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:fontFamily="@font/exo2_bold" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="center" android:id="@id/tvTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48.0dp" android:layout_marginTop="16.0dp" android:layout_marginRight="48.0dp" android:fontFamily="@font/exo2_medium" android:layout_marginHorizontal="48.0dp" />
+        <Button android:enabled="true" android:id="@id/btnProceed" android:tag="binding_3" android:layout_width="160.0dp" android:layout_height="41.0dp" android:layout_marginTop="24.0dp" style="@style/common_button_radius_4" />
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="271.5" />
+</LinearLayout>

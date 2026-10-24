@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_content" android:focusable="true" android:layout_width="match_parent" android:layout_height="83.0dp">
+        <RelativeLayout android:id="@id/rl_icon" android:paddingTop="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/iv_tab_icon" android:layout_width="44.0dp" android:layout_height="44.0dp" android:adjustViewBounds="true" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="10.0sp" android:textColor="#ff000000" android:ellipsize="end" android:gravity="center" android:id="@id/tv_tab_name" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Activity" android:layout_below="@id/iv_tab_icon" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

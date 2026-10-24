@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingTop="12.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tvTitle" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_16dp" android:text="WEDNESDAY WOW DEALS!" android:layout_weight="1.0" android:fontFamily="@font/exo2_extra_bold" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_0038A8" android:id="@id/tvViewOffers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dp" android:text="View All Offers" android:drawableRight="@drawable/ic_arrow_0038a8_right" android:drawablePadding="6.0dp" android:fontFamily="@font/exo2_bold" />
+    </LinearLayout>
+    <TextView android:textSize="10.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tvRedemptionNum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_16dp" android:layout_marginTop="4.0dp" android:text="--- redemption left" android:fontFamily="@font/exo2_bold" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp">
+        <com.youth.banner.Banner android:id="@id/banner" android:layout_width="match_parent" android:layout_height="match_parent" app:banner_infinite_loop="false" />
+    </LinearLayout>
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="6.0dp" android:layout_marginRight="16.0dp" android:layout_below="@id/banner_image" layout="@layout/view_pb_dito_count_down" />
+</LinearLayout>

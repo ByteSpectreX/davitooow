@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="10.0sp" android:textColor="@color/color_16aa18" android:ellipsize="end" android:id="@id/tv_bounds" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:drawablePadding="4.0dp" android:drawableEnd="@drawable/ic_cms_tip_info" android:fontFamily="@font/exo2_bold" />
+</RelativeLayout>

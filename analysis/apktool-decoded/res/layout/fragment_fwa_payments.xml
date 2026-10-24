@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:tag="layout/fragment_fwa_payments_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="#f4f4f4" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tvPaymentSummaryTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dp" android:text="Payment Summary" android:drawableRight="@drawable/ic_tip" android:drawablePadding="5.0dp" android:fontFamily="@font/exo2_bold" />
+        <LinearLayout android:orientation="vertical" android:id="@id/llHaveData" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Bill Amount" android:layout_weight="1.0" android:fontFamily="@font/exo2_bold" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:gravity="end" android:id="@id/tvPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="------" android:fontFamily="@font/exo2_bold" />
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tvBillDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Billing Period: " android:layout_weight="1.0" android:fontFamily="@font/exo2_medium" />
+            <View android:background="@color/color_EAEAEA" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="16.0dp" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp">
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Remaining Balance" android:layout_weight="1.0" android:fontFamily="@font/exo2_medium" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_ce1126" android:gravity="end" android:id="@id/tvRemainingBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="------" android:fontFamily="@font/exo2_bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llNoData" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:background="@drawable/ic_no_data_bill_charges" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dp" />
+            <TextView android:id="@id/tvNoBillDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/next_bill_is_on_or_before_1_s" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_channel" android:background="@drawable/bg_white_10dp" android:padding="16.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="24.0dp">
+            <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Payment Channels" android:fontFamily="@font/exo2_bold" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvList" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="14.0dp" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_debit" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp">
+            <TextView android:textSize="18.0sp" android:textColor="@color/color_3e3e3e" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_bold" />
+            <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_10dp" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp">
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="8.0dp" android:drawableStart="@drawable/ic_my_detail_debit" android:fontFamily="@font/exo2_semi_bold" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:id="@id/tv_debit_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:fontFamily="@font/exo2_medium" />
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:textColor="#ce1126" android:layout_gravity="end" android:id="@id/tv_unLink" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:fontFamily="@font/exo2_semi_bold" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

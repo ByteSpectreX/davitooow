@@ -1,0 +1,26 @@
+{
+  "global": {
+    "product": "cx",
+    "dateFormat": "dd/MM/yy",
+    "dateTimeFormat": "dd/MM/yy HH:mm:ss"
+  },
+  "login": {
+    "loginType": [
+      "pwdLogin",
+      "otpLogin"
+    ],
+    "LoginCombination": [
+      "pwdCaptcha",
+      "otp"
+    ],
+    "accountType": "none",
+    "canOauthLogin": true,
+    "canRegister": true,
+    "canViewPwd": true,
+    "canForgotPwd": true
+  },
+  "forgotPwd":{
+    "accountType":"none",
+    "canViewPwd":true
+  }
+}

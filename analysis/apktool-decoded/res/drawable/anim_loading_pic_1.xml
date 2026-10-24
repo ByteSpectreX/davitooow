@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="23.0dp" android:width="45.0dp" android:drawable="@drawable/bg_loading_anim" />
+    <item android:gravity="left|center" android:height="7.0dp" android:width="7.0dp" android:drawable="@drawable/dot_0038a8" android:start="6.0dp" />
+    <item android:gravity="left|center" android:height="7.0dp" android:width="7.0dp" android:drawable="@drawable/dot_990038a8" android:start="19.0dp" />
+    <item android:gravity="left|center" android:height="7.0dp" android:width="7.0dp" android:drawable="@drawable/dot_4c0038a8" android:start="32.0dp" />
+</layer-list>

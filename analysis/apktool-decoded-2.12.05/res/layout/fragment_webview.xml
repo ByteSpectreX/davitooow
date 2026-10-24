@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/smart_refresh_layout" android:background="#f3f2f2" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.iwhalecloud.basemodule.widgets.RefreshWebView android:id="@id/webview" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/src_over" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="59.0dp">
+            <ProgressBar android:layout_gravity="center" android:id="@id/progressBar" android:layout_width="218.0dp" android:layout_height="13.0dp" android:max="100" android:progress="10" style="?android:progressBarStyleHorizontal" />
+            <TextView android:textSize="13.0sp" android:textColor="#231f20" android:textColorHint="#231f20" android:gravity="center" android:layout_gravity="center" android:id="@id/percent" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="26.0dp" android:hint="10%" />
+        </FrameLayout>
+    </LinearLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

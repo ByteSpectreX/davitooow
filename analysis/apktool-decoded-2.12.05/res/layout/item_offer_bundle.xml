@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_root" android:background="@drawable/bg_offers_unselected" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="8.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_tag" android:background="@drawable/bg_ott_offer_tag" android:paddingTop="4.0dp" android:paddingBottom="3.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_bold" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_offers" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="19.0dp" android:layout_marginBottom="18.0dp" android:layout_marginStart="@dimen/dp_15" android:layout_marginEnd="@dimen/dp_15">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginRight="8.0dp" android:layout_weight="1.0">
+            <TextView android:textSize="15.0sp" android:textColor="@color/color_004fb7" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_extra_bold" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/color_3e3e3e" android:ellipsize="end" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:fontFamily="@font/exo2_semi_bold" />
+            <androidx.recyclerview.widget.RecyclerView android:textSize="14.0sp" android:textColor="@color/color_3e3e3e" android:ellipsize="end" android:id="@id/rv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/exo2_medium" />
+        </LinearLayout>
+        <View android:background="@color/color_EAEAEA" android:layout_width="1.0dp" android:layout_height="match_parent" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="120.0dp" android:layout_height="wrap_content">
+            <TextView android:textSize="10.0sp" android:textColor="@color/color_2f3043" android:gravity="right" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="For only:" android:fontFamily="@font/exo2_medium" />
+            <TextView android:textSize="22.0sp" android:textColor="#da2832" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/tv_price" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/exo2_bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/text_12sp" android:textColor="@color/white" android:id="@id/tv_bottom_tip" android:background="@drawable/shape_bottom_0038a8_10dp" android:paddingLeft="9.0dp" android:paddingTop="6.0dp" android:paddingBottom="6.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/exo2_bold" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|top" android:orientation="vertical" android:background="@drawable/upgrade_shape_ffffff_16dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:src="@drawable/upgrade_icon" android:contentDescription="@null" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#242424" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="@string/service_find_a_new_version" />
+    <TextView android:textSize="14.0sp" android:textColor="#545454" android:gravity="center" android:id="@id/version_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:layout_marginStart="24.0dp" android:layout_marginEnd="24.0dp" />
+    <TextView android:textSize="14.0sp" android:textColor="#545454" android:gravity="center" android:id="@id/update_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:layout_marginStart="24.0dp" android:layout_marginEnd="24.0dp" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="24.0dp">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#242424" android:gravity="center" android:id="@id/close_btn" android:background="@drawable/upgrade_shape_fffffff_d55d5d5bg_8dp" android:paddingTop="9.0dp" android:paddingBottom="9.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/service_close" android:layout_weight="1.0" android:layout_marginEnd="12.0dp" />
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/update_btn" android:background="@drawable/upgrade_shape_0021cd_8dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/service_update" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>
