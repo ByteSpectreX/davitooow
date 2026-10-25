@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "c7048dfb9ac3c6069a82a9d1",
+  "recordedAt": "2026-10-25T14:05:31.310Z",
+  "workspaceFingerprint": "5cb71260d7f51cee03e24b0ae0e3d783b815630a83d02cd11b24b9a1e1243915",
+  "title": "Automatic findings recorder validated; sandbox test-runner failure corrected",
+  "category": "correction",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "The initial subprocess-based test runner could not execute child tests in the managed sandbox and correctly saved a failed zero-test result. The runner now uses Node's in-process test API: the load-purchase suite reported 23 passes and the promo suite 9 passes, and the combined passing finding was saved automatically. The recorder/hook regression suite also passes 11 checks. These local tests establish recording behavior, not live DITO payment success. Native lifecycle hook installation is still pending because the protected write was interrupted.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "dito-system-handoff/tools/research/run-tests.mjs"
+    },
+    {
+      "type": "file",
+      "location": "dito-system-handoff/tools/research/test/automation.test.mjs"
+    },
+    {
+      "type": "test",
+      "location": "npm --prefix dito-login-test test",
+      "description": "32 mocked tests passed; result automatically recorded."
+    },
+    {
+      "type": "test",
+      "location": "automation.test.mjs",
+      "description": "11 recorder/hook regression checks passed."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Use the repository recording rule for subsequent discoveries. Native lifecycle enforcement requires the protected configuration installation and one-time host trust review."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-system-handoff/tools/research/run-tests.mjs",
+      "sha256": "e742fc9745417a73f346dfdad23e760a519fe6a155ab79c55fe9f93a04f64f1a"
+    },
+    {
+      "location": "dito-system-handoff/tools/research/test/automation.test.mjs",
+      "sha256": "c4e927e1ab32165efb97b17137ed0833e0baa56237113b2cf9e3d93aa5c37b9a"
+    }
+  ]
+}

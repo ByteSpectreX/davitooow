@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "node ../dito-system-handoff/tools/research/run-tests.mjs",
     "start": "node proxy-server.js",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">DITO account dashboard</title>
+  <rect width="512" height="512" rx="112" fill="#b10818"/>
+  <path d="M142 124h105c89 0 143 49 143 132s-54 132-143 132H142V124Zm94 198c49 0 75-21 75-66s-26-66-75-66h-17v132h17Z" fill="#fff"/>
+  <circle cx="374" cy="374" r="46" fill="#f8c21b"/>
+  <path d="m351 374 15 15 31-34" fill="none" stroke="#71101a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

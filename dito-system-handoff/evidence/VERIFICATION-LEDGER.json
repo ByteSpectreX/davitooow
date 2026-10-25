@@ -1,0 +1,518 @@
+{
+  "preparedOn": "2026-10-25",
+  "definitions": {
+    "implemented": "Present in copied source; not proof of upstream acceptance.",
+    "mock-tested": "Local deterministic tests using synthetic inputs and mocked upstream responses.",
+    "code-observed": "Referenced in inspected official frontend code; see source index.",
+    "user-reported": "Owner described or showed behavior; raw private response not retained.",
+    "live-verified": "Reserved for a dated sanitized real-account result; no new claims promoted during this export."
+  },
+  "claims": [
+    {
+      "id": "login",
+      "statement": "Password/OTP/captcha connection is implemented.",
+      "evidenceLevels": [
+        "implemented"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Recheck account-specific auth behavior and current token lifetime."
+    },
+    {
+      "id": "account-reads",
+      "statement": "Balance, allocations, history, and points requests are implemented.",
+      "evidenceLevels": [
+        "implemented"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Capture sanitized current response schemas for an authorized account."
+    },
+    {
+      "id": "promo-pages",
+      "statement": "Top-level web categories and pages are traversed with incomplete-result warnings.",
+      "evidenceLevels": [
+        "implemented",
+        "mock-tested"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Nested categories, pageInfo.total support, personalized dispatch, and other channels are incomplete."
+    },
+    {
+      "id": "long-expiry",
+      "statement": "Additional catalog paths and a public offer description were found.",
+      "evidenceLevels": [
+        "code-observed"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "No confirmed offer ID or recipient eligibility result."
+    },
+    {
+      "id": "linked-accounts",
+      "statement": "Linked-account list/switch remains absent.",
+      "evidenceLevels": [
+        "code-observed"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Obtain a sanitized authorized list/switch trace."
+    },
+    {
+      "id": "recipient-load",
+      "statement": "Regular-load quoting and checkout are implemented locally.",
+      "evidenceLevels": [
+        "implemented",
+        "mock-tested",
+        "user-reported"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Reported incomplete handoffs do not establish charge or delivery; no confirmed end-to-end live success."
+    },
+    {
+      "id": "web-method-filter",
+      "statement": "Exact inspected web channel/method pairs are selected.",
+      "evidenceLevels": [
+        "implemented",
+        "mock-tested",
+        "code-observed"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Gateway availability and provider responses can vary."
+    },
+    {
+      "id": "duplicate-protection",
+      "statement": "Saved quotes and equivalent unresolved attempts block local duplicate submits.",
+      "evidenceLevels": [
+        "implemented",
+        "mock-tested"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Single-process/session protection does not survive restart or span instances."
+    },
+    {
+      "id": "gateway-handling",
+      "statement": "HTTPS redirects, sandboxed forms, and locally rendered QR paths exist.",
+      "evidenceLevels": [
+        "implemented",
+        "mock-tested"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Actual provider forms and a completed authorized payment are unverified."
+    },
+    {
+      "id": "payment-status",
+      "statement": "Transaction status C/D/E mapping and redacted diagnostics are implemented.",
+      "evidenceLevels": [
+        "implemented",
+        "mock-tested",
+        "code-observed"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Earlier real attempt outcomes and delivered load are unverified."
+    },
+    {
+      "id": "recipient-data-promos",
+      "statement": "Official recipient data-promo routes were located.",
+      "evidenceLevels": [
+        "code-observed"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "End-to-end recipient promo catalog/checkout is not implemented."
+    },
+    {
+      "id": "worker-load",
+      "statement": "Worker checkout explicitly reports unsupported.",
+      "evidenceLevels": [
+        "implemented",
+        "mock-tested"
+      ],
+      "liveVerification": "not-established-in-this-handoff",
+      "remaining": "Add durable atomic financial coordination before enabling it."
+    }
+  ],
+  "endpointEvidence": [
+    {
+      "id": "auth.captcha",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "auth.account-check",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "auth.send-otp",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "auth.login",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "account.subscriber",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "account.balance",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "account.allocations",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "account.summary",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "account.alias-profile",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P7"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "history.load",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "history.promos",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "account.points",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "catalog.categories",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2",
+        "W1",
+        "W2",
+        "W5"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "catalog.available",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2",
+        "W1"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "catalog.general",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "catalog.detail",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "catalog.validate-offer",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1",
+        "W5"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "recipient.validate",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1",
+        "W3",
+        "W5"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "catalog.guest-entry",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1",
+        "W6"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "marketing.campaigns",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1",
+        "W4"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "marketing.contact-detail",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "catalog.buy-again",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "catalog.buy-again-check",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "load.amounts",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1",
+        "W7"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "load.h5-fees",
+      "sourceEvidence": "code-observed",
+      "sourceIds": [
+        "W1",
+        "W7"
+      ],
+      "implementationPresent": false,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "load.web-fees",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "load.validate-amount",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "W1",
+        "P8",
+        "P9"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "payment.methods",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "W1",
+        "W7",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "payment.promo-purchase",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "P1",
+        "P2",
+        "W1",
+        "W3",
+        "W5"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "payment.load-submit",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "load.recipient-exists",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "load.denominations",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    },
+    {
+      "id": "load.transaction-status",
+      "sourceEvidence": "implemented",
+      "sourceIds": [
+        "W1",
+        "W8",
+        "P8",
+        "P9"
+      ],
+      "implementationPresent": true,
+      "liveVerification": "not-established-in-this-handoff",
+      "mockEvidence": "See feature claims and test output; do not infer coverage solely from this endpoint tag."
+    }
+  ],
+  "historicalAudit": {
+    "date": "2026-10-24",
+    "runtimeFindings": 0,
+    "developmentHighSeverityEntries": 4,
+    "refreshedDuringExport": false
+  },
+  "updateRule": "Append a dated sanitized experiment. Promote only the exact observed claim; retain failures and ambiguous outcomes."
+}

@@ -4,6 +4,7 @@ A workspace for exploring an authorized DITO account, documenting its APIs, and 
 
 | Area | Start here |
 | --- | --- |
+| Complete handoff for the next system | [dito-system-handoff/](./dito-system-handoff/README.md) |
 | Expantor API collection and research notebook | [expantor/](./expantor/README.md) |
 | Account dashboard and local startup | [dito-login-test/](./dito-login-test/README.md) |
 | Existing browser extension | [DITO Home WiFi Dashboard](./tools/dito-login-listener/README.md) |
@@ -11,6 +12,8 @@ A workspace for exploring an authorized DITO account, documenting its APIs, and 
 | Existing runtime capture plan | [Capture plan](./analysis/API_CAPTURE_PLAN.md) |
 
 The API study distinguishes project implementations from endpoints seen in official frontend code and responses actually verified for an account. Finding an endpoint does not prove that an offer is available or purchasable.
+
+New discoveries and test results belong in the [live findings journal](./dito-system-handoff/findings/README.md). The repository's [agent instructions](./AGENTS.md) require automatic recording; [the workflow guide](./dito-system-handoff/docs/06-AUTOMATIC-FINDINGS.md) documents native hook setup and its activation status.
 
 Start the dashboard from the repository root with:
 

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "f257a0ee49f151fa94b9ae13",
+  "recordedAt": "2026-10-25T14:18:26.768Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Owner reports successful login without entering the graphic verification code",
+  "category": "behavior",
+  "outcome": "observed",
+  "evidenceLevel": "user-reported",
+  "summary": "The owner reports that login can proceed with the graphic verification field left blank. This is a reported individual login outcome, not proof that all logins are exempt from a challenge. No raw authentication response or account data was captured. DITO's exact captcha trigger rules remain unverified.",
+  "evidence": [
+    {
+      "type": "user-report",
+      "location": "Owner's graphic verification question in this research session",
+      "description": "Login proceeds without inputting the displayed graphic code."
+    }
+  ],
+  "endpointIds": [
+    "auth.login",
+    "auth.captcha"
+  ],
+  "nextSteps": [
+    "If DITO later explicitly requires a challenge, record the sanitized result code and scope without deliberately triggering repeated failed logins."
+  ],
+  "fileEvidence": []
+}

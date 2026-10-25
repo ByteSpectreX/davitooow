@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "bf0a66911b9dac93d5180b35",
+  "recordedAt": "2026-10-25T14:18:26.839Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Login UI now describes the graphic challenge as conditional",
+  "category": "correction",
+  "outcome": "observed",
+  "evidenceLevel": "implemented",
+  "summary": "The frontend fetches and displays a graphic challenge during login preparation, but builds a captcha-free login payload when the field is blank. The Node backend adds captcha and requestSN upstream only when a nonempty captcha was supplied; it does not locally enforce a mandatory captcha. The original UI wording incorrectly implied the graphic code was always required. The label, password/OTP prompts, and help text now explain that it is conditional on DITO requesting it. The frontend comment no longer claims an unverified exact failure-count trigger. PWA cache revision was advanced to 15. Syntax checks passed; no live login, OTP, or purchase was performed.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "dito-login-test/public/app.js"
+    },
+    {
+      "type": "file",
+      "location": "dito-login-test/public/index.html"
+    },
+    {
+      "type": "file",
+      "location": "dito-login-test/proxy-server.js"
+    }
+  ],
+  "endpointIds": [
+    "auth.login",
+    "auth.captcha"
+  ],
+  "nextSteps": [
+    "Keep the challenge available for upstream-required logins. Do not interpret a displayed image as proof that the server requires its answer for every attempt."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-login-test/public/app.js",
+      "sha256": "412d0a0ca3aa49fd60ead1df42373a6ed34a79eb257aaef256e31b17740f9179"
+    },
+    {
+      "location": "dito-login-test/public/index.html",
+      "sha256": "7da39d1b11f97b05ec7fa59f035bb47e5be42052136642171c8363b560804d96"
+    },
+    {
+      "location": "dito-login-test/proxy-server.js",
+      "sha256": "abd3ee76ae76204b347d0cfcf4b8144e0022707b368de08d77cbb4ed14330d4d"
+    }
+  ]
+}

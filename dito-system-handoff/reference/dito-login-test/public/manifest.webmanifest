@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "DITO Account Dashboard",
+  "short_name": "DITO Dashboard",
+  "description": "View DITO load and promo balances from an installable web app.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f7f8",
+  "theme_color": "#b10818",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

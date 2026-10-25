@@ -1,0 +1,11 @@
+**/node_modules/
+**/.wrangler/
+**/.dev.vars
+**/.env
+**/.env.local
+**/*.log
+**/*.mitm
+**/*.har
+findings/.state/
+findings/.write-lock
+findings/*.tmp

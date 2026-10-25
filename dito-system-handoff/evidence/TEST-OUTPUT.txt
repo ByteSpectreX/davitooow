@@ -1,0 +1,61 @@
+=== load-purchase-tests ===
+✔ normalizes recipient formats and rejects invalid text (1.95438ms)
+✔ options verify the recipient and exclude points/own-account payment methods (1.663978ms)
+✔ web options exclude app-only and alternate provider method pairs (0.656526ms)
+✔ an unresolved equivalent payment blocks another quote even if its method changes (1.308484ms)
+✔ resolved payments do not block another purchase and different recipients remain separate (0.631139ms)
+✔ invalid recipients stop before loading checkout methods (0.346707ms)
+✔ application errors and missing payment options fail closed (1.425312ms)
+✔ quote retains authoritative charge and total without creating a payment (2.170944ms)
+✔ bad amounts, invented payment IDs, and unsupported quotes are rejected (2.491584ms)
+✔ submission needs explicit confirmation and an unexpired quote (0.998425ms)
+✔ concurrent duplicate submissions create only one payment for the saved recipient (0.963248ms)
+✔ network failure leaves an unknown outcome and retries cannot submit again (0.465359ms)
+✔ separate ready quotes cannot both submit an equivalent payment (0.756633ms)
+✔ external handoffs do not apply the points-only returnCode check (0.828377ms)
+✔ diagnostics omit credentials, payment references, handoff contents, and raw messages (0.516635ms)
+✔ status-only checks preserve legacy records and explain when they were checked (0.40665ms)
+✔ gateway handling supports HTTPS redirects/forms/QR and rejects unsafe URLs (0.386231ms)
+✔ only confirmed transaction status C is marked completed (0.352438ms)
+✔ HTTP routes reject unauthenticated, cross-origin, and cross-session purchase attempts (6.090744ms)
+✔ gateway form route is no-store and has an opaque script-restricted sandbox (0.748821ms)
+✔ HTTP checkout uses the session quote, ignores client tampering, and exposes pending orders (127.937962ms)
+✔ QR checkout renders a local SVG without sharing gateway data with another service (672.705531ms)
+✔ Cloudflare mode reports unsupported checkout before any purchase attempt (4.102502ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 841.372742
+
+=== promo-catalog-tests ===
+✔ loads later pages instead of truncating at 50 promos (2.242428ms)
+✔ continues short pages when the upstream page size is capped (0.357247ms)
+✔ uses a top-level totalNumber to finish without an extra request (1.104433ms)
+✔ stops repeated pages and labels the results incomplete (0.320869ms)
+✔ retains earlier results when a later page fails (0.371664ms)
+✔ does not mistake an upstream error body for an empty catalog (0.205263ms)
+✔ reports missing results when an empty page arrives before the total (0.32141ms)
+✔ merges offers across categories and retains their filter membership (0.282247ms)
+✔ bounds requests and reports the safety limit (3.123594ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20.09551
+
+=== node-backend-syntax ===
+
+=== load-service-syntax ===
+
+=== worker-syntax ===
+
+=== browser-module-syntax ===
+
+=== service-worker-syntax ===

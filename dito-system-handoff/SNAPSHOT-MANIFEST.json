@@ -1,0 +1,283 @@
+{
+  "formatVersion": 2,
+  "generatedAt": "2026-10-25T14:06:02.274769+00:00",
+  "algorithm": "SHA-256",
+  "note": "Original reference source and historical evidence are preserved. Live findings are excluded from the frozen file manifest and validated separately by content-derived record IDs. The original export manifest remains in evidence/baselines.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 147,
+      "sha256": "0a0feb66cf89a0aebcfd229c4a78794aa272e47595da806005d8a74b5728ded6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4588,
+      "sha256": "25ce16119fda72ab87f39e57f3cab0ac032d4cb6c99c4170032f51d8da874f1c"
+    },
+    {
+      "path": "docs/01-SETUP.md",
+      "bytes": 3756,
+      "sha256": "66831a6a7de1e5e8b047196328359900c64f540b59ec8a08456195b1038f8502"
+    },
+    {
+      "path": "docs/02-API-CONNECTION.md",
+      "bytes": 6215,
+      "sha256": "454e9ae5daf4f2c7f521b9c0250e475df5bf56117a31b35865d40d784e369e18"
+    },
+    {
+      "path": "docs/03-IMPLEMENTATION.md",
+      "bytes": 6327,
+      "sha256": "13bafc35b5e19f9a2b6d1ce432f44f497454fdcfb4d2f03554e00cae57ec345e"
+    },
+    {
+      "path": "docs/04-VERIFICATION.md",
+      "bytes": 5258,
+      "sha256": "2a44b216a5f1a466159d8c1f60542dee07dab3cc9df7de3f0f00fffc03422141"
+    },
+    {
+      "path": "docs/05-NEXT-SYSTEM.md",
+      "bytes": 4564,
+      "sha256": "8295581c328a63c3fa4af9e97880ec9e18c4421515bd70ffabe1b61f83778ff8"
+    },
+    {
+      "path": "docs/06-AUTOMATIC-FINDINGS.md",
+      "bytes": 7071,
+      "sha256": "a105db83c3d8f9f7ae073dd35aca624ec356a23c6b98b616c9b6e6016f4cf5e1"
+    },
+    {
+      "path": "docs/EXPERIMENT-TEMPLATE.md",
+      "bytes": 1333,
+      "sha256": "d0a5a24e029631ebb6886a6895cc6f2f777c755f7fe0a9aa6b4f0a51db0d4951"
+    },
+    {
+      "path": "evidence/SNAPSHOT-ORIGIN.json",
+      "bytes": 8492,
+      "sha256": "840a31e0bb1e5038751a55bb7b7cbc9a3f5c75d391881a87e140a721119ba59d"
+    },
+    {
+      "path": "evidence/TEST-OUTPUT.txt",
+      "bytes": 3165,
+      "sha256": "ee42eeb104168a874685934b0860aa26ad02c1f4bc9ec0cbf406af2ce228fb62"
+    },
+    {
+      "path": "evidence/VALIDATION.json",
+      "bytes": 1852,
+      "sha256": "52aedcc60229af181207f7fe75eff01054b511d8e7ff7833dcddc7c4723181cf"
+    },
+    {
+      "path": "evidence/VERIFICATION-LEDGER.json",
+      "bytes": 17067,
+      "sha256": "2d32263072e9fa926ce223679394d9980dfb34c5b4f3bd923236ddb4e86365ed"
+    },
+    {
+      "path": "evidence/baselines/2026-10-25-original-manifest.json",
+      "bytes": 8223,
+      "sha256": "5a313d32364d06716d19e581809982473963d3bba01ca784187df534e7365cf3"
+    },
+    {
+      "path": "reference/analysis/API_CAPTURE_PLAN.md",
+      "bytes": 5512,
+      "sha256": "d6848ec8b7a09eef9e4cfe5229ae6570a14fbfbb504a1b99f87439218d779d59"
+    },
+    {
+      "path": "reference/analysis/APK_STATIC_ANALYSIS_REPORT.md",
+      "bytes": 14578,
+      "sha256": "6e7d6a7a3fb60e77c22e86f7acdcc694bb513dda5d247d82b2be7679021e82a4"
+    },
+    {
+      "path": "reference/analysis/apktool-decoded-2.12.05/smali/com/secneo/apkwrapper/H.smali",
+      "bytes": 48810,
+      "sha256": "1c9a4977284140e33401d07f40bc9c651d34c2b8cd36becbd3b1ede72309774b"
+    },
+    {
+      "path": "reference/analysis/captures/README.md",
+      "bytes": 379,
+      "sha256": "0b21f10b5aa4884f6258a241519e13c0382e53f2a2fb99ffae0803ccc3b8d90e"
+    },
+    {
+      "path": "reference/dito-login-test/.dev.vars.example",
+      "bytes": 162,
+      "sha256": "66782f4f70cb15aacf72e51d26575b003c10e2b7dc8a5e053c7839efd6a98c8a"
+    },
+    {
+      "path": "reference/dito-login-test/.gitignore",
+      "bytes": 41,
+      "sha256": "da76f2e31f32d505d888c797157c3cf0a9edb9c0b664b60d783f8b99305465b0"
+    },
+    {
+      "path": "reference/dito-login-test/README.md",
+      "bytes": 8034,
+      "sha256": "3c8a1d822ed3536c1a262e4762b52d8adbdb34871714d0b6738c64a55f95b268"
+    },
+    {
+      "path": "reference/dito-login-test/package-lock.json",
+      "bytes": 60755,
+      "sha256": "98f72871b7ca74c8a40123dd075dc720732b50b1367442eb70e09eb1915e4f27"
+    },
+    {
+      "path": "reference/dito-login-test/package.json",
+      "bytes": 378,
+      "sha256": "3a1c28903841f83f23a5d57478a7ab5351b45e48aef78e8ba347836cbfc6faa4"
+    },
+    {
+      "path": "reference/dito-login-test/proxy-server.js",
+      "bytes": 31483,
+      "sha256": "abd3ee76ae76204b347d0cfcf4b8144e0022707b368de08d77cbb4ed14330d4d"
+    },
+    {
+      "path": "reference/dito-login-test/public/_headers",
+      "bytes": 469,
+      "sha256": "a4572d1226cf54281a7ec50de43f0ef2393af412478a1fcde3f5d5a445c2a84b"
+    },
+    {
+      "path": "reference/dito-login-test/public/app.css",
+      "bytes": 5336,
+      "sha256": "a5ab845dca2d4924bb9e15ca04e9b1f8047db29a5fb00c59e6389dba524ecde7"
+    },
+    {
+      "path": "reference/dito-login-test/public/app.js",
+      "bytes": 33199,
+      "sha256": "21f6d92b722f6f6e6bc5f2fd5e6459cd8f028dd774ac58a8d3bdbb06690d4047"
+    },
+    {
+      "path": "reference/dito-login-test/public/icons/icon.svg",
+      "bytes": 529,
+      "sha256": "5148c551a512afc24393b2ff2fb2d86659ba34e706e8434e96b2a9a784d7d9d9"
+    },
+    {
+      "path": "reference/dito-login-test/public/index.html",
+      "bytes": 8372,
+      "sha256": "b996156654290a526d53432faf8f6009f8f579a82edbd32269c0ae39cc344c0d"
+    },
+    {
+      "path": "reference/dito-login-test/public/manifest.webmanifest",
+      "bytes": 440,
+      "sha256": "6280929427b7033f352e7d75ae21dd66903b0135ccf28152389623128d7249c1"
+    },
+    {
+      "path": "reference/dito-login-test/public/promo-catalog.mjs",
+      "bytes": 2351,
+      "sha256": "ce6a58a1dce66c0a2a7177110c472bf6b1e36d004925fc58f1d7f1ebec538c9c"
+    },
+    {
+      "path": "reference/dito-login-test/public/sw.js",
+      "bytes": 1110,
+      "sha256": "0194182185cb65a925779029081d551a97c3c2854bb27c6ae23cc53a080d9069"
+    },
+    {
+      "path": "reference/dito-login-test/src/load-purchase.mjs",
+      "bytes": 11948,
+      "sha256": "2e88456d420da59a3115daa60ec20f377a3397c58b1aca5e2add79f6fd9dea03"
+    },
+    {
+      "path": "reference/dito-login-test/src/worker.mjs",
+      "bytes": 25437,
+      "sha256": "507659d15817c78f2eb8b4f75fb0f49bd3914ea4de792ea58b77970482605008"
+    },
+    {
+      "path": "reference/dito-login-test/tests/load-purchase.test.mjs",
+      "bytes": 17161,
+      "sha256": "f20723a502f7565f3eb6fa8e1a9ccd337aa7c98d4c0e4aab6d6b1d67eda4aa27"
+    },
+    {
+      "path": "reference/dito-login-test/tests/promo-catalog.test.mjs",
+      "bytes": 3603,
+      "sha256": "524ddda3508e69e6b3b007447cdbdc49015cef3d50ef06b058479439a8487f09"
+    },
+    {
+      "path": "reference/dito-login-test/wrangler.jsonc",
+      "bytes": 454,
+      "sha256": "71779f13cf537c00ad23686aaa35cda457ae7e1ee6fa190c1bb975a6b894214a"
+    },
+    {
+      "path": "reference/expantor/README.md",
+      "bytes": 4100,
+      "sha256": "de14b465659ad2bdcc639c887a6b5e3b017779586d107453bfdf05df98150cb9"
+    },
+    {
+      "path": "reference/expantor/api-catalog.json",
+      "bytes": 19535,
+      "sha256": "bcd907725a1c87c0a3c4925d808474fe02d1c4c36262558fe4f3a921d109daf3"
+    },
+    {
+      "path": "reference/expantor/collections/dito-dashboard.postman_collection.json",
+      "bytes": 7009,
+      "sha256": "b504a07763c15cdd5a9c113f65ea2bfa7cf4d8f057f6e6b29b65ec3e880bae0f"
+    },
+    {
+      "path": "reference/expantor/notes/2026-10-24-load-purchase.md",
+      "bytes": 6917,
+      "sha256": "33808bc893e22a8dcdf0665cfd7dc1bb103eabf8ae0ed47c27e4e6e2c0a9f499"
+    },
+    {
+      "path": "reference/expantor/notes/2026-10-24.md",
+      "bytes": 5411,
+      "sha256": "c84a749e687b8050b618c2d9ab921fd44c4e594777cffdda4bcea245c8010615"
+    },
+    {
+      "path": "reference/expantor/notes/TEMPLATE.md",
+      "bytes": 1108,
+      "sha256": "5311949556d8ebf627fc63ef44b2d1e6c01d4be57a1486ea16631c10f10b7904"
+    },
+    {
+      "path": "reference/expantor/sources.md",
+      "bytes": 4115,
+      "sha256": "664a5ec11abcda452af7bf2d76727139ead9a40daf53c22916d3c4d15e3d7f22"
+    },
+    {
+      "path": "reference/tools/dito-login-listener/README.md",
+      "bytes": 2044,
+      "sha256": "18ad652bcb2b6172f5a4014ccedb1a1b87afd40afd7c3565a74466f06d59f613"
+    },
+    {
+      "path": "reference/tools/dito-login-listener/listener.js",
+      "bytes": 34815,
+      "sha256": "889f144f46beaca925510dde59c6bede221fd6f7caa6455ebeabb368f721bf4c"
+    },
+    {
+      "path": "reference/tools/dito-login-listener/manifest.json",
+      "bytes": 405,
+      "sha256": "182b9cbb93ff1c6bb399770dd7772e5a514ba501529805a0a44517c280dec904"
+    },
+    {
+      "path": "tools/research/finding.example.json",
+      "bytes": 541,
+      "sha256": "285dde9910e47a71c73fea7ab16a2d187f2d0859c855d616bcde940d9fbfa74a"
+    },
+    {
+      "path": "tools/research/hook.mjs",
+      "bytes": 3021,
+      "sha256": "71705318eacafb484264d8c122cb790b62444cd99e7e79791477fc127c2d6b9b"
+    },
+    {
+      "path": "tools/research/install-hooks.mjs",
+      "bytes": 2001,
+      "sha256": "b2545996d4b228fb7198a76811c9970f0c066dcb3cd3bd97a457fd429a3c67d4"
+    },
+    {
+      "path": "tools/research/lib.mjs",
+      "bytes": 9650,
+      "sha256": "629340c70fd5ec5b6c6e2012c40850aa2fd51458c06986243350256403ad8f7b"
+    },
+    {
+      "path": "tools/research/record-finding.mjs",
+      "bytes": 500,
+      "sha256": "4711ae657e94d82d4e81cc2933c559f089573759ebf2a1d73dd48f79a8413c42"
+    },
+    {
+      "path": "tools/research/run-tests.mjs",
+      "bytes": 2271,
+      "sha256": "e742fc9745417a73f346dfdad23e760a519fe6a155ab79c55fe9f93a04f64f1a"
+    },
+    {
+      "path": "tools/research/test/automation.test.mjs",
+      "bytes": 6186,
+      "sha256": "c4e927e1ab32165efb97b17137ed0833e0baa56237113b2cf9e3d93aa5c37b9a"
+    },
+    {
+      "path": "tools/verify-handoff.mjs",
+      "bytes": 3729,
+      "sha256": "078e2b1de173b961925530d52d6ff8cf2eaf5e6d14856cbf8b7485d49bd6acc6"
+    }
+  ]
+}

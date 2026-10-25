@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "e4d11f8477e76923985d9171",
+  "recordedAt": "2026-10-25T14:01:20.440Z",
+  "workspaceFingerprint": "4c422e9df0a164d3cabb7514855eb1da9675323cf2aff927890158236204cddd",
+  "title": "Findings workflow installed; native hook activation still pending",
+  "category": "workflow",
+  "outcome": "uncertain",
+  "evidenceLevel": "implemented",
+  "summary": "Repository instructions now require recording substantive findings without another owner request. The structured recorder, automatic mocked-test runner, and lifecycle hook code are implemented. The ordinary native installer failed because the managed Codex directory is read-only; the escalated attempt was interrupted. Native hooks must not be described as active until installation, reload, and host trust review succeed.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "AGENTS.md"
+    },
+    {
+      "type": "file",
+      "location": "dito-system-handoff/tools/research/hook.mjs"
+    },
+    {
+      "type": "file",
+      "location": "dito-system-handoff/docs/06-AUTOMATIC-FINDINGS.md"
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Complete the protected native hook installation and one-time host trust review when permitted. Repository instructions and automatic test-result recording are usable independently."
+  ],
+  "fileEvidence": [
+    {
+      "location": "AGENTS.md",
+      "sha256": "ccb865a4c8264df79e64b826184c9c23129aa0a716425aee2560a64bbae56d15"
+    },
+    {
+      "location": "dito-system-handoff/tools/research/hook.mjs",
+      "sha256": "71705318eacafb484264d8c122cb790b62444cd99e7e79791477fc127c2d6b9b"
+    },
+    {
+      "location": "dito-system-handoff/docs/06-AUTOMATIC-FINDINGS.md",
+      "sha256": "359f6042fff6a9182987bf1619232368544550278db2a966fddf811398e8d9a4"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Replace with the concrete discovery",
+  "category": "api",
+  "outcome": "uncertain",
+  "evidenceLevel": "code-observed",
+  "summary": "Describe the actual behavior and its limit. Do not paste an account response, credential, or transcript.",
+  "evidence": [
+    { "type": "file", "location": "dito-login-test/src/load-purchase.mjs", "description": "Replace with the relevant source or sanitized experiment note." }
+  ],
+  "endpointIds": ["payment.load-submit"],
+  "nextSteps": ["State the next verification needed, if any."]
+}

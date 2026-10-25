@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "fd890e53ce43a8cadab111f0",
+  "recordedAt": "2026-10-25T14:00:17.985Z",
+  "workspaceFingerprint": "d002b0475ebb2e2ac4e4f3ac709d95f61f931fdaba27d7d1430f0d21c12764f7",
+  "title": "Codespaces dashboard restored by starting the saved server task",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "implemented",
+  "summary": "The owner reported HTTP 502 at the Codespaces forwarded dashboard port. A host-level request to local port 5174 failed to connect before startup. Running the saved DITO dashboard task started the Node server. Subsequent host-level requests returned HTTP 200 for GET /api/health with ok true and HEAD / with HTML content type. This verifies local server availability only; the owner's authenticated forwarded URL, DITO account requests, and payment flows were not exercised. The required live journal index and automatic-findings workflow document were absent at the initial read; the recorder's example and implementation supplied the schema.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "dito-login-test/README.md",
+      "description": "Local/Codespaces setup requires the server task to remain running and to be started again after Codespace restart."
+    },
+    {
+      "type": "file",
+      "location": "dito-login-test/proxy-server.js",
+      "description": "Node server serves the dashboard and local health endpoint on port 5174."
+    },
+    {
+      "type": "user-report",
+      "location": "User report on 2026-10-25",
+      "description": "Forwarded dashboard page displayed HTTP 502; private screenshot and host address were not copied into the journal."
+    },
+    {
+      "type": "test",
+      "location": "Host-local HTTP availability checks on 2026-10-25",
+      "description": "Connection refused before task startup; health GET and homepage HEAD both returned HTTP 200 after startup. No upstream DITO requests were made."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Refresh the existing private forwarded port URL and confirm it opens in the owner's browser.",
+    "Keep the DITO dashboard task running; start it again after the Codespace or server stops.",
+    "Restore the missing docs/06-AUTOMATIC-FINDINGS.md workflow document in the ongoing documentation work."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-login-test/README.md",
+      "sha256": "3c8a1d822ed3536c1a262e4762b52d8adbdb34871714d0b6738c64a55f95b268"
+    },
+    {
+      "location": "dito-login-test/proxy-server.js",
+      "sha256": "abd3ee76ae76204b347d0cfcf4b8144e0022707b368de08d77cbb4ed14330d4d"
+    }
+  ]
+}

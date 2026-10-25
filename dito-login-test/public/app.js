@@ -183,10 +183,10 @@ $("sendOtp").addEventListener("click", async () => {
     await refreshCaptcha();
     $("otpStep").classList.remove("hidden");
     if (password) {
-      setStatus("Enter your account password and the graphic verification code.");
+      setStatus("Enter your account password. Leave the graphic code blank unless DITO requests it.");
       log("Account check passed; ready for password login (no OTP sent).");
     } else {
-      setStatus("OTP sent. Enter it and the graphic verification code.");
+      setStatus("OTP sent. Enter the SMS code. Leave the graphic code blank unless DITO requests it.");
       log("OTP requested successfully.");
     }
   } catch (error) {
@@ -209,8 +209,8 @@ $("login").addEventListener("click", async () => {
   } else if (!/^\d{4,8}$/.test(otp)) {
     return setStatus("Enter the OTP from the SMS.", true);
   }
-  // Captcha is optional: DITO only requires it after repeated failures. Leaving
-  // it blank tests whether a clean login (needed for silent re-auth) works.
+  // Omit an empty captcha. DITO decides whether a particular login needs a
+  // challenge; its exact trigger rules have not been verified in this study.
   const useCaptcha = captcha.length > 0;
   if (useCaptcha && (!/^\w{4}$/.test(captcha) || !captchaRequestSN)) {
     return setStatus("The graphic verification code must be 4 characters, or leave it blank.", true);

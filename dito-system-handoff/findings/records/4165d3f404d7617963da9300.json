@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "4165d3f404d7617963da9300",
+  "recordedAt": "2026-10-25T14:01:21.596Z",
+  "workspaceFingerprint": "4c422e9df0a164d3cabb7514855eb1da9675323cf2aff927890158236204cddd",
+  "title": "Mocked DITO test-suite result",
+  "category": "test",
+  "outcome": "failed",
+  "evidenceLevel": "mock-tested",
+  "summary": "load-purchase.test.mjs: failed or could not complete; 0 tests reported. promo-catalog.test.mjs: failed or could not complete; 0 tests reported",
+  "evidence": [
+    {
+      "type": "test",
+      "location": "load-purchase.test.mjs",
+      "description": "load-purchase.test.mjs: failed or could not complete; 0 tests reported"
+    },
+    {
+      "type": "test",
+      "location": "promo-catalog.test.mjs",
+      "description": "promo-catalog.test.mjs: failed or could not complete; 0 tests reported"
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Investigate the failing local suite; this result says nothing about live DITO payment completion."
+  ],
+  "fileEvidence": []
+}

@@ -2,6 +2,8 @@
 
 An API collection and notebook for studying account data, promo discovery, Buy Load, and Buy Data for an authorized DITO account.
 
+New discoveries are recorded in the handoff's [live findings journal](../dito-system-handoff/findings/README.md) through the [automatic recording workflow](../dito-system-handoff/docs/06-AUTOMATIC-FINDINGS.md). This notebook remains the earlier research baseline.
+
 ## Contents
 
 | File | Purpose |

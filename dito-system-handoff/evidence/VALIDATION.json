@@ -1,0 +1,58 @@
+{
+  "executedAt": "2026-10-25T11:28:16.343645+00:00",
+  "nodeVersion": "v24.21.0",
+  "scope": "Copied handoff source with synthetic local/mock tests. No live account verification.",
+  "dependencySetup": "Used the existing project runtime dependency installation through NODE_PATH; no fresh npm install and no current online dependency audit were performed.",
+  "liveAccountCallsMade": false,
+  "paymentsSubmitted": false,
+  "otpMessagesSent": false,
+  "cloudResourcesChanged": false,
+  "checks": [
+    {
+      "id": "load-purchase-tests",
+      "workingDirectory": "reference/dito-login-test",
+      "command": "node tests/load-purchase.test.mjs",
+      "exitCode": 0,
+      "testCount": 23
+    },
+    {
+      "id": "promo-catalog-tests",
+      "workingDirectory": "reference/dito-login-test",
+      "command": "node tests/promo-catalog.test.mjs",
+      "exitCode": 0,
+      "testCount": 9
+    },
+    {
+      "id": "node-backend-syntax",
+      "workingDirectory": "reference/dito-login-test",
+      "command": "node --check proxy-server.js",
+      "exitCode": 0
+    },
+    {
+      "id": "load-service-syntax",
+      "workingDirectory": "reference/dito-login-test",
+      "command": "node --check src/load-purchase.mjs",
+      "exitCode": 0
+    },
+    {
+      "id": "worker-syntax",
+      "workingDirectory": "reference/dito-login-test",
+      "command": "node --check src/worker.mjs",
+      "exitCode": 0
+    },
+    {
+      "id": "browser-module-syntax",
+      "workingDirectory": "reference/dito-login-test",
+      "command": "node --input-type=module --check",
+      "exitCode": 0,
+      "stdinFile": "reference/dito-login-test/public/app.js"
+    },
+    {
+      "id": "service-worker-syntax",
+      "workingDirectory": "reference/dito-login-test",
+      "command": "node --check public/sw.js",
+      "exitCode": 0
+    }
+  ],
+  "totalMockTests": 32
+}

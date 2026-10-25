@@ -1,0 +1,199 @@
+{
+  "createdAt": "2026-10-25T11:22:40.842951+00:00",
+  "sourceCommit": "c98779b2abd944c2586b59ba9ad4acc0da8cae27",
+  "sourcePolicy": "Allowlisted implementation, synthetic tests, protocol research, and public-source references only. No node_modules, live sessions, credentials, raw captures, account screenshots, APK binaries, or legacy ad-hoc login scripts.",
+  "sourceFiles": [
+    {
+      "source": "dito-login-test/package.json",
+      "destination": "reference/dito-login-test/package.json",
+      "sourceSha256": "3a1c28903841f83f23a5d57478a7ab5351b45e48aef78e8ba347836cbfc6faa4",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/package-lock.json",
+      "destination": "reference/dito-login-test/package-lock.json",
+      "sourceSha256": "98f72871b7ca74c8a40123dd075dc720732b50b1367442eb70e09eb1915e4f27",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/proxy-server.js",
+      "destination": "reference/dito-login-test/proxy-server.js",
+      "sourceSha256": "abd3ee76ae76204b347d0cfcf4b8144e0022707b368de08d77cbb4ed14330d4d",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/wrangler.jsonc",
+      "destination": "reference/dito-login-test/wrangler.jsonc",
+      "sourceSha256": "71779f13cf537c00ad23686aaa35cda457ae7e1ee6fa190c1bb975a6b894214a",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/.dev.vars.example",
+      "destination": "reference/dito-login-test/.dev.vars.example",
+      "sourceSha256": "66782f4f70cb15aacf72e51d26575b003c10e2b7dc8a5e053c7839efd6a98c8a",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/.gitignore",
+      "destination": "reference/dito-login-test/.gitignore",
+      "sourceSha256": "da76f2e31f32d505d888c797157c3cf0a9edb9c0b664b60d783f8b99305465b0",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/README.md",
+      "destination": "reference/dito-login-test/README.md",
+      "sourceSha256": "3c8a1d822ed3536c1a262e4762b52d8adbdb34871714d0b6738c64a55f95b268",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/src/load-purchase.mjs",
+      "destination": "reference/dito-login-test/src/load-purchase.mjs",
+      "sourceSha256": "2e88456d420da59a3115daa60ec20f377a3397c58b1aca5e2add79f6fd9dea03",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/src/worker.mjs",
+      "destination": "reference/dito-login-test/src/worker.mjs",
+      "sourceSha256": "507659d15817c78f2eb8b4f75fb0f49bd3914ea4de792ea58b77970482605008",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/public/_headers",
+      "destination": "reference/dito-login-test/public/_headers",
+      "sourceSha256": "a4572d1226cf54281a7ec50de43f0ef2393af412478a1fcde3f5d5a445c2a84b",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/public/app.css",
+      "destination": "reference/dito-login-test/public/app.css",
+      "sourceSha256": "a5ab845dca2d4924bb9e15ca04e9b1f8047db29a5fb00c59e6389dba524ecde7",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/public/app.js",
+      "destination": "reference/dito-login-test/public/app.js",
+      "sourceSha256": "21f6d92b722f6f6e6bc5f2fd5e6459cd8f028dd774ac58a8d3bdbb06690d4047",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/public/icons/icon.svg",
+      "destination": "reference/dito-login-test/public/icons/icon.svg",
+      "sourceSha256": "5148c551a512afc24393b2ff2fb2d86659ba34e706e8434e96b2a9a784d7d9d9",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/public/index.html",
+      "destination": "reference/dito-login-test/public/index.html",
+      "sourceSha256": "b996156654290a526d53432faf8f6009f8f579a82edbd32269c0ae39cc344c0d",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/public/manifest.webmanifest",
+      "destination": "reference/dito-login-test/public/manifest.webmanifest",
+      "sourceSha256": "6280929427b7033f352e7d75ae21dd66903b0135ccf28152389623128d7249c1",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/public/promo-catalog.mjs",
+      "destination": "reference/dito-login-test/public/promo-catalog.mjs",
+      "sourceSha256": "ce6a58a1dce66c0a2a7177110c472bf6b1e36d004925fc58f1d7f1ebec538c9c",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/public/sw.js",
+      "destination": "reference/dito-login-test/public/sw.js",
+      "sourceSha256": "0194182185cb65a925779029081d551a97c3c2854bb27c6ae23cc53a080d9069",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/tests/load-purchase.test.mjs",
+      "destination": "reference/dito-login-test/tests/load-purchase.test.mjs",
+      "sourceSha256": "f20723a502f7565f3eb6fa8e1a9ccd337aa7c98d4c0e4aab6d6b1d67eda4aa27",
+      "transformed": false
+    },
+    {
+      "source": "dito-login-test/tests/promo-catalog.test.mjs",
+      "destination": "reference/dito-login-test/tests/promo-catalog.test.mjs",
+      "sourceSha256": "524ddda3508e69e6b3b007447cdbdc49015cef3d50ef06b058479439a8487f09",
+      "transformed": false
+    },
+    {
+      "source": "expantor/README.md",
+      "destination": "reference/expantor/README.md",
+      "sourceSha256": "de14b465659ad2bdcc639c887a6b5e3b017779586d107453bfdf05df98150cb9",
+      "transformed": false
+    },
+    {
+      "source": "expantor/api-catalog.json",
+      "destination": "reference/expantor/api-catalog.json",
+      "sourceSha256": "bcd907725a1c87c0a3c4925d808474fe02d1c4c36262558fe4f3a921d109daf3",
+      "transformed": false
+    },
+    {
+      "source": "expantor/collections/dito-dashboard.postman_collection.json",
+      "destination": "reference/expantor/collections/dito-dashboard.postman_collection.json",
+      "sourceSha256": "b504a07763c15cdd5a9c113f65ea2bfa7cf4d8f057f6e6b29b65ec3e880bae0f",
+      "transformed": false
+    },
+    {
+      "source": "expantor/notes/2026-10-24-load-purchase.md",
+      "destination": "reference/expantor/notes/2026-10-24-load-purchase.md",
+      "sourceSha256": "33808bc893e22a8dcdf0665cfd7dc1bb103eabf8ae0ed47c27e4e6e2c0a9f499",
+      "transformed": false
+    },
+    {
+      "source": "expantor/notes/2026-10-24.md",
+      "destination": "reference/expantor/notes/2026-10-24.md",
+      "sourceSha256": "c84a749e687b8050b618c2d9ab921fd44c4e594777cffdda4bcea245c8010615",
+      "transformed": false
+    },
+    {
+      "source": "expantor/notes/TEMPLATE.md",
+      "destination": "reference/expantor/notes/TEMPLATE.md",
+      "sourceSha256": "5311949556d8ebf627fc63ef44b2d1e6c01d4be57a1486ea16631c10f10b7904",
+      "transformed": false
+    },
+    {
+      "source": "expantor/sources.md",
+      "destination": "reference/expantor/sources.md",
+      "sourceSha256": "664a5ec11abcda452af7bf2d76727139ead9a40daf53c22916d3c4d15e3d7f22",
+      "transformed": false
+    },
+    {
+      "source": "tools/dito-login-listener/README.md",
+      "destination": "reference/tools/dito-login-listener/README.md",
+      "sourceSha256": "18ad652bcb2b6172f5a4014ccedb1a1b87afd40afd7c3565a74466f06d59f613",
+      "transformed": false
+    },
+    {
+      "source": "tools/dito-login-listener/manifest.json",
+      "destination": "reference/tools/dito-login-listener/manifest.json",
+      "sourceSha256": "182b9cbb93ff1c6bb399770dd7772e5a514ba501529805a0a44517c280dec904",
+      "transformed": false
+    },
+    {
+      "source": "tools/dito-login-listener/listener.js",
+      "destination": "reference/tools/dito-login-listener/listener.js",
+      "sourceSha256": "889f144f46beaca925510dde59c6bede221fd6f7caa6455ebeabb368f721bf4c",
+      "transformed": false
+    },
+    {
+      "source": "analysis/APK_STATIC_ANALYSIS_REPORT.md",
+      "destination": "reference/analysis/APK_STATIC_ANALYSIS_REPORT.md",
+      "sourceSha256": "6e7d6a7a3fb60e77c22e86f7acdcc694bb513dda5d247d82b2be7679021e82a4",
+      "transformed": false
+    },
+    {
+      "source": "analysis/apktool-decoded-2.12.05/smali/com/secneo/apkwrapper/H.smali",
+      "destination": "reference/analysis/apktool-decoded-2.12.05/smali/com/secneo/apkwrapper/H.smali",
+      "sourceSha256": "1c9a4977284140e33401d07f40bc9c651d34c2b8cd36becbd3b1ede72309774b",
+      "transformed": false
+    },
+    {
+      "source": "analysis/API_CAPTURE_PLAN.md",
+      "destination": "reference/analysis/API_CAPTURE_PLAN.md",
+      "sourceSha256": "fa0da8f2bc8f4da4ec4a937e946be657c0e5720ce57beb9d1c9820c64443368f",
+      "transformed": true
+    }
+  ]
+}

@@ -53,9 +53,10 @@
           <label class="checkbox-row"><input id="remember" type="checkbox" checked> Stay signed in — store the password (encrypted) to auto-renew the 30-minute session</label>
         </div>
 
-        <label for="captcha">Graphic verification code</label>
+        <label for="captcha">Graphic verification code (if requested)</label>
+        <p id="captchaHelp" class="muted">An anti-bot check. Leave blank unless DITO asks for it; your password or SMS code is still required.</p>
         <div class="captcha-row">
-          <input id="captcha" type="text" autocomplete="off" maxlength="4" placeholder="4-character code">
+          <input id="captcha" type="text" autocomplete="off" maxlength="4" placeholder="Optional" aria-describedby="captchaHelp">
           <img id="captchaImage" alt="Graphic verification code; select to refresh">
           <button id="refreshCaptcha" class="secondary" type="button">New code</button>
         </div>
@@ -167,6 +168,6 @@
     </div>
   </div>
 
-  <script src="/app.js?v=14" type="module"></script>
+  <script src="/app.js?v=15" type="module"></script>
 </body>
 </html>

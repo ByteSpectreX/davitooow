@@ -1,0 +1,20 @@
+{
+  "name": "dito-account-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node proxy-server.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "4.143.0"
+  },
+  "overrides": {
+    "undici": "7.29.1"
+  },
+  "dependencies": {
+    "qrcode": "1.5.4"
+  }
+}
