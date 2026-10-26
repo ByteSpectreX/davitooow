@@ -1,0 +1,187 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DVendo Supply application API",
+    "version": "0.1.0",
+    "description": "Implemented foundation endpoints only. No private operations or DITO proxy."
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "operationId": "getHealth",
+        "summary": "Foundation health",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public foundation status; no account data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status",
+                    "service",
+                    "stage"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "const": "ok"
+                    },
+                    "service": {
+                      "type": "string",
+                      "const": "dvendo-supply"
+                    },
+                    "stage": {
+                      "type": "string",
+                      "const": "foundation"
+                    }
+                  }
+                },
+                "example": {
+                  "status": "ok",
+                  "service": "dvendo-supply",
+                  "stage": "foundation"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed; Allow: GET",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "required": [
+                        "code",
+                        "message"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/capabilities": {
+      "get": {
+        "operationId": "getCapabilities",
+        "summary": "Foundation capabilities",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public foundation status; no account data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "stage",
+                    "preview",
+                    "authentication",
+                    "persistentPlans",
+                    "providerConnected",
+                    "livePurchases",
+                    "automaticRenewals"
+                  ],
+                  "properties": {
+                    "stage": {
+                      "type": "string",
+                      "const": "foundation"
+                    },
+                    "preview": {
+                      "type": "string",
+                      "const": "synthetic"
+                    },
+                    "authentication": {
+                      "type": "boolean",
+                      "const": false
+                    },
+                    "persistentPlans": {
+                      "type": "boolean",
+                      "const": false
+                    },
+                    "providerConnected": {
+                      "type": "boolean",
+                      "const": false
+                    },
+                    "livePurchases": {
+                      "type": "boolean",
+                      "const": false
+                    },
+                    "automaticRenewals": {
+                      "type": "boolean",
+                      "const": false
+                    }
+                  }
+                },
+                "example": {
+                  "stage": "foundation",
+                  "preview": "synthetic",
+                  "authentication": false,
+                  "persistentPlans": false,
+                  "providerConnected": false,
+                  "livePurchases": false,
+                  "automaticRenewals": false
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed; Allow: GET",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "required": [
+                        "code",
+                        "message"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

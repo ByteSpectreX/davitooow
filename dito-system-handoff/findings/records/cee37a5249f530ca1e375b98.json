@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "cee37a5249f530ca1e375b98",
+  "recordedAt": "2026-10-25T15:17:19.625Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Project DVito contains DVendo Uptime fleet dashboard; CCTV integration remains a placeholder",
+  "category": "implementation",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "The Project DVito directory contains the DVendo Uptime installable dashboard for multiple authorized DITO prepaid Wi-Fi accounts grouped by site. The frontend provides overview charts, account and group editing, spending, team roles and settings; Worker routes implement account refresh, promo browsing and purchase, history, groups and users. The D1 schema stores users, groups, accounts, top-ups, settings and challenges. Production frontend text explicitly states that Tapo integration, camera feeds and availability checks are not implemented and internet reachability has not been measured. The README reports a prior deployment; current deployment health and live DITO behavior were not checked in this source inspection.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/README.md",
+      "description": "Project purpose, structure and historical deployment claims."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/src/worker.mjs",
+      "description": "Account, spending, promo, group, settings and team API routes."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/public/app.js",
+      "description": "Site details and CCTV placeholder implementation."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/migrations/0001_init.sql",
+      "description": "Fleet dashboard database schema."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "If runtime assurance is requested, validate the dashboard separately; preserve the distinction between local source inspection and live account or deployment verification."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/README.md",
+      "sha256": "8a8237bdeb12edf4c33aee8d5a8be7c2e7ded9e694bdef0e64f66e7ddc1cbbb5"
+    },
+    {
+      "location": "Project DVito/src/worker.mjs",
+      "sha256": "b81cefa130e25a86cb0f2de2076b487b61002b413f60cc01190ded4a92607bed"
+    },
+    {
+      "location": "Project DVito/public/app.js",
+      "sha256": "d0b6d923a736c392b17b61234cd1d8726b3cb9e28bbe37ce79e83bf73e1abad3"
+    },
+    {
+      "location": "Project DVito/migrations/0001_init.sql",
+      "sha256": "b0b72d53d907ecf740eaaa2a63bccd2d7b9b38736aa70347343f4ea98d0195d1"
+    }
+  ]
+}

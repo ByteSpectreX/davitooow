@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "9974ecba673e99c71debbee8",
+  "recordedAt": "2026-10-25T20:27:35.740Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Typography review confirms undersized preview labels and mobile text",
+  "category": "correction",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "The owner reports that the redesigned preview's font and text size are too small. Source review found 139 font-size declarations below 14px, including operational labels, table content, buttons and mobile overrides in the 8–13px range. The body shorthand is 15px, and a Segoe-first system stack may render differently across devices. This supports a focused typography correction: use an embedded Inter font, a 16px body, 14–15px operational secondary text and layout reflow rather than font shrinking at narrow widths. Existing production source and provider behavior are outside this change.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-redesign.css",
+      "description": "Existing font-size declarations and responsive overrides establish the small-text cause."
+    },
+    {
+      "type": "user-report",
+      "location": "Owner font/readability feedback on the current preview",
+      "description": "Font size and font appear too small; asks for a recheck."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Apply a centralized readable type scale and embedded Inter assets, then inspect actual rendered sizes and responsive layouts."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-redesign.css",
+      "sha256": "664650eb498f055a35bb570fa58b604d9d3d043d9eb9a49d06032902a41185c2"
+    }
+  ]
+}

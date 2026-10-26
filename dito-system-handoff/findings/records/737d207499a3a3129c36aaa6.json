@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "737d207499a3a3129c36aaa6",
+  "recordedAt": "2026-10-26T07:24:31.475Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Cloudflare recommended for supplier app hosting; recipient fulfillment remains a verification gate",
+  "category": "implementation",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "Deployment review found the existing Project DVito configuration already uses Workers static assets, D1, and Access configuration. Recommended architecture, pending owner adoption: Workers for UI/API, D1 for role-scoped application records, and a Durable Object per supplier wallet for durable spending coordination and scheduled renewals. Official alarm documentation guarantees at-least-once execution, so persisted attempt state and reconciliation must prevent repeat financial submissions; hosting alone cannot guarantee exactly-once upstream charges. Existing blueprint and handoff distinguish owner-reported wallet-funded recipient promos from independently verified integration. Build roles, persisted plans and forecast first; verify the precise payer-wallet/recipient-offer/delivery flow before enabling real automation. No deployment, login or financial action occurred, and no provider acceptance from Cloudflare was established.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/wrangler.jsonc",
+      "description": "Existing Cloudflare Workers, static assets, D1 and Access configuration; configuration does not verify current deployment health."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-role-blueprint.md",
+      "description": "Agreed role model and outstanding integration requirements."
+    },
+    {
+      "type": "url",
+      "location": "https://developers.cloudflare.com/workers/static-assets/",
+      "description": "Workers supports frontend assets and backend API hosting."
+    },
+    {
+      "type": "url",
+      "location": "https://developers.cloudflare.com/d1/",
+      "description": "Managed SQL storage for application records."
+    },
+    {
+      "type": "url",
+      "location": "https://developers.cloudflare.com/durable-objects/api/alarms/",
+      "description": "Persisted schedules and at-least-once execution with retries require application-level duplicate protection."
+    }
+  ],
+  "endpointIds": [
+    "payment.promo-purchase"
+  ],
+  "nextSteps": [
+    "Build an isolated staging app with authenticated roles, durable records and simulated fulfillment before production spending.",
+    "Verify recipient eligibility, supplier-wallet debit route and recipient delivery evidence through separately authorized provider experiments.",
+    "Persist submission intent before external calls; reconcile uncertain outcomes and block duplicate submission across alarm retries."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/wrangler.jsonc",
+      "sha256": "c1c2724ffcaf2bd8dd86c49c0ea3fa5775dddcd3a2be4f9e352959300b161c37"
+    },
+    {
+      "location": "Project DVito/design/supplier-role-blueprint.md",
+      "sha256": "c8b41e9ad6f76d8a6887dc97d969e6aa2b086b6a91b951d36fde3bfae394141e"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "9ee9438835f20764f0007810",
+  "recordedAt": "2026-10-25T17:17:44.744Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Supplier preview browser interactions passed; narrow-layout overflow found and corrected",
+  "category": "test",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "After approved installation of browser runtime dependencies, browser checks exercised forecast windows, reserve editing, demo top-ups, search, crew filtering, renewal toggles, details and Escape handling, wallet history, crew view, CSV export and reload reset. An initial run detected 50 pixels of page overflow at 320px caused by the planner grid minimum size. The correction uses shrinkable grid tracks and a stacked narrow-screen planner; subsequent checks passed at 320, 390, 768, 1024 and 1440px without page overflow, JavaScript errors or external requests. Visual review then identified that a horizontally scrolled schedule hid renewal dates on mobile, so a narrow-screen card layout was added and awaits its final recheck. All interactions are sample-data simulations, not live account or payment verification.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "description": "Standalone interactive captain and crew prototype with corrected responsive planning layout."
+    },
+    {
+      "type": "test",
+      "location": "Local Playwright preview check, 2026-10-25",
+      "description": "Interaction and viewport checks passed after the initial mobile overflow correction; final mobile card layout to be rechecked."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Recheck the final mobile schedule-card layout and complete the local HTML preview handoff."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "sha256": "22c95fb55b0b5bc5b13d07912462eef8de67e14ba1a333ddde7795240269d233"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "43771bfb974475a3eaeedf86",
+  "recordedAt": "2026-10-26T08:24:48.272Z",
+  "workspaceFingerprint": "00f745effe92812c787d5eeef20411ecc35197035e779c1bcbac8d9740a3db57",
+  "title": "Clean project offline test result",
+  "category": "test",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "21 offline tests: passed. Synthetic API/prototype and project checks only; no live account or payment verification.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "tests/api.test.mjs"
+    },
+    {
+      "type": "file",
+      "location": "tests/preview.test.mjs"
+    },
+    {
+      "type": "file",
+      "location": "tests/project.test.mjs"
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Complete persistent authenticated features and separately verify provider integration before live fulfillment."
+  ],
+  "fileEvidence": [
+    {
+      "location": "tests/api.test.mjs",
+      "sha256": "f13f3c615eab744db1c4f7802cf1337a52391b08558ac5b16318ee1195923706"
+    },
+    {
+      "location": "tests/preview.test.mjs",
+      "sha256": "b93dd65f45cd201e8044bc2cff9a546158026a4672074fc8ee1873199d6c6227"
+    },
+    {
+      "location": "tests/project.test.mjs",
+      "sha256": "71485459ec9d139809f47e94510c349d6d3d31bcf617e7a4b89716387c694d0d"
+    }
+  ]
+}

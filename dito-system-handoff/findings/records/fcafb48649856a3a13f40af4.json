@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "fcafb48649856a3a13f40af4",
+  "recordedAt": "2026-10-25T16:00:06.213Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "DVito supplier model needs crew-scoped access and separate payer-recipient order records",
+  "category": "limitation",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "The requested supplier model requires an owner funding promos from a personal DITO account while crew use their own dashboards. Existing Project DVito listAccounts selects all accounts without crew membership filtering; groups are organizational labels, not access boundaries. Its promo buy handler uses the selected account's token, mobile and customer identifier together, so it does not implement a separate supplier payer and crew recipient. The schema has no supplier-order or crew-payment ledger. Recipient-validation leads exist in the research catalog, but supplier-wallet-funded promo delivery remains unverified. Existing account monitoring can inform the new design; access scoping and order accounting require explicit additions.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/src/worker.mjs",
+      "description": "listAccounts and buy handlers use a shared account pool and selected-account payment identity."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/src/dito.mjs",
+      "description": "buyPromo implements the selected-account load-funded purchase request."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/migrations/0001_init.sql",
+      "description": "Current schema lacks crew membership and supplier transaction records."
+    },
+    {
+      "type": "file",
+      "location": "expantor/api-catalog.json",
+      "description": "Recipient-validation leads do not prove supplier-wallet payment acceptance."
+    }
+  ],
+  "endpointIds": [
+    "recipient.validate",
+    "payment.promo-purchase"
+  ],
+  "nextSteps": [
+    "Draft the owner and crew workflow with proposed decisions clearly separated from confirmed requirements.",
+    "Establish payer, recipient, eligibility, supported payment methods and delivery confirmation before enabling supplier purchase execution."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/src/worker.mjs",
+      "sha256": "b81cefa130e25a86cb0f2de2076b487b61002b413f60cc01190ded4a92607bed"
+    },
+    {
+      "location": "Project DVito/src/dito.mjs",
+      "sha256": "77b9fa584a31a84a45550e733600a469bf45d269be12aa6e15e1cb532b525e47"
+    },
+    {
+      "location": "Project DVito/migrations/0001_init.sql",
+      "sha256": "b0b72d53d907ecf740eaaa2a63bccd2d7b9b38736aa70347343f4ea98d0195d1"
+    },
+    {
+      "location": "expantor/api-catalog.json",
+      "sha256": "bcd907725a1c87c0a3c4925d808474fe02d1c4c36262558fe4f3a921d109daf3"
+    }
+  ]
+}

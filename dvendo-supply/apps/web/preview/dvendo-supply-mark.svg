@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" role="img" aria-label="DVendo Supply monogram">
+  <path d="M10 7.5h9a12.5 12.5 0 0 1 0 25h-9v-8" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m8 14 7.5 12L23 14" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="8" cy="14" r="2" fill="currentColor"/>
+  <circle cx="23" cy="14" r="2" fill="currentColor"/>
+</svg>

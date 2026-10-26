@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "ff4646222e0b0b611af5dbb2",
+  "recordedAt": "2026-10-25T16:23:43.289Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Owner confirms wallet-funded recipient promos and requests manual captain funding with automated renewals",
+  "category": "behavior",
+  "outcome": "observed",
+  "evidenceLevel": "user-reported",
+  "summary": "The owner confirms that their DITO wallet can pay for a promo delivered to another number. This is owner-reported capability, not a new independently verified transaction. Captain-account top-ups will be performed manually. Crew promo loading is intended to be automated, and the captain dashboard should show upcoming accounts and estimate how much to top up in advance. An interactive HTML design preview is requested; billing and pricing remain unsettled. This supersedes the earlier proposed per-order manual approval default, while leaving live execution implementation and provider evidence to a separate phase.",
+  "evidence": [
+    {
+      "type": "user-report",
+      "location": "Owner dashboard-preview clarification, 2026-10-25",
+      "description": "Manual captain top-ups, automatic recipient promo loading, upcoming-account forecast and funding estimate."
+    }
+  ],
+  "endpointIds": [
+    "payment.promo-purchase"
+  ],
+  "nextSteps": [
+    "Update the planning document and create a sample-data captain and crew HTML preview.",
+    "Show forecast inputs and uncertainty, keeping manual funding separate from automatic promo renewal.",
+    "Retain financial coordination and delivery verification requirements for later execution implementation."
+  ],
+  "fileEvidence": []
+}

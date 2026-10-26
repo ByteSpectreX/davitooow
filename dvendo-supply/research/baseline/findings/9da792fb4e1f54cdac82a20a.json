@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "9da792fb4e1f54cdac82a20a",
+  "recordedAt": "2026-10-25T14:46:42.814Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Owner clarifies wallet-funded recipient promo comparison; Share Load was not intended",
+  "category": "correction",
+  "outcome": "observed",
+  "evidenceLevel": "user-reported",
+  "summary": "The intended comparison is: buy regular load for the owner's own account, then spend that wallet balance on a promo for another recipient, versus buying that recipient's promo directly with an external payment. This is not a regular-load transfer or Share Load comparison. Earlier Share Load limits therefore do not answer the owner's question. Published rewards exclusions remain relevant, but recipient promo support, discounts, and which account receives rewards for a direct gift must be verified separately. No purchase was authorized or initiated by this clarification.",
+  "evidence": [
+    {
+      "type": "user-report",
+      "location": "Owner clarification in this research session",
+      "description": "Buy load for self, then buy another recipient's promo using that balance."
+    },
+    {
+      "type": "url",
+      "location": "https://dito.ph/loyaltyrewards",
+      "description": "Published policy excludes additional points for promo purchases paid from an existing load balance."
+    },
+    {
+      "type": "file",
+      "location": "dito-login-test/proxy-server.js",
+      "description": "Current own-load promo payment still targets account.mobile; it does not establish wallet-funded promo gifting."
+    }
+  ],
+  "endpointIds": [
+    "payment.promo-purchase"
+  ],
+  "nextSteps": [
+    "Verify supported payer-wallet versus recipient identifiers without changing the own-account payment request blindly. Compare actual reward attribution and final cost for the two intended routes before claiming one benefits the owner more."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-login-test/proxy-server.js",
+      "sha256": "abd3ee76ae76204b347d0cfcf4b8144e0022707b368de08d77cbb4ed14330d4d"
+    }
+  ]
+}

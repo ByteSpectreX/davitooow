@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "9a514f3b4c87eeca7dfa9b15",
+  "recordedAt": "2026-10-26T08:51:16.456Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Owner requests fresh organized project; portable DVendo Supply starter prepared",
+  "category": "implementation",
+  "outcome": "observed",
+  "evidenceLevel": "mock-tested",
+  "summary": "The owner requested a fresh organized project with API information, guides and important research preserved. Prepared dvendo-supply as a self-contained folder for a future fresh repository, keeping existing applications and frozen reference snapshots intact. It contains the current synthetic UI and editable sources, an infrastructure-only Worker API, OpenAPI, setup/product/architecture/data/deployment/roadmap guides, all 33 historical endpoint records, original verification limits, selected historical findings, provenance hashes and its own automatic findings recorder/test runner. Twenty-one offline tests, portable-copy build/tests, documentation/provenance checks, local HTTP smoke checks and Cloudflare staging dry-run passed. The final installed development toolchain audited with zero reported vulnerabilities after updating Wrangler and overriding Undici to 7.30.1. No remote repository, deployment, provider login or purchase was performed. Authentication, persistence, supplier-wallet recipient fulfillment and automation remain future implementation work.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "dvendo-supply/README.md",
+      "description": "Standalone starter status and guide index."
+    },
+    {
+      "type": "file",
+      "location": "dvendo-supply/research/import-manifest.json",
+      "description": "Exact source/import hashes and preservation provenance."
+    },
+    {
+      "type": "file",
+      "location": "dvendo-supply/research/findings/records/d1f9c1c12ef76966ffb1fede.json",
+      "description": "Detailed clean-project verification and remaining capabilities."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Choose the final new-repository name and visibility; move only the clean project contents into it.",
+    "Implement application identity and persistent role-scoped records before live integration."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dvendo-supply/README.md",
+      "sha256": "9fdc76724a65f027f81066eea98a02d8ba38c07f7fea519ccfccf2d6d33bfc0e"
+    },
+    {
+      "location": "dvendo-supply/research/import-manifest.json",
+      "sha256": "2663d3f524375e225b61bdea72f24feb717e2fef4cdbca2254fcb5bdaddf40e4"
+    },
+    {
+      "location": "dvendo-supply/research/findings/records/d1f9c1c12ef76966ffb1fede.json",
+      "sha256": "110e3eb7a9e8b8714f5fbca88ee81f73cfa937224e0178a035b67318eb8cf21d"
+    }
+  ]
+}

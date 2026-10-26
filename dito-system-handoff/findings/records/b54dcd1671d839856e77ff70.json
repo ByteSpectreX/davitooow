@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "b54dcd1671d839856e77ff70",
+  "recordedAt": "2026-10-25T19:38:08.038Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Redesign browser workflow reached responsive checks; tablet overflow traced to a hidden table heading",
+  "category": "correction",
+  "outcome": "observed",
+  "evidenceLevel": "mock-tested",
+  "summary": "Browser checks exercised role navigation, manager draft/save behavior, pause/resume request, recipient-only monitoring state, sample SIM registration and admin assignment, schedule setup, supplier override reasons, forecast coverage, history/export, demo top-up, themes and spending review before detecting an 11-pixel root overflow at 768px. Inspection traced the spill to an absolutely positioned screen-reader-only table heading outside the scrolling table's containing block. The table scroll wrapper now establishes a containing block, and the empty action header uses an accessible label instead of that positioned span. An earlier test also needed its assignment confirmation locator scoped to the native dialog. Final browser recheck is pending; no live account or financial action occurred.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-redesign-ui.js",
+      "description": "Corrected accessible action-table heading."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-redesign.css",
+      "description": "Scrolling tables establish their own positioning context."
+    },
+    {
+      "type": "test",
+      "location": "Redesign browser workflow and 768px inspection, 2026-10-25",
+      "description": "Workflow progressed to layout checks; hidden-heading overflow was identified before the final rerun."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Recheck the corrected tablet layout and finish verification across both roles and five viewport widths."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-redesign-ui.js",
+      "sha256": "b69591c16dcb73aaef5faf1a008a717d6510cf1c2fe5cd496a627858ccbd5345"
+    },
+    {
+      "location": "Project DVito/design/supplier-redesign.css",
+      "sha256": "8e7a80620ee6544cfc95d8fa1878b591f5a7a0298642c58d43e7b9465306a74d"
+    }
+  ]
+}

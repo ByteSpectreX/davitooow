@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "6f039718890dc44241888f06",
+  "recordedAt": "2026-10-26T07:10:35.597Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Supplier preview reopened through its saved port 5175 task",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "implemented",
+  "summary": "The owner requested reopening the UI with the supplier role blueprint attached. Existing journal evidence and saved tasks identify the supplier preview as supplier-dashboard-preview.html on port 5175, separate from the DITO dashboard on 5174. Both saved server tasks were started. This reopens the existing synthetic preview without changing its source or exercising provider actions.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-role-blueprint.md",
+      "description": "Supplier and manager preview context."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "description": "Existing standalone supplier preview served by the saved task."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Open the private forwarded port 5175 supplier preview URL in the owner's browser."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-role-blueprint.md",
+      "sha256": "c8b41e9ad6f76d8a6887dc97d969e6aa2b086b6a91b951d36fde3bfae394141e"
+    },
+    {
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "sha256": "aab02a0eea0a1fb36f2a3d4f012c71c5fb4530baa59f9a3dffa36e9f583e210c"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "preparedOn": "2026-10-26",
+  "sourceRepository": "https://github.com/ByteSpectreX/davitooow",
+  "sourceState": "Selected working-tree files; hashes identify exact source bytes, including uncommitted material. No Git history imported.",
+  "files": [
+    {
+      "sourcePath": "Project DVito/design/supplier-redesign-model.js",
+      "sourceSha256": "5d58ad5cdc6db093fb2c8040d3a5dade93fb7357e1f1d1ed7a1fc7282255672b",
+      "projectPath": "apps/web/preview/supplier-redesign-model.js",
+      "importedSha256": "5d58ad5cdc6db093fb2c8040d3a5dade93fb7357e1f1d1ed7a1fc7282255672b",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/design/supplier-redesign-ui.js",
+      "sourceSha256": "8dfa35ee1ea6c9fd566dea61fe30a14b517293c2f53764f3bc772e48cc368622",
+      "projectPath": "apps/web/preview/supplier-redesign-ui.js",
+      "importedSha256": "8dfa35ee1ea6c9fd566dea61fe30a14b517293c2f53764f3bc772e48cc368622",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/design/supplier-redesign.css",
+      "sourceSha256": "67998e5b324433fbad877ebd0a59574f7f23d8d387cf44f018501fb392fb239b",
+      "projectPath": "apps/web/preview/supplier-redesign.css",
+      "importedSha256": "67998e5b324433fbad877ebd0a59574f7f23d8d387cf44f018501fb392fb239b",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/design/dvendo-supply-mark.svg",
+      "sourceSha256": "5d732248ceb664de2f74bbf9366a32df16aec4ff6c93f1f5c21c2d2080a902a4",
+      "projectPath": "apps/web/preview/dvendo-supply-mark.svg",
+      "importedSha256": "5d732248ceb664de2f74bbf9366a32df16aec4ff6c93f1f5c21c2d2080a902a4",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/design/fonts/Inter-LICENSE.txt",
+      "sourceSha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+      "projectPath": "apps/web/preview/fonts/Inter-LICENSE.txt",
+      "importedSha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/design/fonts/inter-latin-ext-wght-normal.woff2",
+      "sourceSha256": "34b9c504cab7a73e37b746343a449132e56cf7b5481af2cb81dc74dcff25c956",
+      "projectPath": "apps/web/preview/fonts/inter-latin-ext-wght-normal.woff2",
+      "importedSha256": "34b9c504cab7a73e37b746343a449132e56cf7b5481af2cb81dc74dcff25c956",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/design/fonts/inter-latin-wght-normal.woff2",
+      "sourceSha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "projectPath": "apps/web/preview/fonts/inter-latin-wght-normal.woff2",
+      "importedSha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/public/app.css",
+      "sourceSha256": "d11a2720018b90ad67c5de9f685e4344fd091681e13374280e2f24393cb06b17",
+      "projectPath": "apps/web/preview/base/app.css",
+      "importedSha256": "d11a2720018b90ad67c5de9f685e4344fd091681e13374280e2f24393cb06b17",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/public/operations.css",
+      "sourceSha256": "59a1dd1887e5a761805f727f51271792af759d097787f7925818bd4a2fa6990a",
+      "projectPath": "apps/web/preview/base/operations.css",
+      "importedSha256": "59a1dd1887e5a761805f727f51271792af759d097787f7925818bd4a2fa6990a",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/design/build-supplier-preview.mjs",
+      "sourceSha256": "8b9a1ac0e7484c48e2e924957ee9d2cf9c4ce839bf8967cf512c233242b6494c",
+      "projectPath": "scripts/build-preview.mjs",
+      "importedSha256": "9f69ac2f435fbcace6a13eac61ea99f13510470455cf8a69289b46b52d57aff1",
+      "transformed": true
+    },
+    {
+      "sourcePath": "Project DVito/design/supplier-redesign.test.mjs",
+      "sourceSha256": "8748b37ee4dc39ccb2136ebd5cad4a6147f46316824bef0940fdb60bdcd9ae14",
+      "projectPath": "tests/preview.test.mjs",
+      "importedSha256": "b93dd65f45cd201e8044bc2cff9a546158026a4672074fc8ee1873199d6c6227",
+      "transformed": true
+    },
+    {
+      "sourcePath": "expantor/api-catalog.json",
+      "sourceSha256": "bcd907725a1c87c0a3c4925d808474fe02d1c4c36262558fe4f3a921d109daf3",
+      "projectPath": "research/dito/endpoints.json",
+      "importedSha256": "bcd907725a1c87c0a3c4925d808474fe02d1c4c36262558fe4f3a921d109daf3",
+      "transformed": false
+    },
+    {
+      "sourcePath": "expantor/sources.md",
+      "sourceSha256": "664a5ec11abcda452af7bf2d76727139ead9a40daf53c22916d3c4d15e3d7f22",
+      "projectPath": "research/dito/sources.md",
+      "importedSha256": "9d58293ab31439553f2da76d386324b16b393ad011701c170ebedaf4241ab79d",
+      "transformed": true
+    },
+    {
+      "sourcePath": "dito-system-handoff/evidence/VERIFICATION-LEDGER.json",
+      "sourceSha256": "2d32263072e9fa926ce223679394d9980dfb34c5b4f3bd923236ddb4e86365ed",
+      "projectPath": "research/dito/verification-ledger.json",
+      "importedSha256": "2d32263072e9fa926ce223679394d9980dfb34c5b4f3bd923236ddb4e86365ed",
+      "transformed": false
+    },
+    {
+      "sourcePath": "Project DVito/design/supplier-role-blueprint.md",
+      "sourceSha256": "c8b41e9ad6f76d8a6887dc97d969e6aa2b086b6a91b951d36fde3bfae394141e",
+      "projectPath": "research/baseline/role-blueprint.md",
+      "importedSha256": "66df00015573f329a002aff984773968e5ac68ee3f17806bf105fecc91172ab4",
+      "transformed": true
+    },
+    {
+      "sourcePath": "dito-system-handoff/findings/records/ff4646222e0b0b611af5dbb2.json",
+      "sourceSha256": "50f48f0c563da2472b7391d24f1fc7d55256717a7c6e94c743556306bc4bd2c9",
+      "projectPath": "research/baseline/findings/ff4646222e0b0b611af5dbb2.json",
+      "importedSha256": "50f48f0c563da2472b7391d24f1fc7d55256717a7c6e94c743556306bc4bd2c9",
+      "transformed": false
+    },
+    {
+      "sourcePath": "dito-system-handoff/findings/records/4f073b219d17b18308eaef1b.json",
+      "sourceSha256": "35888a47f5a5ae48e01342653fb9f2d7b3ffae233f75c25bf27758f70cb76da8",
+      "projectPath": "research/baseline/findings/4f073b219d17b18308eaef1b.json",
+      "importedSha256": "35888a47f5a5ae48e01342653fb9f2d7b3ffae233f75c25bf27758f70cb76da8",
+      "transformed": false
+    },
+    {
+      "sourcePath": "dito-system-handoff/findings/records/9da792fb4e1f54cdac82a20a.json",
+      "sourceSha256": "cbed8de56e622bda33026da7dea497a567c92a0475a8af9b792e41849566d857",
+      "projectPath": "research/baseline/findings/9da792fb4e1f54cdac82a20a.json",
+      "importedSha256": "cbed8de56e622bda33026da7dea497a567c92a0475a8af9b792e41849566d857",
+      "transformed": false
+    },
+    {
+      "sourcePath": "dito-system-handoff/findings/records/d752371b074fced30c2af70c.json",
+      "sourceSha256": "45a0014ee57e298ea0aac1b3f2ac180f2219b074cd32dafd5376bdb67ee79288",
+      "projectPath": "research/baseline/findings/d752371b074fced30c2af70c.json",
+      "importedSha256": "45a0014ee57e298ea0aac1b3f2ac180f2219b074cd32dafd5376bdb67ee79288",
+      "transformed": false
+    },
+    {
+      "sourcePath": "dito-system-handoff/findings/records/01dd06ec766e10d1122c31b6.json",
+      "sourceSha256": "ce234776e4fbc191aec656a44709b412c44e6751e9c34089fb6e91792ae393bd",
+      "projectPath": "research/baseline/findings/01dd06ec766e10d1122c31b6.json",
+      "importedSha256": "ce234776e4fbc191aec656a44709b412c44e6751e9c34089fb6e91792ae393bd",
+      "transformed": false
+    },
+    {
+      "sourcePath": "dito-system-handoff/findings/records/737d207499a3a3129c36aaa6.json",
+      "sourceSha256": "60dfa0732cac19ee304feef256ebf99ceefb9814c5367dcb7f217d4579fbec64",
+      "projectPath": "research/baseline/findings/737d207499a3a3129c36aaa6.json",
+      "importedSha256": "60dfa0732cac19ee304feef256ebf99ceefb9814c5367dcb7f217d4579fbec64",
+      "transformed": false
+    },
+    {
+      "sourcePath": "dito-system-handoff/tools/research/record-finding.mjs",
+      "sourceSha256": "4711ae657e94d82d4e81cc2933c559f089573759ebf2a1d73dd48f79a8413c42",
+      "projectPath": "scripts/record-finding.mjs",
+      "importedSha256": "26de67efca919375b47b7ee33459cfcf6e5bc5c3624c3b363b110a010ad04e65",
+      "transformed": true
+    }
+  ]
+}

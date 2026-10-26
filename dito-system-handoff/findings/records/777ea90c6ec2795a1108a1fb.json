@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "777ea90c6ec2795a1108a1fb",
+  "recordedAt": "2026-10-25T16:35:32.592Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Supplier preview forecast checks pass; initial browser verification blocked by missing system libraries",
+  "category": "test",
+  "outcome": "uncertain",
+  "evidenceLevel": "mock-tested",
+  "summary": "The standalone supplier preview's JavaScript parsed successfully and offline assertions passed for the sample seven-day cost of 2094 pesos, rounded top-up of 1200 pesos, post-top-up reserve, repeated short-validity renewals, paused rules, horizon boundaries, invalid cycles and chart-bucket totals. The static preview server returned HTTP 200. Browser setup initially failed under sandbox DNS and executable visibility restrictions; approved execution downloaded Chromium, but launch then failed because libatk-1.0.so.0 is absent. Browser layout and interaction checks have not yet run. These checks use fictional data and do not establish a live payment or account response.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "description": "Standalone sample-data preview and pure forecast model."
+    },
+    {
+      "type": "test",
+      "location": "Offline Node VM forecast assertions, 2026-10-25",
+      "description": "Inline script syntax and forecast invariants passed; browser launch failed before page evaluation."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Install the required browser runtime libraries through the approved environment mechanism, then verify desktop/mobile layouts and preview interactions.",
+    "If runtime setup remains unavailable, explicitly report the browser verification limit."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "sha256": "fa1cdb2c2b8e65814b576518766c04a54bd458819a1273420faba8d965a7253a"
+    }
+  ]
+}

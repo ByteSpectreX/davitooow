@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "0a8c60390ff0530e77268eff",
+  "recordedAt": "2026-10-25T16:02:03.134Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Supplier dashboard discussion plan records owner funding, crew scope and unsettled billing choices",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "implemented",
+  "summary": "A discussion draft now captures the owner's requested personal DITO funding account, supplier dashboard and crew dashboards. Proposed design separates app owner identity, DITO payer, recipient, funding, promo supply and optional customer collections; it requires server-enforced crew scope and durable order reconciliation. Advance payment versus credit versus owner-covered service, crew fleet size and pricing remain open decisions rather than approved requirements. The read-only attachment path was unavailable and was not inspected or edited. No login, OTP, purchase, deployment or live delivery was initiated. Published Rewards rules were reviewed and continue to exclude additional points for purchases funded from existing load; no new rewards-attribution result was established.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "description": "Proposed hierarchy, owner and crew screens, order workflow, money records and phased feasibility plan."
+    },
+    {
+      "type": "user-report",
+      "location": "Owner supplier-dashboard planning request, 2026-10-25",
+      "description": "Owner intends to buy load for a personal account and supply crew promos, with records and dashboards."
+    },
+    {
+      "type": "url",
+      "location": "https://dito.ph/loyaltyrewards",
+      "description": "Published existing-load-balance rewards exclusion reviewed during analysis."
+    }
+  ],
+  "endpointIds": [
+    "recipient.validate",
+    "payment.promo-purchase"
+  ],
+  "nextSteps": [
+    "Refine billing and crew account scope from the owner's answers.",
+    "Verify the exact supported supplier-wallet-to-recipient promo route before implementation of financial execution.",
+    "Review the attachment if it becomes available; do not assume the repository listener is identical."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "sha256": "2a8babbd2467dea4717035cb9a441e6e66878303d22c2c86542f33c584511643"
+    }
+  ]
+}

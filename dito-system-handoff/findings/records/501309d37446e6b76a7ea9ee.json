@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "501309d37446e6b76a7ea9ee",
+  "recordedAt": "2026-10-26T09:01:43.466Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Commit preparation preserves independent DVito repository ownership",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "The owner requested committing all work. Project DVito is an independent nested Git checkout with its own origin and untracked supplier design sources; the main workspace holds the standalone dvendo-supply project, source bundle, preview task and new notes. Added a parent ignore entry for the independent checkout to prevent an embedded Git link without a submodule definition. Design work will be committed in its own repository, and the standalone starter and notes in the main repository. Fourteen synthetic redesign-model tests and clean-project documentation/provenance checks passed. No live account, payment or deployment is verified by these checks. This step creates local commits only. An initial recorder attempt rejected a hidden-file evidence path; the record now uses visible source evidence.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-redesign.test.mjs",
+      "description": "Fourteen offline tests passed during commit preparation."
+    },
+    {
+      "type": "file",
+      "location": "dvendo-supply/scripts/verify-project.mjs",
+      "description": "Portable guide links and historical evidence checks passed."
+    },
+    {
+      "type": "file",
+      "location": "dvendo-supply/README.md",
+      "description": "Standalone project remains portable and separate from the original DVito checkout."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Create and inspect local commits in both repositories; report commit IDs and working-tree state."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-redesign.test.mjs",
+      "sha256": "8748b37ee4dc39ccb2136ebd5cad4a6147f46316824bef0940fdb60bdcd9ae14"
+    },
+    {
+      "location": "dvendo-supply/scripts/verify-project.mjs",
+      "sha256": "4a1a504ec3def3dc0cd523e39a90c1d98c30677a50ec7be8236f4dd29a9e14ae"
+    },
+    {
+      "location": "dvendo-supply/README.md",
+      "sha256": "9fdc76724a65f027f81066eea98a02d8ba38c07f7fea519ccfccf2d6d33bfc0e"
+    }
+  ]
+}

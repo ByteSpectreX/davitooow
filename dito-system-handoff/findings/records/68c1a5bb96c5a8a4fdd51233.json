@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "68c1a5bb96c5a8a4fdd51233",
+  "recordedAt": "2026-10-25T18:11:34.335Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Supplier Admin and Account Manager preview now has an original icon and manager promo preferences",
+  "category": "implementation",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "Updated the sample preview to propose DVendo Supply with Supplier Admin and Account Manager roles, replacing visible captain/crew terminology and the stock bars brand icon with an original DV vector monogram. The admin sees all manager portfolios, supplier wallet forecasts and the renewal queue; the manager has a distinct assigned-SIM workspace with a next-promo selector per number. Draft preferences are excluded from forecasts. Saving an allowed sample preference updates planned cost and recurrence, appears in admin oversight and preserves current allowance, wallet balance, renewal date and enabled/paused state. Paused preferences remain excluded from funding. Final browser checks passed at 320, 390, 768, 1024 and 1440px, including role wording, custom icon, scoped display, draft/save behavior, current-state preservation, admin updates, demo top-up, theme toggle and reload reset, without script errors, overflow or external/API requests. An initial queue assertion used an overly exact text locator and was corrected; final checks passed. The separate editor-diagnostics/artifact batch did not finish and was stopped, so no editor-diagnostics pass is claimed. Naming is proposed for review. No production source, live account, purchase or deployment changed.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/dvendo-supply-mark.svg",
+      "description": "Original vector DV monogram without nautical imagery."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-preview-workspaces.js",
+      "description": "Distinct role workspaces and scoped sample promo-preference selection."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-preview.js",
+      "description": "Integration with existing frontend and supplier funding forecast."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "description": "Updated role responsibilities, naming proposal and separation of preference from payment/delivery."
+    },
+    {
+      "type": "test",
+      "location": "Role-workspace Playwright checks, 2026-10-25",
+      "description": "Final checks passed across five viewport widths with synthetic data and no live requests."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Review the proposed product and role names and the distinct workspaces with the owner.",
+    "Establish live catalog governance, recipient eligibility, spending limits, server authorization and durable fulfillment before enabling real purchases."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/dvendo-supply-mark.svg",
+      "sha256": "5d732248ceb664de2f74bbf9366a32df16aec4ff6c93f1f5c21c2d2080a902a4"
+    },
+    {
+      "location": "Project DVito/design/supplier-preview-workspaces.js",
+      "sha256": "021c4f310d430de099f61a548898fa148733d32328c04ec123313bcee3471521"
+    },
+    {
+      "location": "Project DVito/design/supplier-preview.js",
+      "sha256": "3ac8b46c6a066c3da39c8f0e86115f6e6ce2fb5178daefd68d9d75c7e9a06403"
+    },
+    {
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "sha256": "8059f1c5f9afdf450fe48338dd91dc4a56df82d86e9524b3aa6761fdaa0be066"
+    }
+  ]
+}

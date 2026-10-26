@@ -1,0 +1,25 @@
+{
+  "name": "dvendo-supply",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build-preview.mjs",
+    "test": "node scripts/test.mjs",
+    "verify": "node scripts/verify-project.mjs",
+    "dev:cloudflare": "wrangler dev --env staging",
+    "check:cloudflare": "wrangler deploy --dry-run --env staging",
+    "types": "wrangler types --env staging",
+    "deploy:staging": "wrangler deploy --env staging"
+  },
+  "devDependencies": {
+    "wrangler": "4.152.0"
+  },
+  "overrides": {
+    "undici": "7.30.1"
+  }
+}

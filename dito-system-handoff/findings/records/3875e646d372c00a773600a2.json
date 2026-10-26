@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "3875e646d372c00a773600a2",
+  "recordedAt": "2026-10-25T17:36:08.312Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Supplier preview now reuses the original DVendo production UI and passes responsive integration checks",
+  "category": "implementation",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "Replaced the earlier green supplier redesign with a standalone preview bundling the existing DVendo frontend shell, app.css, operations.css, account model, dashboard renderer, theme helper and application UI. Assertions confirm the original styles, account model and dashboard source are embedded unchanged. A captain funding strip augments the existing Overview; Captain wallet and Auto-renewals add forecast, reserve, demo top-up and schedule controls. Crew preview uses the original charts and account pages with scoped sample accounts. Integration checks identified and corrected an input-state/focus race, an omitted theme helper and narrow funding-header overflow. Final browser checks passed at 320, 390, 768, 1024 and 1440px for original chart headings/drill-downs, group filters, funding controls, renewal toggles, search, crew display, themes, CSV export and reload reset, without script errors, page overflow or any asset/API/external request. Production boot and cache are disabled in the generated page, and CSP blocks connections. These are synthetic UI checks, not live DITO verification. Local production source and deployed service were not changed; production access was unnecessary.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/build-supplier-preview.mjs",
+      "description": "Reads and bundles the actual production frontend into a standalone preview, preserving original files."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-preview.js",
+      "description": "Synthetic supplier data and funding controls integrated with existing account and chart UI."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "description": "Rebuilt amber/charcoal original-UI preview with no API connectivity."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "description": "Records the corrected original-interface requirement and preview build workflow."
+    },
+    {
+      "type": "test",
+      "location": "Production-UI Playwright and embedded-source checks, 2026-10-25",
+      "description": "Five responsive widths, existing frontend interactions, supplier interactions, exact embedded-source checks and forecast invariants passed after the documented integration corrections."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Have the owner review the revised original-UI preview before further product changes.",
+    "Keep live supplier execution, server-enforced crew access and financial transaction verification in the later implementation phase."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/build-supplier-preview.mjs",
+      "sha256": "f03dc83dcbb16d154eb183dda94773dd15fb3c5250493d8b8bb792bfe97992af"
+    },
+    {
+      "location": "Project DVito/design/supplier-preview.js",
+      "sha256": "e69c65cdc1a03e4c6678a7f16d46263ed8c62ec8cf16ac1b002e673ef221c2b0"
+    },
+    {
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "sha256": "e768be279ca9b682e87183b3091cb2d5a1510efbbe824b51bc9ec76cdd09b7f7"
+    },
+    {
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "sha256": "2bebf37175059309cff2e083a09199fc0b233beb36cd6c4f706fe11f015d7919"
+    }
+  ]
+}

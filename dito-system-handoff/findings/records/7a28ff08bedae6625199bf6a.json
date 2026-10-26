@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "7a28ff08bedae6625199bf6a",
+  "recordedAt": "2026-10-25T17:27:18.362Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Owner selects existing production DVendo dashboard styling for supplier preview",
+  "category": "correction",
+  "outcome": "observed",
+  "evidenceLevel": "user-reported",
+  "summary": "The owner wants the existing deployed DVendo Uptime dashboard UI for the supplier project. The earlier green supplier prototype was a design mismatch. Local public app.css and operations.css already implement the amber/charcoal theme, while dashboard.js provides the expiry bars, freshness donut, spending chart, group comparisons and action queue visible in the supplied screenshot. The revised preview will reuse these local production assets with fictional data and add captain funding features within the same shell. The public deployment URL could not be opened by the browsing tool; no authenticated production inspection or exact live-version comparison was established. Production account access is unnecessary for this local visual correction.",
+  "evidence": [
+    {
+      "type": "user-report",
+      "location": "Owner production-dashboard screenshot and UI correction, 2026-10-25",
+      "description": "Keep the existing deployed DVendo Uptime UI and dashboard."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/public/operations.css",
+      "description": "Existing amber/charcoal theme and chart layouts."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/public/dashboard.js",
+      "description": "Existing production dashboard chart rendering."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Rebuild the supplier preview with the existing production frontend assets and sample data; leave production source and deployed service unchanged."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/public/operations.css",
+      "sha256": "59a1dd1887e5a761805f727f51271792af759d097787f7925818bd4a2fa6990a"
+    },
+    {
+      "location": "Project DVito/public/dashboard.js",
+      "sha256": "f7492a9fc2c0f0763cf3cecca667f88792a77abd9be679bf92320d7fa3e4a4b2"
+    }
+  ]
+}

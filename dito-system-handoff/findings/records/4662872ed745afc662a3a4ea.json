@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "4662872ed745afc662a3a4ea",
+  "recordedAt": "2026-10-25T17:33:01.398Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Production-UI preview bundling corrected to preserve literal dollar characters in source scripts",
+  "category": "correction",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "The first production-UI preview browser run timed out before charts appeared. Inspection identified that JavaScript String.replace treated dollar sequences in a replacement string as substitutions, turning the production double-dollar DOM helper into a duplicate single-dollar declaration. This prevented the embedded application from parsing and left the preview adapter without its helpers. The builder now uses replacement callbacks for dynamic source insertion. All six bundled inline scripts subsequently parsed successfully. Browser interaction and layout verification is still being rerun. Production source files were read rather than edited.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/build-supplier-preview.mjs",
+      "description": "Callback replacements preserve literal production JavaScript when bundling."
+    },
+    {
+      "type": "test",
+      "location": "Bundled inline script syntax verification, 2026-10-25",
+      "description": "Six embedded scripts compiled successfully after fixing the initial startup failure."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Complete browser checks against the corrected original-UI preview."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/build-supplier-preview.mjs",
+      "sha256": "196615d2ea2fb0eff64feda5071c3bfbbc0b49147ca49f37ad76b61495da568b"
+    }
+  ]
+}

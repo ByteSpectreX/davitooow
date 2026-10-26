@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "d752371b074fced30c2af70c",
+  "recordedAt": "2026-10-25T19:00:40.505Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Role redesign blueprint separates supplier funding, manager promo planning and optional SIM monitoring",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "implemented",
+  "summary": "Created a discussion blueprint before further visual redesign. It defines a supplier landing page centered on wallet freshness, future funding, fulfillment and manager portfolios, and a manager landing page centered on assigned SIMs, current data when authorized, next-promo choices and own supply history. The proposed permission matrix keeps supplier funds, assignment, roles and spending authority separate from manager preferences. It recommends treating registered recipients and authorized monitoring connections as different capabilities, and preserving independent plan, supply-attempt and monitoring statuses. The owner-provided screenshot inspires number validation and recipient offers, without establishing arbitrary recipient balance access or universal offer eligibility. Onboarding, manager pause/resume policy, exact renewal timing and billing remain open; suggested defaults are labelled recommendations. No credentials, live account calls, OTPs, purchases, deployment or preview changes occurred.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-role-blueprint.md",
+      "description": "Detailed role access matrix, first-screen priorities, navigation, recipient selection flow, data provenance and open decisions."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "description": "Links to the new blueprint as the starting point for the next visual pass."
+    },
+    {
+      "type": "file",
+      "location": "expantor/api-catalog.json",
+      "description": "Existing recipient validation and purchase leads are distinguished from connected-account monitoring."
+    },
+    {
+      "type": "user-report",
+      "location": "Owner careful role-planning request and recipient-promo screenshot",
+      "description": "Owner asks to plan role boundaries from the top and offers later login access; no live login was requested or performed for this draft."
+    }
+  ],
+  "endpointIds": [
+    "recipient.validate",
+    "payment.promo-purchase"
+  ],
+  "nextSteps": [
+    "Resolve who registers numbers and controls final assignment using the pending clarification.",
+    "Review the proposed landing-page priorities and permission matrix before another visual redesign.",
+    "Run narrowly scoped authenticated capability checks only if a specific data requirement remains unresolved and the owner requests them."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-role-blueprint.md",
+      "sha256": "9bfea3b1fe19e10c0f04c8d304eaf4896cdd6d7fa24e248d0b9b1a4b9a1b5ce2"
+    },
+    {
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "sha256": "2cc51096ef6f9703324d7b3a8563b76005c4af1c2183d2816857d598b2b2c568"
+    },
+    {
+      "location": "expantor/api-catalog.json",
+      "sha256": "bcd907725a1c87c0a3c4925d808474fe02d1c4c36262558fe4f3a921d109daf3"
+    }
+  ]
+}

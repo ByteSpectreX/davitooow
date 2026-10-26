@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "38d8de70aa885048d0ceddbc",
+  "recordedAt": "2026-10-25T17:19:30.614Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Interactive captain and crew HTML preview completed with funding forecast and final responsive checks",
+  "category": "implementation",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "Completed a self-contained local HTML preview and updated the supplier plan for manual captain funding plus automated recipient renewal rules. The preview includes captain overview, fleet-wide seven/fourteen/thirty-day forecasts with recurring cycles, configurable reserve, rounded top-up estimate, account search, crew schedule filtering, renewal-rule toggles, session-only demo funding and ledger, CSV export, account dialogs and crew-specific visual dashboards. Phone schedules now show renewal dates and costs as cards. Final browser checks passed at 320, 390, 768, 1024 and 1440px with no page overflow, JavaScript errors or external requests. Forecast and interaction checks passed with synthetic data. The preview is served by the DVito supplier preview task on port 5175. No live DITO account connection, automated purchase, payment, OTP or production deployment was performed. The supplied read-only attachment path remained unavailable; the editable repository plan was updated instead.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "description": "Completed standalone visual and interactive preview using fictional accounts, illustrative prices and a fixed demo date."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "description": "Updated owner direction and forecast formula; automatic renewal rule design replaces the earlier per-order manual default."
+    },
+    {
+      "type": "test",
+      "location": "Final local Playwright preview checks, 2026-10-25",
+      "description": "Verified forecast periods, reserve edits, demo top-ups, filters, rule toggles, dialogs, crew display scope, ledger, CSV export, reload reset, five responsive widths and absence of external requests."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Review the captain and crew preview with the owner and refine the workflow before connecting live accounts.",
+    "Implement durable order coordination, authenticated crew isolation and actual wallet/delivery verification separately before enabling live schedules."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-dashboard-preview.html",
+      "sha256": "22c95fb55b0b5bc5b13d07912462eef8de67e14ba1a333ddde7795240269d233"
+    },
+    {
+      "location": "Project DVito/design/supplier-dashboard-plan.md",
+      "sha256": "d96c07883b826ffe5f249ab0bb436f72709b5df6280fea14b42e907cc7d5e57e"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "01dd06ec766e10d1122c31b6",
+  "recordedAt": "2026-10-25T20:32:55.179Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Preview typography corrected with embedded Inter and verified readable operational text",
+  "category": "correction",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "Rendered baseline confirmed body 15px, navigation 13px, table content 11px, table headings 9px, buttons 12px and statuses 10px. The preview now embeds licensed Inter Latin/Latin Extended font assets, including the peso range, and uses a centralized scale: body/navigation/buttons 16px, table content 15px, table headings/helpers/statuses at least 14px, and larger headings/totals. Line spacing and control/table spacing increased. Mobile cards, concise navigation names and grouped chart bars accommodate the text without changing forecast data. A first sweep caught remaining 12px operational labels; those were enlarged. Final browser checks passed for both roles, both themes, all main pages and SIM tabs at 320, 390, 768, 1024 and 1440px, with both font faces loaded and no viewport overflow, script errors or external requests. Manager plan saving preserved wallet/current service and updated the forecast as expected. No production source or live DITO action changed.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-redesign.css",
+      "description": "Shared readable type scale, spacing and responsive layout changes."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/build-supplier-preview.mjs",
+      "description": "Embeds local Inter subsets and license; font CSP permits data URLs while API connections remain blocked."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/fonts/Inter-LICENSE.txt",
+      "description": "Preserved SIL Open Font License accompanying the font assets."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-redesign-ui.js",
+      "description": "Responsive chart grouping and concise mobile navigation labels preserve the same planning data."
+    },
+    {
+      "type": "test",
+      "location": "Rendered typography and browser layout sweep, 2026-10-25",
+      "description": "Before/after computed sizes, two loaded font faces, two themes and five widths passed after residual small labels were corrected."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Have the owner review the enlarged typography in the updated interactive preview."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-redesign.css",
+      "sha256": "67998e5b324433fbad877ebd0a59574f7f23d8d387cf44f018501fb392fb239b"
+    },
+    {
+      "location": "Project DVito/design/build-supplier-preview.mjs",
+      "sha256": "8b9a1ac0e7484c48e2e924957ee9d2cf9c4ce839bf8967cf512c233242b6494c"
+    },
+    {
+      "location": "Project DVito/design/fonts/Inter-LICENSE.txt",
+      "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+    },
+    {
+      "location": "Project DVito/design/supplier-redesign-ui.js",
+      "sha256": "8dfa35ee1ea6c9fd566dea61fe30a14b517293c2f53764f3bc772e48cc368622"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "bd29f7c4bdfb8f13ae59fabf",
+  "recordedAt": "2026-10-25T15:14:20.518Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Upload size investigation distinguishes large repository history from the small pending commit",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "Local Git inspection found 8183 tracked files totaling about 280.1 MiB of content, including a 76.77 MiB APK; the local object pack is about 128.73 MiB. Commit a7a12ad is one commit ahead of the local origin/main tracking reference c98779b. Its new reachable objects total about 0.183 MiB uncompressed relative to that reference; copied reference files mostly reuse existing blobs. Actual network progress, remote state, and retries have not been inspected. No push, deletion, or history rewrite was performed.",
+  "evidence": [
+    {
+      "type": "test",
+      "location": "git count-objects -vH",
+      "description": "Read-only local object-store size inspection."
+    },
+    {
+      "type": "test",
+      "location": "git ls-tree -r -l HEAD",
+      "description": "Read-only tracked-file size inspection; no file contents or credentials exported."
+    },
+    {
+      "type": "test",
+      "location": "git rev-list --objects --no-object-names origin/main..HEAD",
+      "description": "Compared outgoing object metadata with the local remote-tracking baseline; this does not verify the remote server."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Obtain the upload progress line to distinguish cumulative bytes written, file count, retries, or another upload operation. Do not infer the current commit adds the full repository size."
+  ],
+  "fileEvidence": []
+}

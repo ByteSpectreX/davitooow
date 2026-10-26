@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "491a09d42d388846cc40cc68",
+  "recordedAt": "2026-10-25T14:42:45.276Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Self-top-up versus direct recipient loading needs rewards-attribution verification",
+  "category": "limitation",
+  "outcome": "uncertain",
+  "evidenceLevel": "code-observed",
+  "summary": "Official published rules list eligible App/MyDITO load rewards at 0.5–4% by tier, no further points on load-balance-funded purchases, and free Share Load with transaction/day limits and a retained balance. These are published-policy observations, not verified account outcomes. Direct recipient purchase rewards attribution and this owner's tier remain unknown. The current checkout creates new recipient load; it does not implement Share Load. No payment or transfer was initiated.",
+  "evidence": [
+    {
+      "type": "url",
+      "location": "https://dito.ph/loyaltyrewards",
+      "description": "Published earning rates and existing-load-balance exclusion, reviewed 2026-10-25."
+    },
+    {
+      "type": "url",
+      "location": "https://dito.ph/faq",
+      "description": "Published Share Load limits: 5–1000 pesos per transfer, five daily transfers, at least one peso retained; reviewed 2026-10-25."
+    },
+    {
+      "type": "file",
+      "location": "dito-login-test/src/load-purchase.mjs",
+      "description": "Current recipient checkout submits an external payment for new load, not a balance transfer."
+    }
+  ],
+  "endpointIds": [
+    "payment.load-submit"
+  ],
+  "nextSteps": [
+    "Compare quoted total costs, the owner's rewards tier, and whose points/qualified-spend history is credited for an authorized direct-recipient purchase before recommending either route. Do not assume rewards twice for the same funds."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-login-test/src/load-purchase.mjs",
+      "sha256": "2e88456d420da59a3115daa60ec20f377a3397c58b1aca5e2add79f6fd9dea03"
+    }
+  ]
+}

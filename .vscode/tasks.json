@@ -12,6 +12,22 @@
 			],
 			"isBackground": true,
 			"problemMatcher": []
+		},
+		{
+			"label": "DVito supplier preview",
+			"type": "shell",
+			"command": "python3",
+			"args": [
+				"-m",
+				"http.server",
+				"5175",
+				"--bind",
+				"0.0.0.0",
+				"--directory",
+				"Project DVito/design"
+			],
+			"isBackground": true,
+			"problemMatcher": []
 		}
 	]
 }

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "5cb8c86f8318da91303bd279",
+  "recordedAt": "2026-10-25T19:35:19.738Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Redesign prototype model passes fourteen offline role and renewal tests",
+  "category": "test",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "Fourteen offline prototype tests passed for wallet/funding reconciliation, forecast gaps, repeated offer cycles with different validity, draft exclusion, saved manager preferences, portfolio mutation limits, supplier override reasons, pause/resume policy, immutable in-progress attempts, protected unresolved amounts without double counting, missing-date disclosure, catalog/budget review, registered versus connected SIMs, format-only recipient limits, assignment/history ownership and invalid numeric controls. The new fixture offers are illustrative cards inspired by the owner-provided screenshot; they are not verified live eligibility or prices. A self-contained redesigned preview has been built using the existing DVendo theme and custom mark. Browser layout and interaction checks are next. No live account, OTP, payment or deployment occurred.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-redesign-model.js",
+      "description": "Synthetic role, SIM, promo-plan and forecast model."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/supplier-redesign.test.mjs",
+      "description": "Fourteen in-process Node tests using synthetic data."
+    },
+    {
+      "type": "file",
+      "location": "Project DVito/design/build-supplier-preview.mjs",
+      "description": "Builds a standalone preview without editing production source or including API connectivity."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Verify desktop/mobile layouts, keyboard navigation and the complete manager-to-supplier workflow in a browser."
+  ],
+  "fileEvidence": [
+    {
+      "location": "Project DVito/design/supplier-redesign-model.js",
+      "sha256": "5d58ad5cdc6db093fb2c8040d3a5dade93fb7357e1f1d1ed7a1fc7282255672b"
+    },
+    {
+      "location": "Project DVito/design/supplier-redesign.test.mjs",
+      "sha256": "8748b37ee4dc39ccb2136ebd5cad4a6147f46316824bef0940fdb60bdcd9ae14"
+    },
+    {
+      "location": "Project DVito/design/build-supplier-preview.mjs",
+      "sha256": "461aea0c369debb78db5c47c404e7485ee343f3d64fb3d219b624eb211fb71b1"
+    }
+  ]
+}

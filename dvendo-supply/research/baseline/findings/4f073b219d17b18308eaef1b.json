@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "4f073b219d17b18308eaef1b",
+  "recordedAt": "2026-10-25T18:03:31.147Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Owner clarifies supplier-admin and account-manager responsibilities and requests distinct dashboards",
+  "category": "correction",
+  "outcome": "observed",
+  "evidenceLevel": "user-reported",
+  "summary": "The owner clarifies that Captain is a metaphor, not literal nautical branding. The product has an admin side that funds and buys promos for SIMs assigned to managers, and a user/manager side that selects the promo for each assigned number. The owner requests an original icon and distinct role dashboards. Proposed preview terminology is Supplier Admin and Account Manager, with DVendo Supply as a product-name proposal; these names are recommendations, not an assertion of the owner's final naming choice. Existing automatic fulfillment remains the direction, with manager promo preferences separated from supplier funds and actual delivery. Only the sample-data preview will change.",
+  "evidence": [
+    {
+      "type": "user-report",
+      "location": "Owner role, icon and naming clarification in this conversation",
+      "description": "Admin funds and supplies promos; manager chooses a promo per assigned SIM; replace the old icon and nautical terminology."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Create a custom vector mark and revise preview terminology.",
+    "Give managers a SIM-and-promo-selection workspace and admins fleet funding and fulfillment oversight.",
+    "Keep current active promos separate from next-promo preferences and show manager changes in the supplier forecast."
+  ],
+  "fileEvidence": []
+}
