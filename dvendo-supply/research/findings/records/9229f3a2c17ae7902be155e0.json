@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "9229f3a2c17ae7902be155e0",
+  "recordedAt": "2026-10-26T16:18:24.020Z",
+  "workspaceFingerprint": "81b0cdeff027df002a7df26250060e06e38b99c98fa6c5f7ebd29d785dbbd318",
+  "title": "Clean transfer archive independently builds and passes offline checks outside original checkout",
+  "category": "workflow",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "Prepared a standalone DVendo Supply transfer archive containing only the project folder, including source, generated preview, contracts, documentation, sanitized research, tests, lockfile and CI configuration. Excluded dependency folders, Git metadata, local environment files and runtime state. Extracted the archive into a temporary directory outside the original checkout and successfully ran npm run build, npm test (21 offline tests) and npm run verify without installed dependencies. This validates portable foundation/prototype behavior only, not authentication, provider purchasing or renewals. The original project was retained; no remote repository was created and no deployment occurred.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "docs/02-setup.md",
+      "description": "Fresh repository transfer procedure."
+    },
+    {
+      "type": "file",
+      "location": "package.json",
+      "description": "Self-contained project commands and toolchain requirements."
+    },
+    {
+      "type": "test",
+      "location": "Independent extracted transfer archive: npm run build, npm test, npm run verify",
+      "description": "Build succeeded, 21 offline tests passed, and 57 local links, 33 endpoint inventory entries, 10 historical imports and four journal records verified."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Extract the archive into a new project directory and initialize independent Git history.",
+    "Choose the destination GitHub repository ownership, name and visibility before publishing.",
+    "Deploy staging separately when requested; core operational capabilities remain unfinished."
+  ],
+  "fileEvidence": [
+    {
+      "location": "docs/02-setup.md",
+      "sha256": "b3da4607cade93924616de0908591ef2fdb8bc2b1a8a25d7c37bfc7603a0ff23"
+    },
+    {
+      "location": "package.json",
+      "sha256": "ec6e6ab17e7581dc75b66405ab177223eb72de3cd45aa8b93c3cbad831006981"
+    }
+  ]
+}

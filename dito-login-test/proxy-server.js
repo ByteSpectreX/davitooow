@@ -3,6 +3,7 @@ const crypto = require("crypto");
 const { readFile } = require("node:fs/promises");
 const path = require("node:path");
 const loadService = import("./src/load-purchase.mjs?revision=20261024-checkout2");
+const promoResearch = import("./src/promo-research.mjs");
 
 const PORT = Number(process.env.PORT || 5174);
 const PWA_ORIGIN = "http://localhost:5173";
@@ -611,6 +612,21 @@ const server = http.createServer(async (req, res) => {
     }
 
     const urlPath = req.url.split("?")[0];
+
+    if (urlPath === "/api/promo/research" && req.method === "POST") {
+      const current = getSession(req);
+      if (!current) return sendJson(res, 401, { error: "Sign in before comparing catalogs." });
+      if (current.session.promoResearchRunning) return sendJson(res, 409, { error: "A catalog comparison is already running." });
+      // Read-only research uses the existing token and never silently logs in.
+      const account = current.session.accounts.values().next().value;
+      if (!account || tokenExpired(account.token)) return sendJson(res, 401, { error: "Sign in again before comparing catalogs." });
+      current.session.promoResearchRunning = true;
+      try {
+        const { explorePromos } = await promoResearch;
+        const report = await explorePromos((path, method, body) => callDito(path, method, body, account.token));
+        return sendJson(res, 200, report);
+      } finally { current.session.promoResearchRunning = false; }
+    }
 
     if ((urlPath === "/api/history/recharge" || urlPath === "/api/history/package") && req.method === "POST") {
       const current = getSession(req);

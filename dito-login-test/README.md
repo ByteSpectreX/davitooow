@@ -33,6 +33,16 @@ In GitHub Codespaces, open port **5174** from the **Ports** panel and keep its v
 
 The older two-terminal setup (Node on port 5174 plus `python -m http.server 5173 --bind 127.0.0.1 --directory public`) remains supported for localhost use only.
 
+## Read-only catalog comparison
+
+In local Node mode, sign in and select **Compare catalogs and offer IDs** in Available promos. The comparison uses the first signed-in account's current token; it does not silently log in, send an OTP, validate another recipient, or submit a purchase.
+
+It compares `ECARE_PROMO_WEB_PREPAID` with the mobile root `ECARE_PROMO_PREPAID`, traverses returned nested categories, and queries both the subscriber-available and general offer lists. Results retain category IDs, `offerId`, and `relatedOfferId` separately. A general-catalog listing does not establish subscriber eligibility; even a subscriber-available listing does not prove checkout acceptance. No purchase buttons are attached to research results.
+
+Requests are bounded to 80 per comparison. Repeated pages, malformed responses, skipped personalized categories, authentication rejection, and exhausted request budgets are reported as incomplete. The report includes only selected catalog metadata; credentials, subscriber IDs and raw account payloads are not returned or saved as findings. Cloudflare mode does not implement this endpoint.
+
+See [Long Expiry research](../expantor/notes/2026-10-29-long-expiry.md). The owner's report of historical DITO-app availability is a discovery lead; exact current Long Expiry IDs still require a live signed-in comparison.
+
 ## Buy load for another recipient
 
 In local Node mode, sign in and use **Buy load for someone**:

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "7e4c02bc358e67bf007b2d68",
+  "recordedAt": "2026-10-29T08:28:04.389Z",
+  "workspaceFingerprint": "e7f351b65b6dd4a366a6bfd0aebf7b741db803de06bda55e7bee2fff9f8d3d6b",
+  "title": "Read-only web/mobile catalog comparison preserves offer IDs and separates listing from purchase verification",
+  "category": "implementation",
+  "outcome": "observed",
+  "evidenceLevel": "mock-tested",
+  "summary": "Implemented a local Node dashboard comparison of observed web/mobile prepaid roots, nested returned categories, and general/subscriber-available offer lists. Reports preserve category IDs separately from offerId/relatedOfferId pairs, count mobile-only and general-only discoveries, and name-match Long Expiry. Fixed pagination to recognize pageInfo.total and prevented distinct offerId values sharing a relatedOfferId from collapsing during research. The research route requires a current existing session, does not silently log in, accepts no upstream-path overrides, skips unsupported personalized flows with explicit warnings, and limits requests to 80. All 39 mocked tests passed, including an HTTP test that injects a purchase path and confirms only catalog queries occur. The running local route was also checked without credentials and returned HTTP 401. No live signed-in account catalog, eligibility, purchase, or fulfillment was verified; owner sign-in and comparison results remain necessary.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "dito-login-test/src/promo-research.mjs"
+    },
+    {
+      "type": "file",
+      "location": "dito-login-test/tests/promo-catalog.test.mjs"
+    },
+    {
+      "type": "file",
+      "location": "dito-login-test/tests/load-purchase.test.mjs"
+    },
+    {
+      "type": "file",
+      "location": "expantor/notes/2026-10-29-long-expiry.md"
+    }
+  ],
+  "endpointIds": [
+    "catalog.categories",
+    "catalog.general",
+    "catalog.available"
+  ],
+  "nextSteps": [
+    "Owner signs in to the running private dashboard and selects Compare catalogs and offer IDs; inspect sanitized catalog results for exact Long Expiry matches and additional subscriber-listed offers.",
+    "Treat subscriber listing as discovery evidence only. Explicit promo/price/recipient selection remains necessary before any purchase test."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-login-test/src/promo-research.mjs",
+      "sha256": "95bae6bd54f9394cf47103f9a1ba41404366d802cce38dbcfdd92e059f1875a9"
+    },
+    {
+      "location": "dito-login-test/tests/promo-catalog.test.mjs",
+      "sha256": "ce1ddf00f988ff50bf3c57543b39d62186ed1b95c5a6c5cf31a399a4bad8c947"
+    },
+    {
+      "location": "dito-login-test/tests/load-purchase.test.mjs",
+      "sha256": "38597ea479f2a97d5941de9949c5f586239ede78857248f61254bc920b6172bf"
+    },
+    {
+      "location": "expantor/notes/2026-10-29-long-expiry.md",
+      "sha256": "6d8bcfdb44897fa3ee4864b12eb2a917d38bddc7401c972d83281b664f533133"
+    }
+  ]
+}

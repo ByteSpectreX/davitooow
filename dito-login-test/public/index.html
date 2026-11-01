@@ -124,6 +124,11 @@
       <p class="muted">Fetches every page in each category returned by DITO's web catalog for your account. Other sales channels may have additional offers. DITO lists <a href="https://dito.ph/prepaid" target="_blank" rel="noopener noreferrer">Long Expiry through GCash</a>.</p>
       <p id="promoStatus" role="status" aria-live="polite"></p>
       <div id="promoResult" class="account-grid"></div>
+      <h3>Explore other catalogs</h3>
+      <p class="muted">Compare the web and mobile catalogs, including nested categories. This read-only check shows returned offer IDs and whether your signed-in account's available list includes them. Purchase acceptance still needs a separate check. Local Node mode only.</p>
+      <button id="promoExplore" type="button">Compare catalogs and offer IDs</button>
+      <p id="promoExploreStatus" role="status" aria-live="polite"></p>
+      <div id="promoExploreResult" class="account-grid"></div>
     </section>
 
     <section class="panel" aria-labelledby="historyHeading">
@@ -168,6 +173,6 @@
     </div>
   </div>
 
-  <script src="/app.js?v=15" type="module"></script>
+  <script src="/app.js?v=17" type="module"></script>
 </body>
 </html>

@@ -578,6 +578,34 @@ async function loadPromos() {
 
 $("promoLoad").addEventListener("click", loadPromos);
 
+$("promoExplore").addEventListener("click", async () => {
+  $("promoExplore").disabled = true;
+  $("promoExploreStatus").textContent = "Comparing catalogs for the first signed-in account. This may take a few minutes…";
+  $("promoExploreResult").replaceChildren();
+  try {
+    const report = await api("/promo/research", { method: "POST", body: "{}" });
+    // Also support a running proxy loaded before summary counts were added.
+    const comparison = report.comparison || {
+      mobileOnly: report.offers.filter((offer) => offer.observations.some((o) => o.root === "ECARE_PROMO_PREPAID") &&
+        !offer.observations.some((o) => o.root === "ECARE_PROMO_WEB_PREPAID")).length,
+      subscriberListed: report.offers.filter((offer) => offer.subscriberListed).length,
+      generalOnly: report.offers.filter((offer) => !offer.subscriberListed).length,
+    };
+    $("promoExploreStatus").textContent = `${report.offers.length} offer ID pairs across ${report.catalogs.length} catalog checks; ${report.longExpiryMatches.length} Long Expiry matches. ` +
+      `${comparison.mobileOnly} seen only in the mobile catalog; ${comparison.subscriberListed} in subscriber-available lists; ${comparison.generalOnly} seen only in general lists. ` +
+      (report.complete ? "Comparison completed. " : `Incomplete: ${report.warnings.join("; ")} `) + "No purchases were submitted.";
+    $("promoExploreResult").innerHTML = report.offers.map((offer) => `<article class="account promo-card">
+      <h3>${escapeHtml(offer.observations[0]?.name || "Unnamed offer")}</h3>
+      <p>Offer ID: ${escapeHtml(offer.offerId || "not returned")} · Related offer ID: ${escapeHtml(offer.relatedOfferId || "not returned")}</p>
+      <p>${offer.subscriberListed ? "Returned in your subscriber-available list." : "Found in the general catalog only."} Purchase acceptance unverified.</p>
+      ${offer.observations.map((o) => `<p class="muted">${escapeHtml(o.root)} · ${escapeHtml(o.categoryName)} · ${escapeHtml(o.kind)}: ${escapeHtml(o.name)} · ${escapeHtml(o.price)} · ${escapeHtml(o.validity)} ${escapeHtml(o.validityUnit)}</p><p>${escapeHtml(o.brief)}</p>`).join("")}
+    </article>`).join("");
+  } catch (error) {
+    $("promoExploreStatus").textContent = error.status === 404
+      ? "Catalog comparison requires the local Node dashboard." : error.message;
+  } finally { $("promoExplore").disabled = false; }
+});
+
 $("promoResult").addEventListener("click", async (event) => {
   const button = event.target.closest(".promo-buy");
   if (!button) return;

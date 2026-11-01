@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "9aa250dd9fbb2fca22e97e70",
+  "recordedAt": "2026-10-26T16:12:15.546Z",
+  "workspaceFingerprint": "81b0cdeff027df002a7df26250060e06e38b99c98fa6c5f7ebd29d785dbbd318",
+  "title": "DVendo Supply foundation is locally verified but not production-complete",
+  "category": "limitation",
+  "outcome": "observed",
+  "evidenceLevel": "mock-tested",
+  "summary": "The current DVendo Supply release is an organized interactive prototype/foundation. Its 21 offline tests, preview build, project verification, and Cloudflare staging dry run pass, but the API capability response explicitly reports authentication, persistence, provider connection, live purchases, and automatic renewals as unavailable. The frontend is synthetic and does not call the API.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "README.md",
+      "description": "Release status and local commands"
+    },
+    {
+      "type": "file",
+      "location": "docs/api/README.md",
+      "description": "Implemented routes and unavailable business operations"
+    },
+    {
+      "type": "file",
+      "location": "apps/api/src/worker.mjs",
+      "description": "Foundation-only API capability flags"
+    },
+    {
+      "type": "test",
+      "location": "npm test; npm run build; npm run verify; npm run check:cloudflare",
+      "description": "Offline tests, preview build, project verification, and staging dry run passed"
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Implement and verify authenticated membership and assignment scope.",
+    "Add persistence for SIMs, plans, orders and audit records.",
+    "Complete separately authorized DITO read integration, controlled fulfillment, renewals, and production staging evidence."
+  ],
+  "fileEvidence": [
+    {
+      "location": "README.md",
+      "sha256": "9fdc76724a65f027f81066eea98a02d8ba38c07f7fea519ccfccf2d6d33bfc0e"
+    },
+    {
+      "location": "docs/api/README.md",
+      "sha256": "927bc6133cce7b2132d714fe0df0fb4509de11d7a83535b6c1fc657dd1069c31"
+    },
+    {
+      "location": "apps/api/src/worker.mjs",
+      "sha256": "3c757074cabdf3b9b8c48a87a0d7649371c76f614a285042a03baeae60efc8de"
+    }
+  ]
+}

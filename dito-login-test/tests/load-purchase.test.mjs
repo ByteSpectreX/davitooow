@@ -224,6 +224,30 @@ async function request(route, body, { session = "test-session", origin = "http:/
   });
 }
 
+test("catalog research requires a fresh session and ignores injected payment paths and offer IDs", async () => {
+  assert.equal((await request("/api/promo/research", {}, { session: "" })).status, 401);
+  const originalFetch = globalThis.fetch;
+  const paths = [];
+  const token = `fixture.${Buffer.from(JSON.stringify({ exp: Math.floor(Date.now() / 1000) + 3600 })).toString("base64url")}.fixture`;
+  proxy.sessions.set("test-session", { accounts: new Map([[recipient, { mobile: recipient, token, userData: {} }]]) });
+  globalThis.fetch = async (url) => {
+    const path = new URL(url).pathname;
+    paths.push(path);
+    assert.equal(path, "/ecare/webs/shop/catg/list");
+    return new Response(JSON.stringify({ prodCatgList: [] }), { status: 200 });
+  };
+  try {
+    const response = await request("/api/promo/research", { path: "payment/prePay", offerId: 123, confirmed: true });
+    assert.equal(response.status, 200);
+    assert.equal(JSON.parse(response.text).purchaseVerified, false);
+    assert.equal(paths.length, 2);
+    const expired = `fixture.${Buffer.from(JSON.stringify({ exp: 1 })).toString("base64url")}.fixture`;
+    proxy.sessions.get("test-session").accounts.get(recipient).token = expired;
+    assert.equal((await request("/api/promo/research", {})).status, 401);
+    assert.equal(paths.length, 2); // No silent login or attempted upstream query.
+  } finally { globalThis.fetch = originalFetch; proxy.sessions.clear(); }
+});
+
 test("HTTP routes reject unauthenticated, cross-origin, and cross-session purchase attempts", async () => {
   assert.equal((await request("/api/load/submit", {}, { session: "" })).status, 401);
   assert.equal((await request("/api/load/submit", {}, { origin: "https://evil.example.test" })).status, 403);

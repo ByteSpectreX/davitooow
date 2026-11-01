@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "4278b244ea5f8c02587a1e2b",
+  "recordedAt": "2026-10-29T08:20:39.980Z",
+  "workspaceFingerprint": "3323f2c02a4e092e52472a563f620bc516fc8ee193dd75fa2021c34302647ec1",
+  "title": "Owner identifies GCash screenshot and reports historical DITO-app Long Expiry purchase",
+  "category": "behavior",
+  "outcome": "observed",
+  "evidenceLevel": "user-reported",
+  "summary": "The owner confirms the supplied Long Expiry screenshot is from GCash and reports their aunt previously bought the promo in the DITO app. This is historical user-reported availability, not proof of current app catalog exposure, an exact public offer ID, or eligibility for the owner's account. The local dashboard was not listening on its saved port at the start of this investigation, so no active local signed-in session was available for live subscriber catalog comparisons.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "expantor/notes/2026-10-29-long-expiry.md",
+      "description": "Existing Long Expiry discovery context; owner's follow-up clarifies screenshot source and historical purchase."
+    }
+  ],
+  "endpointIds": [
+    "catalog.general",
+    "catalog.available"
+  ],
+  "nextSteps": [
+    "Compare the web/mobile category roots and general/subscriber catalog IDs using an authorized signed-in session, including nested returned categories; retain historical availability as a lead rather than a current eligibility result."
+  ],
+  "fileEvidence": [
+    {
+      "location": "expantor/notes/2026-10-29-long-expiry.md",
+      "sha256": "5d4267a879a3c9080abea032b663a0950af03ecf913e2a6d61bb54775019f3ac"
+    }
+  ]
+}

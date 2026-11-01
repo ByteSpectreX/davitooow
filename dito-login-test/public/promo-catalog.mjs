@@ -4,7 +4,7 @@ export function promoKey(promo) {
 }
 
 // Do not assume a short page means the end: DITO may cap pageSize itself.
-export async function fetchPromoPages(fetchPage, onProgress = () => {}) {
+export async function fetchPromoPages(fetchPage, onProgress = () => {}, keyForPromo = promoKey) {
   const promos = new Map();
   let received = 0;
   for (let pageIndex = 1; pageIndex <= 100; pageIndex++) {
@@ -21,7 +21,7 @@ export async function fetchPromoPages(fetchPage, onProgress = () => {}) {
     }
     const info = body.data.pageInfo || body.pageInfo || {};
     const totalPages = Number(info.totalPage ?? info.totalPages);
-    const totalNumber = Number(info.totalNumber);
+    const totalNumber = Number(info.totalNumber ?? info.total);
     const knownEnd = (totalPages > 0 && pageIndex >= totalPages) ||
       (totalNumber > 0 && received + rows.length >= totalNumber);
     if (!rows.length) {
@@ -30,7 +30,7 @@ export async function fetchPromoPages(fetchPage, onProgress = () => {}) {
         warning: missing ? "DITO returned an empty page before the reported end." : "" };
     }
     const before = promos.size;
-    for (const promo of rows) promos.set(promoKey(promo), promo);
+    for (const promo of rows) promos.set(keyForPromo(promo), promo);
     received += rows.length;
     if (promos.size === before) {
       return { promos: [...promos.values()], complete: false,

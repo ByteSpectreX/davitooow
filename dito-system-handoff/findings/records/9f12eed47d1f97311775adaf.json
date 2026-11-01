@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "9f12eed47d1f97311775adaf",
+  "recordedAt": "2026-10-29T05:19:25.954Z",
+  "workspaceFingerprint": "6cd69353b1edae29af64a1583c02a8ebb9f9b48dd05c810e47390475650669e3",
+  "title": "Long Expiry public catalog investigation retrieves categories but no exact offer",
+  "category": "api",
+  "outcome": "uncertain",
+  "evidenceLevel": "live-verified",
+  "summary": "Read-only unauthenticated DITO guest entry and category queries returned the mobile root ECARE_PROMO_PREPAID and 14 top-level categories with three Super Saver validity children. No returned category label was Long Expiry. Three general offer-list targets using returned categories produced HTTP 200 with empty objects without signing, then HTTP 417 and ECARE-COMMON-00009 with frontend-style signing and empty authentication. No promo list or exact Long Expiry 799 offer identifier was obtained. Public DITO FAQ recommends Long Expiry through GCash. This verifies only public query behavior, not account eligibility or purchase availability. Raw account responses and credentials were not collected.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "expantor/notes/2026-10-29-long-expiry.md",
+      "description": "Sanitized public query observations, failed retrieval experiments, source links and limitations."
+    },
+    {
+      "type": "url",
+      "location": "https://dito.ph/prepaid",
+      "description": "Official Long Expiry sales-channel lead."
+    }
+  ],
+  "endpointIds": [
+    "catalog.guest-entry",
+    "catalog.categories",
+    "catalog.general"
+  ],
+  "nextSteps": [
+    "Inspect an authorized authenticated catalog response from the application showing the promo; distinguish a partner SKU from a DITO offer ID before integration.",
+    "Do not infer account ineligibility or channel exclusivity from the failed unauthenticated requests. Stop before checkout."
+  ],
+  "verifiedStage": "query",
+  "fileEvidence": [
+    {
+      "location": "expantor/notes/2026-10-29-long-expiry.md",
+      "sha256": "5d4267a879a3c9080abea032b663a0950af03ecf913e2a6d61bb54775019f3ac"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "e9c750bad67f1b774d03ffde",
+  "recordedAt": "2026-10-29T05:11:36.406Z",
+  "workspaceFingerprint": "591601d79439db23f2b2f1520c18cc7620a2737917a69fb95dc23cc4279c7b12",
+  "title": "Long Expiry screenshot investigated through DITO public guest catalog entry",
+  "category": "api",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "The owner supplied a screenshot of Long Expiry 599, 799 and 999. The selected 799 offer is shown as 80GB, unlimited all-network SMS, unlimited DITO calls and 1000 other-network mobile minutes for 365 days. A fresh DITO prepaid FAQ read recommends Long Expiry through GCash and describes the 599 tier as 40GB for one year. The public guest entry API returned a mobile category deep link whose root is ECARE_PROMO_PREPAID, distinct from the dashboard's ECARE_PROMO_WEB_PREPAID. No exact Long Expiry offer ID, account eligibility or purchase result is established.",
+  "evidence": [
+    {
+      "type": "url",
+      "location": "https://dito.ph/prepaid",
+      "description": "Public FAQ freshly retrieved on 2026-10-29."
+    },
+    {
+      "type": "url",
+      "location": "https://my.dito.ph/ecare/common/entity/PTO_PROMO_CATG_FOR_GUEST/records",
+      "description": "Read-only public response returned mobile and home entry cards; mobile deep link uses ECARE_PROMO_PREPAID."
+    },
+    {
+      "type": "file",
+      "location": "dito-login-test/proxy-server.js",
+      "description": "Dashboard category query uses the web prepaid root."
+    }
+  ],
+  "endpointIds": [
+    "catalog.guest-entry",
+    "catalog.categories"
+  ],
+  "nextSteps": [
+    "Query the returned mobile category root and traverse only returned catalog identifiers; establish whether Long Expiry is listed without assuming recipient eligibility."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-login-test/proxy-server.js",
+      "sha256": "abd3ee76ae76204b347d0cfcf4b8144e0022707b368de08d77cbb4ed14330d4d"
+    }
+  ]
+}

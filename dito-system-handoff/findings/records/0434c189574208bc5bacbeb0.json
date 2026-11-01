@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "0434c189574208bc5bacbeb0",
+  "recordedAt": "2026-11-01T09:29:36.905Z",
+  "workspaceFingerprint": "e7f351b65b6dd4a366a6bfd0aebf7b741db803de06bda55e7bee2fff9f8d3d6b",
+  "title": "Independent DITO research handover export prepared without changing the frozen reference",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "The owner asked about exporting the handover as an independent repository. The earlier fresh-application plan applied to DVendo Supply; the DITO handover is separately portable. Prepared a clean local Git repository containing the handover under its original folder name, its live journal, a root guide and the research working agreement. Independent-copy validation passed all 55 preserved file hashes, 33 endpoint records, nine query requests, historical evidence and the 43 pre-export findings. The original October 25 executable reference remains unchanged; later October 29 dashboard implementation is documented in the journal but is not included as updated executable source in this handover export. The GitHub CLI reported invalid configured authentication, so no remote repository was created or pushed. No deployment, account query, OTP or financial action occurred.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "dito-system-handoff/tools/verify-handoff.mjs",
+      "description": "Integrity and journal checks passed against both the original package and its independent copy."
+    },
+    {
+      "type": "file",
+      "location": "dito-system-handoff/README.md",
+      "description": "Portable handover scope and historical executable reference."
+    },
+    {
+      "type": "file",
+      "location": "dvendo-supply/docs/02-setup.md",
+      "description": "Earlier separate-repository procedure for the fresh application."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Confirm whether the desired remote repository is the research handover or the separate DVendo Supply application.",
+    "Finish the clean export archive; remote creation and push require working GitHub authentication."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-system-handoff/tools/verify-handoff.mjs",
+      "sha256": "078e2b1de173b961925530d52d6ff8cf2eaf5e6d14856cbf8b7485d49bd6acc6"
+    },
+    {
+      "location": "dito-system-handoff/README.md",
+      "sha256": "25ce16119fda72ab87f39e57f3cab0ac032d4cb6c99c4170032f51d8da874f1c"
+    },
+    {
+      "location": "dvendo-supply/docs/02-setup.md",
+      "sha256": "b3da4607cade93924616de0908591ef2fdb8bc2b1a8a25d7c37bfc7603a0ff23"
+    }
+  ]
+}

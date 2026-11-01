@@ -6,6 +6,18 @@ A mock-tested pass does not establish a live account result or payment success. 
 
 | UTC date | Finding | Evidence | Outcome |
 | --- | --- | --- | --- |
+| 2026-11-01 | [Current workspace prepared for commit and push before independent repository creation](./records/51e9c4566448e899ee153f5a.json) | code-observed | observed |
+| 2026-11-01 | [Mocked DITO test-suite result](./records/dd913a467ee061ff4331adf0.json) | mock-tested | passed |
+| 2026-11-01 | [Independent DITO handover Git bundle and ZIP validated for transfer](./records/55e1483e06cd221553a201cb.json) | code-observed | passed |
+| 2026-11-01 | [Independent-copy findings automation passes eleven offline regression tests](./records/10c9c086205d0391e6379e49.json) | mock-tested | passed |
+| 2026-11-01 | [Independent DITO research handover export prepared without changing the frozen reference](./records/0434c189574208bc5bacbeb0.json) | code-observed | observed |
+| 2026-10-29 | [Read-only web/mobile catalog comparison preserves offer IDs and separates listing from purchase verification](./records/7e4c02bc358e67bf007b2d68.json) | mock-tested | observed |
+| 2026-10-29 | [Mocked DITO test-suite result](./records/77856f9af1562e5b2f2ad3c3.json) | mock-tested | passed |
+| 2026-10-29 | [Mocked DITO test-suite result](./records/7f248c91f8d571c7b2f447b3.json) | mock-tested | passed |
+| 2026-10-29 | [Mocked DITO test-suite result](./records/cecb4ad03f4ed679515366af.json) | mock-tested | passed |
+| 2026-10-29 | [Owner identifies GCash screenshot and reports historical DITO-app Long Expiry purchase](./records/4278b244ea5f8c02587a1e2b.json) | user-reported | observed |
+| 2026-10-29 | [Long Expiry public catalog investigation retrieves categories but no exact offer](./records/9f12eed47d1f97311775adaf.json) | live-verified | uncertain |
+| 2026-10-29 | [Long Expiry screenshot investigated through DITO public guest catalog entry](./records/e9c750bad67f1b774d03ffde.json) | code-observed | observed |
 | 2026-10-26 | [Commit preparation preserves independent DVito repository ownership](./records/501309d37446e6b76a7ea9ee.json) | code-observed | observed |
 | 2026-10-26 | [Owner requests fresh organized project; portable DVendo Supply starter prepared](./records/9a514f3b4c87eeca7dfa9b15.json) | mock-tested | observed |
 | 2026-10-26 | [Cloudflare recommended for supplier app hosting; recipient fulfillment remains a verification gate](./records/737d207499a3a3129c36aaa6.json) | code-observed | observed |

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "55e1483e06cd221553a201cb",
+  "recordedAt": "2026-11-01T09:30:24.505Z",
+  "workspaceFingerprint": "e7f351b65b6dd4a366a6bfd0aebf7b741db803de06bda55e7bee2fff9f8d3d6b",
+  "title": "Independent DITO handover Git bundle and ZIP validated for transfer",
+  "category": "workflow",
+  "outcome": "passed",
+  "evidenceLevel": "code-observed",
+  "summary": "Created a fresh independent repository with root commit 46e93ce48aa336b6f9cc0bfa3e04d6b336aa1bc2 and no parent history. Exported it as a complete Git bundle and source ZIP. Git bundle verification passed. The ZIP passed its CRC check, was extracted outside the original checkout, and the extracted handover passed 55 preserved hashes, portable documentation links, 33 endpoint records, nine query requests, historical evidence and 45 included live findings. Archive sizes are 197337 bytes for the bundle and 227135 bytes for the ZIP. The original frozen reference was not changed. This completion record was made after packaging and is retained in the original workspace journal. GitHub publication remains incomplete because CLI authentication was reported invalid; no remote was created or pushed.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "exports/dito-system-handoff-2026-11-01.bundle",
+      "description": "Verified complete independent Git repository history."
+    },
+    {
+      "type": "file",
+      "location": "exports/dito-system-handoff-2026-11-01.zip",
+      "description": "Source archive re-extracted and independently validated."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Use the research export if the intended independent project is the DITO handover; the earlier fresh application plan referred to DVendo Supply.",
+    "Working GitHub authentication and a selected repository name are needed for remote creation and push."
+  ],
+  "fileEvidence": [
+    {
+      "location": "exports/dito-system-handoff-2026-11-01.bundle",
+      "sha256": "c1a0c733a1d4a269ca1c6b6522bbe40dd4b9d65c36e09dc9dfe2f848effce9f7"
+    },
+    {
+      "location": "exports/dito-system-handoff-2026-11-01.zip",
+      "sha256": "6929f47ebd77197544053863804be6762e8818771a3aaca3ad6b331e4201ebc2"
+    }
+  ]
+}

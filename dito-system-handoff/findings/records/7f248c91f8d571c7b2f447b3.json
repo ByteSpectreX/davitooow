@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "7f248c91f8d571c7b2f447b3",
+  "recordedAt": "2026-10-29T08:22:38.810Z",
+  "workspaceFingerprint": "7425f74392410378e8887cf01ea392fb78bba7a95ece69100137a7079a11fdc2",
+  "title": "Mocked DITO test-suite result",
+  "category": "test",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "load-purchase.test.mjs: 24 passed, 0 failed. promo-catalog.test.mjs: 15 passed, 0 failed. Combined run: 39 tests; passed",
+  "evidence": [
+    {
+      "type": "test",
+      "location": "load-purchase.test.mjs",
+      "description": "load-purchase.test.mjs: 24 passed, 0 failed"
+    },
+    {
+      "type": "test",
+      "location": "promo-catalog.test.mjs",
+      "description": "promo-catalog.test.mjs: 15 passed, 0 failed"
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Live account and payment outcomes still require separate dated evidence."
+  ],
+  "fileEvidence": []
+}

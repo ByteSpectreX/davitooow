@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "10c9c086205d0391e6379e49",
+  "recordedAt": "2026-11-01T09:29:54.020Z",
+  "workspaceFingerprint": "e7f351b65b6dd4a366a6bfd0aebf7b741db803de06bda55e7bee2fff9f8d3d6b",
+  "title": "Independent-copy findings automation passes eleven offline regression tests",
+  "category": "test",
+  "outcome": "passed",
+  "evidenceLevel": "mock-tested",
+  "summary": "Ran the findings automation suite from the standalone handover export outside the original checkout. All eleven tests passed, covering recording, deduplication, changed evidence, unsafe inputs, redaction, exact live-verification stages, checksum validation, hook guards and installer behavior. These are local offline checks of the research workflow, not verification of DITO account queries, purchases, delivery, native hook activation or GitHub publication.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "dito-system-handoff/tools/research/test/automation.test.mjs",
+      "description": "Same preserved automation test source executed successfully in the independent copy."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Retain the preserved snapshot and live journal in the export; create and push the selected remote repository when GitHub authentication is available."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-system-handoff/tools/research/test/automation.test.mjs",
+      "sha256": "c4e927e1ab32165efb97b17137ed0833e0baa56237113b2cf9e3d93aa5c37b9a"
+    }
+  ]
+}
