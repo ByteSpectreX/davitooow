@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "b0b498efc2e0534dfd76747f",
+  "recordedAt": "2026-11-01T09:55:55.006Z",
+  "workspaceFingerprint": "c6100c6b1092c0832d379aec3dbcae9188011d3f742c1e4f59251dc5d952df8c",
+  "title": "Standing authorization added for routine work with explicit important-action approval boundaries",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "implemented",
+  "summary": "The owner authorized automatic routine work while retaining approval for important actions such as deletion and deployment. AGENTS.md now authorizes task-scoped reversible file work, local validation and previews, and public documentation reads without repeated conversational confirmation. It requires explicit scoped approval before destructive deletion, deployment or publishing, financial commitments, OTP requests, credential or access changes, shared Git mutations, and external messages or private-data transfers. Existing approval applies only within its original action and target scope. The instructions preserve host approvals, sandbox restrictions and managed policy. No host approval configuration was changed. Official documentation describes Approve for me as automatic review of eligible approval requests rather than blanket approval; the installed codex-cli 0.164.0 help lists --approve-for-me with the workspace-write sandbox. The changed Markdown file has no reported editor diagnostics. No application tests were needed for this documentation change.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "AGENTS.md"
+    },
+    {
+      "type": "url",
+      "location": "https://developers.openai.com/codex/auto-review/"
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Select Approve for me in the client if available, or use codex --approve-for-me for a CLI session. Confirm the active host permission mode separately; repository instructions alone do not change Allow prompts."
+  ],
+  "fileEvidence": [
+    {
+      "location": "AGENTS.md",
+      "sha256": "1bc9f6d37468608b4d630968d022a1594114bd956c9f2130af461f9cfc8a41e8"
+    }
+  ]
+}

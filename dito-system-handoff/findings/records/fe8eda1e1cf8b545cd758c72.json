@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "fe8eda1e1cf8b545cd758c72",
+  "recordedAt": "2026-11-01T09:53:42.232Z",
+  "workspaceFingerprint": "e7f351b65b6dd4a366a6bfd0aebf7b741db803de06bda55e7bee2fff9f8d3d6b",
+  "title": "Approval prompt reduction requires client permissions or supported Codex settings",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "The owner requested fewer repeated Allow clicks. Official Codex approval documentation describes non-interactive approval policy and automatic approval review as settings. Never approval policy suppresses prompts but retains the selected sandbox restrictions; it does not automatically grant blocked actions. The current managed workspace exposes its project .codex directory as read-only, and no available tool changes the active chat permission mode. No approval setting or hook was changed. The documentation fetch required an escalated command after sandbox DNS resolution failed.",
+  "evidence": [
+    {
+      "type": "url",
+      "location": "https://developers.openai.com/codex/agent-approvals-security/"
+    },
+    {
+      "type": "file",
+      "location": "dito-system-handoff/docs/06-AUTOMATIC-FINDINGS.md"
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Select the desired approval mode in the client permissions UI; managed policy may limit available modes."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-system-handoff/docs/06-AUTOMATIC-FINDINGS.md",
+      "sha256": "a105db83c3d8f9f7ae073dd35aca624ec356a23c6b98b616c9b6e6016f4cf5e1"
+    }
+  ]
+}

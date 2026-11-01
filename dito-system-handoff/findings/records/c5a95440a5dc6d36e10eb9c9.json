@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "c5a95440a5dc6d36e10eb9c9",
+  "recordedAt": "2026-11-01T09:58:51.661Z",
+  "workspaceFingerprint": "c6100c6b1092c0832d379aec3dbcae9188011d3f742c1e4f59251dc5d952df8c",
+  "title": "Current research and handover exports committed and pushed to existing GitHub repository",
+  "category": "workflow",
+  "outcome": "passed",
+  "evidenceLevel": "code-observed",
+  "summary": "Created commit b1c84ac on main with read-only catalog comparison code, tests, sanitized research, findings and independent handover exports. A normal non-force git push origin main succeeded to ByteSpectreX/davitooow, advancing remote main from c98779b to b1c84ac and publishing the earlier handover/starter commits too. The earlier GitHub CLI authentication status failure did not establish failure of Git transport authentication; the actual Git push succeeded. All 39 mocked DITO tests passed before the commit, handover integrity validation passed, and no code diagnostics were reported. The managed sandbox required elevated Git metadata writes because the repository Git directory was read-only. No new remote repository was created; the owner will supply its URL separately. No deployment, account query, OTP, purchase or recipient delivery was performed.",
+  "evidence": [
+    {
+      "type": "test",
+      "location": "git push origin main",
+      "description": "Exit 0; remote reported main advanced from c98779b to b1c84ac."
+    },
+    {
+      "type": "file",
+      "location": "dito-login-test/src/promo-research.mjs",
+      "description": "Committed catalog comparison implementation."
+    },
+    {
+      "type": "file",
+      "location": "exports/dito-system-handoff-2026-11-01.bundle",
+      "description": "Committed independent research repository export."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Commit and publish this push outcome in the findings journal, then confirm local and remote main agree.",
+    "Use the owner-provided new repository URL to publish the selected independent project without replacing the current origin."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-login-test/src/promo-research.mjs",
+      "sha256": "95bae6bd54f9394cf47103f9a1ba41404366d802cce38dbcfdd92e059f1875a9"
+    },
+    {
+      "location": "exports/dito-system-handoff-2026-11-01.bundle",
+      "sha256": "c1a0c733a1d4a269ca1c6b6522bbe40dd4b9d65c36e09dc9dfe2f848effce9f7"
+    }
+  ]
+}

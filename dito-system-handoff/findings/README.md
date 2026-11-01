@@ -6,6 +6,9 @@ A mock-tested pass does not establish a live account result or payment success. 
 
 | UTC date | Finding | Evidence | Outcome |
 | --- | --- | --- | --- |
+| 2026-11-01 | [Current research and handover exports committed and pushed to existing GitHub repository](./records/c5a95440a5dc6d36e10eb9c9.json) | code-observed | passed |
+| 2026-11-01 | [Standing authorization added for routine work with explicit important-action approval boundaries](./records/b0b498efc2e0534dfd76747f.json) | implemented | observed |
+| 2026-11-01 | [Approval prompt reduction requires client permissions or supported Codex settings](./records/fe8eda1e1cf8b545cd758c72.json) | code-observed | observed |
 | 2026-11-01 | [Current workspace prepared for commit and push before independent repository creation](./records/51e9c4566448e899ee153f5a.json) | code-observed | observed |
 | 2026-11-01 | [Mocked DITO test-suite result](./records/dd913a467ee061ff4331adf0.json) | mock-tested | passed |
 | 2026-11-01 | [Independent DITO handover Git bundle and ZIP validated for transfer](./records/55e1483e06cd221553a201cb.json) | code-observed | passed |
