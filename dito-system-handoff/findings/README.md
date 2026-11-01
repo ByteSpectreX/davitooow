@@ -6,6 +6,12 @@ A mock-tested pass does not establish a live account result or payment success. 
 
 | UTC date | Finding | Evidence | Outcome |
 | --- | --- | --- | --- |
+| 2026-11-01 | [Codespace transition backup integrity checked before final source preservation](./records/bc86ad3d52836ce16ac1bf2d.json) | code-observed | passed |
+| 2026-11-01 | [DVendo DITO Load transfer pushed and destination main verified](./records/cfe838a6bf7c7f445675df4a.json) | code-observed | passed |
+| 2026-11-01 | [GitHub documents separate authentication for cross-repository access in an existing Codespace](./records/0b367ecfde80ac90663c6655.json) | code-observed | observed |
+| 2026-11-01 | [DVendo DITO Load independent transfer committed and archived; remote access remains blocked](./records/18ceae45c9f00a74db06ce70.json) | code-observed | uncertain |
+| 2026-11-01 | [Owner selects dvendo-dito-load destination; initial GitHub access rejects the new repository](./records/a80cc06eb6f6610091ea44c1.json) | code-observed | uncertain |
+| 2026-11-01 | [Local project instructions do not require a Git commit to be discovered](./records/99daffb6e9041bd837dcbfea.json) | code-observed | observed |
 | 2026-11-01 | [Current research and handover exports committed and pushed to existing GitHub repository](./records/c5a95440a5dc6d36e10eb9c9.json) | code-observed | passed |
 | 2026-11-01 | [Standing authorization added for routine work with explicit important-action approval boundaries](./records/b0b498efc2e0534dfd76747f.json) | implemented | observed |
 | 2026-11-01 | [Approval prompt reduction requires client permissions or supported Codex settings](./records/fe8eda1e1cf8b545cd758c72.json) | code-observed | observed |

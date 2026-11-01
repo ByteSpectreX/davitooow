@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "0b367ecfde80ac90663c6655",
+  "recordedAt": "2026-11-01T10:21:15.218Z",
+  "workspaceFingerprint": "c6100c6b1092c0832d379aec3dbcae9188011d3f742c1e4f59251dc5d952df8c",
+  "title": "GitHub documents separate authentication for cross-repository access in an existing Codespace",
+  "category": "correction",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "Investigated the owner's request for concrete steps to resolve destination HTTP 403. GitHub documentation states the default Codespaces token normally covers only the source repository. Additional devcontainer permissions do not update an existing Codespace, even after rebuild. For an existing Codespace GitHub documents a repository-scoped fine-grained token stored as a Codespaces secret; Git's existing helper may otherwise continue using the original source-repository token. This is a plausible explanation for the observed successful old-repository push and denied new-repository lookup, not proof of the exact injected credential scope. Recommended that the owner, signed in as the destination owner ByteSpectreX, create an expiring token restricted to dvendo-dito-load with Contents write and Workflows write because the prepared project includes a CI workflow, save it under the distinct Codespaces secret name DVENDO_TRANSFER_TOKEN with access for the current source repository davitooow, then stop and restart the Codespace. No token value, secret creation, authentication change or remote write was performed. Future use must be limited to the destination command without replacing or exposing the source repository credential.",
+  "evidence": [
+    {
+      "type": "url",
+      "location": "https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-authentication-to-a-repository",
+      "description": "Default source-repository token scope, existing Codespace token option and Git credential-helper distinction."
+    },
+    {
+      "type": "url",
+      "location": "https://docs.github.com/en/codespaces/managing-your-codespaces/managing-repository-access-for-your-codespaces",
+      "description": "New devcontainer permissions do not apply to an existing Codespace."
+    },
+    {
+      "type": "url",
+      "location": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens",
+      "description": "Fine-grained resource owner, repository restrictions, expiry and available permissions."
+    },
+    {
+      "type": "url",
+      "location": "https://docs.github.com/en/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces",
+      "description": "Selected source-repository access and Codespace restart for loading a new secret."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Wait for the owner's scoped credential setup or another supported access fix; do not request token values in chat.",
+    "Check destination access using the supported selected credential, inspect remote refs, then complete the already-authorized normal push."
+  ],
+  "fileEvidence": []
+}

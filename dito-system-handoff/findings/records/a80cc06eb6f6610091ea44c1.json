@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "a80cc06eb6f6610091ea44c1",
+  "recordedAt": "2026-11-01T10:10:46.253Z",
+  "workspaceFingerprint": "c6100c6b1092c0832d379aec3dbcae9188011d3f742c1e4f59251dc5d952df8c",
+  "title": "Owner selects dvendo-dito-load destination; initial GitHub access rejects the new repository",
+  "category": "workflow",
+  "outcome": "uncertain",
+  "evidenceLevel": "code-observed",
+  "summary": "The owner selected the name dvendo-dito-load and supplied ByteSpectreX/dvendo-dito-load for transfer of the standalone supplier/manager application with fresh history. Initial connector metadata lookup returned 404. Sandboxed Git lookup could not resolve github.com; the required elevated retry reached GitHub but received HTTP 403 and a write-access-not-granted message. This establishes that the current access path cannot inspect or push the new destination, not that the repository does not exist. Prepared an isolated clean copy of DVendo Supply outside the original checkout, excluding dependencies, runtime state and parent history. The copy uses the chosen repository/package name, carries the owner working-authorization boundaries and supplements the historical baseline with the sanitized October 29 Long Expiry note and links to the latest original dashboard code. Neither the old repository nor its frozen handover was changed by preparing this copy. No deployment or provider action occurred.",
+  "evidence": [
+    {
+      "type": "url",
+      "location": "https://github.com/ByteSpectreX/dvendo-dito-load",
+      "description": "Owner-selected destination; initial connector 404 and Git HTTP 403 prevent inspection."
+    },
+    {
+      "type": "file",
+      "location": "dvendo-supply/README.md",
+      "description": "Standalone source application selected for transfer."
+    },
+    {
+      "type": "file",
+      "location": "expantor/notes/2026-10-29-long-expiry.md",
+      "description": "Later sanitized research included without changing the historical baseline."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Finish offline validation and a fresh local commit of the isolated project.",
+    "Resolve destination GitHub repository access before attempting a normal non-force push."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dvendo-supply/README.md",
+      "sha256": "9fdc76724a65f027f81066eea98a02d8ba38c07f7fea519ccfccf2d6d33bfc0e"
+    },
+    {
+      "location": "expantor/notes/2026-10-29-long-expiry.md",
+      "sha256": "6d8bcfdb44897fa3ee4864b12eb2a917d38bddc7401c972d83281b664f533133"
+    }
+  ]
+}

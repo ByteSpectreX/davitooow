@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "bc86ad3d52836ce16ac1bf2d",
+  "recordedAt": "2026-11-01T10:46:39.507Z",
+  "workspaceFingerprint": "c6100c6b1092c0832d379aec3dbcae9188011d3f742c1e4f59251dc5d952df8c",
+  "title": "Codespace transition backup integrity checked before final source preservation",
+  "category": "workflow",
+  "outcome": "passed",
+  "evidenceLevel": "code-observed",
+  "summary": "While preparing the owner-requested Codespace transition, verified the original handover's 55 preserved file hashes, portable links, 33 endpoint records, nine query requests, historical evidence and 56 existing live findings. The independent application Git bundle contains complete history through 08216492d41807a2866dc00ccb49a7cce092e8d0; its SHA-256 and the source ZIP SHA-256 match the earlier transfer record, and ZIP integrity checks pass. The original checkout still has the working-agreement addition, five transfer-related records and the two application backups pending preservation. Destination push verification and application limitations remain as already recorded; these checks do not establish fresh remote state, a live integration or a deployment. A normal push of the prepared source preservation commit requires explicit authorization for ByteSpectreX/davitooow main before any remote write.",
+  "evidence": [
+    {
+      "type": "file",
+      "location": "dito-system-handoff/tools/verify-handoff.mjs",
+      "description": "Integrity verification completed successfully before this record."
+    },
+    {
+      "type": "file",
+      "location": "exports/dvendo-dito-load-2026-11-01.bundle",
+      "description": "Complete Git history verified; SHA-256 matches the original transfer record."
+    },
+    {
+      "type": "file",
+      "location": "exports/dvendo-dito-load-2026-11-01.zip",
+      "description": "ZIP integrity and recorded SHA-256 verified."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Prepare a local source preservation commit, then request approval of its normal push to ByteSpectreX/davitooow main.",
+    "Continue the application from ByteSpectreX/dvendo-dito-load in a new Codespace; live operation still requires the documented implementation work."
+  ],
+  "fileEvidence": [
+    {
+      "location": "dito-system-handoff/tools/verify-handoff.mjs",
+      "sha256": "078e2b1de173b961925530d52d6ff8cf2eaf5e6d14856cbf8b7485d49bd6acc6"
+    },
+    {
+      "location": "exports/dvendo-dito-load-2026-11-01.bundle",
+      "sha256": "aa3f3bbedfa984ecfc3d00eedbffff668bcdb5048c4193d7598fdef05afd97f6"
+    },
+    {
+      "location": "exports/dvendo-dito-load-2026-11-01.zip",
+      "sha256": "73aea96ea354fd6d90d5957a21fb576098b72048a1a2f544c1b8f5664ed96bc3"
+    }
+  ]
+}

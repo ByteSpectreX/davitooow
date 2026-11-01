@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "99daffb6e9041bd837dcbfea",
+  "recordedAt": "2026-11-01T10:02:58.488Z",
+  "workspaceFingerprint": "c6100c6b1092c0832d379aec3dbcae9188011d3f742c1e4f59251dc5d952df8c",
+  "title": "Local project instructions do not require a Git commit to be discovered",
+  "category": "workflow",
+  "outcome": "observed",
+  "evidenceLevel": "code-observed",
+  "summary": "The owner asked whether the updated working agreement was committed and whether committing and pushing are necessary for it to work. Git showed the AGENTS.md change staged but not committed; HEAD and the local origin/main tracking reference both remained at c052ac31753d7a907c33f8eb7fcad970915b492d. Official OpenAI documentation describes discovering instructions from local project files at the start of a run, independent of committing or pushing. The updated instructions were also supplied directly in this conversation and apply here. Committing records the change in Git history; pushing makes it available to subsequent remote checkouts. Local instruction text does not change host sandbox permissions or approval settings. The attached read-only commit-message snapshot was not accessible at its supplied filesystem path; status was checked directly in Git. No commit or push was performed in response to this status question.",
+  "evidence": [
+    {
+      "type": "test",
+      "location": "git status --short; git diff --cached -- AGENTS.md",
+      "description": "Confirmed the working agreement is staged with seventeen added lines and is not included in HEAD."
+    },
+    {
+      "type": "url",
+      "location": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "description": "Official local instruction discovery and session refresh behavior."
+    }
+  ],
+  "endpointIds": [],
+  "nextSteps": [
+    "Commit and push the working agreement when requested so it is preserved for future remote checkouts; no upload is required for its local use."
+  ],
+  "fileEvidence": []
+}

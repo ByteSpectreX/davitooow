@@ -2,6 +2,23 @@
 
 The owner has authorized automatic documentation of substantive discoveries. Do not wait for a separate request to take notes.
 
+## Standing authorization for routine work
+
+The owner authorizes routine, reversible work needed to complete the requested task without repeated confirmation. Proceed with reading and searching project files, creating and editing source and documentation, running local builds, lint checks and mocked tests, starting local preview servers, and reading public documentation. Keep these actions within the requested task and report meaningful changes and verification results.
+
+Ask for explicit approval of the concrete action and target before:
+
+- Deleting project files or directories, user data, databases, accounts, or remote resources; destructive cleanup; or overwriting unrelated work.
+- Deploying, publishing, releasing, or changing production services, infrastructure, DNS, or live configuration.
+- Creating purchases, payments, paid resources, subscriptions, or other financial commitments, or retrying an ambiguous financial submission.
+- Requesting OTPs, exporting credentials or private account data, rotating secrets, or changing account access, authentication, security controls, or approval settings.
+- Pushing or merging changes to shared repositories, force-pushing, rewriting history, or performing destructive Git operations.
+- Sending messages or transferring private information to external services or people.
+
+An explicit approval applies only to its stated action, target, and scope; do not ask again for that same approved action while those remain unchanged. General authorization for routine work does not authorize the actions above. If the impact is uncertain, inspect it first and ask before proceeding with a potentially destructive, external, or costly effect.
+
+These instructions express the owner's workflow preferences; they do not change the host's tool approvals, sandbox, managed policy, or hook trust. Use supported client permission settings for automatic approval review. Honor denied actions and host restrictions without attempting a workaround.
+
 ## Record findings as part of the work
 
 - Read [the live findings journal](dito-system-handoff/findings/README.md) when continuing research.
